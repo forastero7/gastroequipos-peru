@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Fotografía de proyecto — imagen referencial">
+  <rect width="800" height="600" fill="#e6e9eb"/>
+  <rect x="0" y="340" width="800" height="260" fill="#d2d7dc"/>
+  <polygon points="60,340 220,180 380,340" fill="#b7c0c8"/>
+  <polygon points="340,340 470,220 600,340" fill="#c3cbd2"/>
+  <rect x="580" y="240" width="160" height="100" fill="#9aa5ae"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#6b7684">
+    <text x="400" y="440" text-anchor="middle" font-size="20" font-weight="700">PROYECTO — imagen referencial</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Categoría línea caliente — imagen referencial">
+  <rect width="800" height="600" fill="#eef0f2"/>
+  <rect width="800" height="10" fill="#d9662a"/>
+  <g stroke="#c7cdd3" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/><line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <g transform="translate(300,220)">
+    <rect x="0" y="60" width="200" height="120" rx="6" fill="#c7d0d8"/>
+    <rect x="0" y="60" width="200" height="18" fill="#d9662a"/>
+    <circle cx="45" cy="140" r="16" fill="#1a1f26"/>
+    <circle cx="100" cy="140" r="16" fill="#1a1f26"/>
+    <circle cx="155" cy="140" r="16" fill="#1a1f26"/>
+    <path d="M45 100c0-14-8-20-8-30 0-8 6-12 6-20 6 8 10 16 10 26 0 10-4 16-4 22" fill="none" stroke="#d9662a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M100 100c0-14-8-20-8-30 0-8 6-12 6-20 6 8 10 16 10 26 0 10-4 16-4 22" fill="none" stroke="#d9662a" stroke-width="4" stroke-linecap="round"/>
+    <path d="M155 100c0-14-8-20-8-30 0-8 6-12 6-20 6 8 10 16 10 26 0 10-4 16-4 22" fill="none" stroke="#d9662a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#6b7684">LÍNEA CALIENTE — imagen referencial</text>
+</svg>

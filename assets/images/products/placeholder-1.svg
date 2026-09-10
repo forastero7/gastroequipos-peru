@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Imagen referencial de producto">
+  <rect width="800" height="600" fill="#eef0f2"/>
+  <g stroke="#d7dbe0" stroke-width="1">
+    <line x1="0" y1="200" x2="800" y2="200"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="266" y1="0" x2="266" y2="600"/><line x1="533" y1="0" x2="533" y2="600"/>
+  </g>
+  <rect x="270" y="210" width="260" height="180" rx="8" fill="#cfd6dc"/>
+  <rect x="270" y="210" width="260" height="24" fill="#9aa5ae"/>
+  <rect x="300" y="260" width="200" height="100" rx="4" fill="#e7eaed"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#8a95a0">
+    <text x="400" y="430" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="1">IMAGEN REFERENCIAL</text>
+    <text x="400" y="455" text-anchor="middle" font-size="15">Foto real próximamente</text>
+  </g>
+</svg>

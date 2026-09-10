@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GastroEquipos | Equipamiento profesional para negocios gastronómicos</title>
+  <meta name="description" content="Cocinas, hornos, freidoras, refrigeración y acero inoxidable para restaurantes, pollerías, chifas, panaderías y cafeterías. Fabricaciones a medida. Solicita tu cotización.">
+  <link rel="canonical" href="https://www.gastroequipos-peru.example/index.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GastroEquipos | Equipamiento profesional para negocios gastronómicos">
+  <meta property="og:description" content="Cocción, refrigeración, acero inoxidable y fabricaciones a medida para negocios gastronómicos.">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:url" content="https://www.gastroequipos-peru.example/index.html">
+  <meta property="og:image" content="assets/images/branding/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GastroEquipos">
+  <meta name="twitter:description" content="Equipamiento profesional para negocios gastronómicos.">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"GastroEquipos","url":"https://www.gastroequipos-peru.example/","logo":"https://www.gastroequipos-peru.example/assets/images/branding/logo.svg"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="GastroEquipos — Inicio">
+        <img class="logo-img" src="assets/images/branding/logo.svg" alt="GastroEquipos">
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Productos</a></li>
+          <li><a href="catalogo.html?cat=linea-caliente">Línea caliente</a></li>
+          <li><a href="catalogo.html?cat=linea-fria">Línea fría</a></li>
+          <li><a href="catalogo.html?cat=acero-inoxidable">Acero inoxidable</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="cotizacion.html" class="quote-indicator" data-quote-indicator aria-label="Mi cotización, 0 equipos">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-quote"/></svg>
+          <span class="quote-indicator__label">Mi cotización</span>
+          <span class="quote-indicator__count" data-quote-count data-empty="true">0</span>
+        </a>
+        <a href="cotizacion.html" class="btn btn-primary btn-sm header-cta">Cotizar equipos</a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú de navegación">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO ================================================== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Equipamiento profesional para negocios gastronómicos</h1>
+        <p class="lead">Cocción, refrigeración, acero inoxidable y soluciones para restaurantes y negocios gastronómicos.</p>
+        <div class="hero-actions">
+          <a href="catalogo.html" class="btn btn-primary">Ver catálogo</a>
+          <a href="cotizacion.html" class="btn btn-outline-light">Solicitar cotización</a>
+        </div>
+        <ul class="trust-badges">
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-shield"/></svg>Equipamiento profesional</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-wrench"/></svg>Fabricación a medida</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"/></svg>Atención especializada</li>
+          <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-truck"/></svg>Envíos nacionales</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS PRINCIPALES ================================ -->
+    <section class="section" id="categorias" aria-labelledby="categoriasTitle">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Catálogo</span>
+          <h2 id="categoriasTitle">Encuentra el equipo que necesitas</h2>
+          <p class="lead">Explora por línea de producto: cocción, refrigeración o fabricaciones en acero inoxidable.</p>
+        </div>
+        <div class="grid grid-3" id="categoryGrid" aria-live="polite">
+          <!-- Generado por js/products.js (initCategoryGrid) a partir de data/products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPO DE NEGOCIO ======================================== -->
+    <section class="section section--muted" aria-labelledby="negocioTitle">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Para tu rubro</span>
+          <h2 id="negocioTitle">¿Qué negocio estás equipando?</h2>
+          <p class="lead">Un mismo equipo puede servir a distintos rubros. Elige el tuyo para ver equipos relacionados.</p>
+        </div>
+        <div class="business-grid" id="businessGrid" aria-live="polite">
+          <!-- Generado por js/products.js (initBusinessGrid) a partir de data/products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS =================================== -->
+    <section class="section" aria-labelledby="destacadosTitle">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">Selección</span>
+            <h2 id="destacadosTitle">Equipos destacados</h2>
+          </div>
+          <a href="catalogo.html" class="btn btn-outline btn-sm">Ver catálogo completo</a>
+        </div>
+        <p class="placeholder-note" style="margin-bottom: var(--space-5);">Datos de demostración para probar la interfaz — no representan precios ni especificaciones reales.</p>
+        <div class="grid grid-4" id="featuredGrid" aria-live="polite">
+          <!-- Generado por js/products.js (initFeaturedGrid) a partir de data/products.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS ====================================== -->
+    <section class="section section--muted" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Confianza</span>
+          <h2 id="whyTitle">Por qué elegirnos</h2>
+        </div>
+        <div class="stats-grid" style="margin-bottom: var(--space-8);">
+          <div class="stat-item"><span class="stat-value">[XX]+</span><span class="stat-label">Años de experiencia</span></div>
+          <div class="stat-item"><span class="stat-value">[X año]</span><span class="stat-label">Garantía</span></div>
+          <div class="stat-item"><span class="stat-value">[Taller propio]</span><span class="stat-label">Fabricación</span></div>
+          <div class="stat-item"><span class="stat-value">[Todo el Perú]</span><span class="stat-label">Cobertura</span></div>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-steel"/></svg></span>
+            <h3 class="h4">Acero inoxidable</h3>
+            <p class="text-muted">Fabricación en materiales pensados para uso industrial intensivo.</p>
+          </div>
+          <div class="why-item">
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-wrench"/></svg></span>
+            <h3 class="h4">Fabricación a medida</h3>
+            <p class="text-muted">Soluciones adaptadas al espacio y necesidad real de tu negocio.</p>
+          </div>
+          <div class="why-item">
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-shield"/></svg></span>
+            <h3 class="h4">Soporte técnico</h3>
+            <p class="text-muted">Acompañamiento especializado antes y después de la compra.</p>
+          </div>
+          <div class="why-item">
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-truck"/></svg></span>
+            <h3 class="h4">Cobertura nacional</h3>
+            <p class="text-muted">Coordinación de envíos a distintas regiones del país.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FABRICACIÓN A MEDIDA ==================================== -->
+    <section class="section" id="fabricacion" aria-labelledby="fabTitle">
+      <div class="container custom-fab">
+        <div>
+          <span class="eyebrow">A medida</span>
+          <h2 id="fabTitle">¿Necesitas un equipo a medida?</h2>
+          <p class="lead">Fabricamos soluciones en acero inoxidable según el espacio, capacidad y requerimiento específico de tu negocio. Cuéntanos qué necesitas y te contactaremos con una propuesta.</p>
+          <p class="placeholder-note">Este formulario aún no envía datos a un servidor: es una demostración de la interfaz (ver README).</p>
+        </div>
+        <form id="fabForm" novalidate>
+          <div class="form-grid form-grid--2">
+            <div class="field">
+              <label for="fabTipo">Tipo de equipo *</label>
+              <input type="text" id="fabTipo" name="tipo" required placeholder="Ej. Mesa de trabajo">
+              <span class="field-error">Este campo es obligatorio.</span>
+            </div>
+            <div class="field">
+              <label for="fabCantidad">Cantidad *</label>
+              <input type="number" id="fabCantidad" name="cantidad" min="1" required placeholder="1">
+              <span class="field-error">Este campo es obligatorio.</span>
+            </div>
+            <div class="field">
+              <label for="fabAncho">Ancho (cm)</label>
+              <input type="number" id="fabAncho" name="ancho" min="0">
+            </div>
+            <div class="field">
+              <label for="fabAlto">Alto (cm)</label>
+              <input type="number" id="fabAlto" name="alto" min="0">
+            </div>
+            <div class="field">
+              <label for="fabFondo">Fondo (cm)</label>
+              <input type="number" id="fabFondo" name="fondo" min="0">
+            </div>
+            <div class="field">
+              <label for="fabMaterial">Material</label>
+              <select id="fabMaterial" name="material">
+                <option value="">Selecciona una opción</option>
+                <option value="acero-inoxidable">Acero inoxidable</option>
+                <option value="acero-pintado">Acero pintado</option>
+                <option value="otro">Otro / no lo sé aún</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-top: var(--space-4);">
+            <label for="fabComentarios">Comentarios</label>
+            <textarea id="fabComentarios" name="comentarios" placeholder="Cuéntanos más sobre lo que necesitas"></textarea>
+          </div>
+          <div class="form-status" id="fabFormStatus" role="status"></div>
+          <button type="submit" class="btn btn-primary" style="margin-top: var(--space-4);">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- PROYECTOS REALIZADOS ==================================== -->
+    <section class="section section--muted" aria-labelledby="proyectosTitle">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">Casos</span>
+            <h2 id="proyectosTitle">Proyectos realizados</h2>
+          </div>
+          <a href="proyectos.html" class="btn btn-outline btn-sm">Ver todos los proyectos</a>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="media-frame"><img src="assets/images/projects/placeholder-1.svg" alt="Proyecto de equipamiento — imagen referencial" loading="lazy" width="800" height="600"></div>
+            <div class="project-card__body">
+              <span class="badge">Restaurante</span>
+              <h3 class="h4">Equipamiento de cocina — proyecto de ejemplo</h3>
+              <p class="project-card__meta"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>[Ubicación pendiente]</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="media-frame"><img src="assets/images/projects/placeholder-2.svg" alt="Proyecto de equipamiento — imagen referencial" loading="lazy" width="800" height="600"></div>
+            <div class="project-card__body">
+              <span class="badge">Pollería</span>
+              <h3 class="h4">Línea caliente completa — proyecto de ejemplo</h3>
+              <p class="project-card__meta"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>[Ubicación pendiente]</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="media-frame"><img src="assets/images/projects/placeholder-3.svg" alt="Proyecto de equipamiento — imagen referencial" loading="lazy" width="800" height="600"></div>
+            <div class="project-card__body">
+              <span class="badge">Panadería</span>
+              <h3 class="h4">Mobiliario en acero inoxidable — proyecto de ejemplo</h3>
+              <p class="project-card__meta"><svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>[Ubicación pendiente]</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS ============================================= -->
+    <section class="section" aria-labelledby="testimoniosTitle">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Clientes</span>
+          <h2 id="testimoniosTitle">Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="grid grid-3">
+          <figure class="card testimonial-card">
+            <div class="testimonial-card__stars" aria-hidden="true">
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">"Testimonio de ejemplo. Este espacio se reemplazará por comentarios reales de clientes."</blockquote>
+            <figcaption class="testimonial-card__author">
+              <span class="testimonial-card__avatar" aria-hidden="true">?</span>
+              <span><strong>Nombre pendiente</strong><span>Negocio de ejemplo</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card testimonial-card">
+            <div class="testimonial-card__stars" aria-hidden="true">
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">"Testimonio de ejemplo. Este espacio se reemplazará por comentarios reales de clientes."</blockquote>
+            <figcaption class="testimonial-card__author">
+              <span class="testimonial-card__avatar" aria-hidden="true">?</span>
+              <span><strong>Nombre pendiente</strong><span>Negocio de ejemplo</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card testimonial-card">
+            <div class="testimonial-card__stars" aria-hidden="true">
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+              <svg class="icon icon--sm"><use href="assets/icons/sprite.svg#icon-star"/></svg>
+            </div>
+            <blockquote class="testimonial-card__quote">"Testimonio de ejemplo. Este espacio se reemplazará por comentarios reales de clientes."</blockquote>
+            <figcaption class="testimonial-card__author">
+              <span class="testimonial-card__avatar" aria-hidden="true">?</span>
+              <span><strong>Nombre pendiente</strong><span>Negocio de ejemplo</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- GARANTÍA (resumen) ====================================== -->
+    <section class="section section--dark" aria-labelledby="garantiaTitle">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow" style="color:#e8873f;">Respaldo</span>
+          <h2 id="garantiaTitle">Garantía y servicio técnico</h2>
+          <p class="lead" style="color:#cbd2d9;">Contamos con condiciones de garantía y soporte técnico que se detallarán próximamente con información comercial definitiva.</p>
+        </div>
+        <div class="text-center">
+          <a href="garantia.html" class="btn btn-outline-light">Ver garantía y servicio técnico</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ====================================================== -->
+    <section class="section" id="faq" aria-labelledby="faqTitle">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Ayuda</span>
+          <h2 id="faqTitle">Preguntas frecuentes</h2>
+        </div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq1">
+                ¿Realizan envíos?
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-down"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq1"><div class="accordion-panel__inner">Contenido provisional hasta contar con información comercial real sobre cobertura y tiempos de envío.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq2">
+                ¿Fabrican equipos a medida?
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-down"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq2"><div class="accordion-panel__inner">Contenido provisional. Próximamente detallaremos el proceso de fabricación a medida.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq3">
+                ¿Cuánto demora una fabricación?
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-down"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq3"><div class="accordion-panel__inner">Contenido provisional hasta definir tiempos reales de producción.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq4">
+                ¿Qué formas de pago aceptan?
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-down"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq4"><div class="accordion-panel__inner">Contenido provisional hasta recibir información comercial definitiva.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq5">
+                ¿Los equipos tienen garantía?
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-down"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq5"><div class="accordion-panel__inner">Contenido provisional. Ver <a href="garantia.html">Garantía y servicio técnico</a> para más detalle una vez definido.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h3>
+              <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq6">
+                ¿Cómo solicito una cotización?
+                <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-chevron-down"/></svg>
+              </button>
+            </h3>
+            <div class="accordion-panel" id="faq6"><div class="accordion-panel__inner">Agrega los equipos que te interesan con el botón "Agregar a cotización" y luego visita "Mi cotización" para enviarnos tu solicitud.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN ================================================ -->
+    <section class="section section--muted" id="ubicanos" aria-labelledby="ubicanosTitle">
+      <div class="container location-grid">
+        <div>
+          <span class="eyebrow">Visítanos</span>
+          <h2 id="ubicanosTitle">Visítanos</h2>
+          <ul class="location-list" style="margin-top: var(--space-5);">
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg><span>[Dirección pendiente]</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-phone"/></svg><span>[Teléfono / WhatsApp pendiente]</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"/></svg><span>[Correo pendiente]</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"/></svg><span>[Horario de atención pendiente]</span></li>
+          </ul>
+        </div>
+        <div class="location-map-placeholder">
+          <svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>
+          <p>Mapa de Google Maps — se integrará cuando se defina la dirección definitiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL ================================================ -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-final">
+          <h2>¿Estás equipando tu negocio?</h2>
+          <p>Selecciona los equipos que necesitas y solicita una cotización.</p>
+          <div class="cta-final__actions">
+            <a href="catalogo.html" class="btn btn-primary">Ver catálogo</a>
+            <a href="cotizacion.html" class="btn btn-outline-light">Solicitar cotización</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <img class="logo-img" src="assets/images/branding/logo-light.svg" alt="GastroEquipos">
+        <p>Equipamiento gastronómico profesional: línea caliente, línea fría, acero inoxidable y fabricaciones a medida.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="garantia.html">Garantía y servicio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="catalogo.html?cat=linea-caliente">Línea caliente</a></li>
+          <li><a href="catalogo.html?cat=linea-fria">Línea fría</a></li>
+          <li><a href="catalogo.html?cat=acero-inoxidable">Acero inoxidable</a></li>
+          <li><a href="catalogo.html">Ver catálogo completo</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+          <li><a href="index.html#ubicanos">Contacto</a></li>
+          <li><a href="libro-reclamaciones.html">Libro de reclamaciones</a></li>
+          <li><a href="privacidad.html">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span data-year>2026</span> GastroEquipos. Todos los derechos reservados.</p>
+      <p class="placeholder-note">Razón social y RUC pendientes de definir.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"/></svg>
+    <span data-toast-message></span>
+  </div>
+
+  <script type="module" src="js/products.js"></script>
+  <script type="module" src="js/quote.js"></script>
+  <script type="module" src="js/catalog.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

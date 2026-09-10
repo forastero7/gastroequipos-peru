@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Imagen referencial de producto — detalle">
+  <rect width="800" height="600" fill="#f2f3f4"/>
+  <g stroke="#dde1e5" stroke-width="1">
+    <line x1="0" y1="200" x2="800" y2="200"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="266" y1="0" x2="266" y2="600"/><line x1="533" y1="0" x2="533" y2="600"/>
+  </g>
+  <circle cx="400" cy="300" r="110" fill="#d6dce1"/>
+  <circle cx="400" cy="300" r="70" fill="#c3cbd2"/>
+  <circle cx="400" cy="300" r="30" fill="#9aa5ae"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#8a95a0">
+    <text x="400" y="450" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="1">IMAGEN REFERENCIAL</text>
+    <text x="400" y="475" text-anchor="middle" font-size="15">Detalle — pendiente</text>
+  </g>
+</svg>

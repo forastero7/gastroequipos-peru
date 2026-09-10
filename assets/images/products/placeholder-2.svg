@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Imagen referencial de producto — vista lateral">
+  <rect width="800" height="600" fill="#e7eaed"/>
+  <g stroke="#d2d7dc" stroke-width="1">
+    <line x1="0" y1="200" x2="800" y2="200"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="266" y1="0" x2="266" y2="600"/><line x1="533" y1="0" x2="533" y2="600"/>
+  </g>
+  <polygon points="270,390 320,220 480,220 530,390" fill="#c3cbd2"/>
+  <rect x="320" y="220" width="160" height="20" fill="#9aa5ae"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#8a95a0">
+    <text x="400" y="430" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="1">IMAGEN REFERENCIAL</text>
+    <text x="400" y="455" text-anchor="middle" font-size="15">Vista lateral — pendiente</text>
+  </g>
+</svg>
