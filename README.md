@@ -1,4 +1,4 @@
-# GastroEquipos — Base V1
+# Jeinox Gastronomic — Base V1
 
 Sitio web tipo catálogo para comercializar equipamiento gastronómico
 profesional: línea caliente, línea fría, acero inoxidable y

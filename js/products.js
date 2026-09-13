@@ -282,7 +282,7 @@ function initProductDetail() {
     return;
   }
 
-  document.title = `${product.name} | GastroEquipos`;
+  document.title = `${product.name} | Jeinox Gastronomic`;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", product.shortDescription);
 

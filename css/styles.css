@@ -86,28 +86,28 @@ table { border-collapse: collapse; width: 100%; }
    2. TOKENS DE DISEÑO
    -------------------------------------------------------------------------- */
 :root {
-  /* Paleta industrial: acero + carbón + acento fuego */
-  --color-ink: #1a1f26;         /* carbón — headers oscuros, texto fuerte */
-  --color-ink-soft: #2b323b;
-  --color-graphite: #3a4552;
-  --color-steel: #6b7684;
-  --color-steel-light: #cbd2d9;
-  --color-border: #e2e5e9;
-  --color-bg: #f7f8f9;          /* fondo general */
+  /* Paleta de marca: azul + blanco + negro (grises = tintes de negro) */
+  --color-ink: #0d1117;         /* negro — headers oscuros, texto fuerte */
+  --color-ink-soft: #161d27;
+  --color-graphite: #232c3a;
+  --color-steel: #55606c;
+  --color-steel-light: #c7ccd3;
+  --color-border: #dde1e6;
+  --color-bg: #f5f7fa;          /* fondo general */
   --color-surface: #ffffff;     /* tarjetas */
-  --color-text: #232a32;
-  --color-text-muted: #5b6570;
+  --color-text: #10151c;
+  --color-text-muted: #55606c;
 
-  --color-accent: #d9662a;      /* acento "cocción" — CTAs principales */
-  --color-accent-dark: #b8501e;
+  --color-accent: #1d4ed8;      /* azul — CTAs principales */
+  --color-accent-dark: #1739ad;
   --color-accent-contrast: #ffffff;
-  --color-cold: #2f6690;        /* acento línea fría, uso puntual */
+  --color-cold: #2563eb;        /* azul secundario, uso puntual */
 
-  --color-success: #2f7d4f;
-  --color-success-bg: #e7f4ec;
-  --color-warning-bg: #fbeee3;
-  --color-warning-text: #8a4a1c;
-  --color-focus: #2f6690;
+  --color-success: #1d4ed8;     /* "Disponible": azul (sin verde, fuera de paleta) */
+  --color-success-bg: #e7edfc;
+  --color-warning-bg: #e7e9ec;  /* "Fabricación": negro/gris (sin naranja, fuera de paleta) */
+  --color-warning-text: #10151c;
+  --color-focus: #1d4ed8;
 
   --font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 

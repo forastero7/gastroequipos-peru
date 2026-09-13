@@ -4,7 +4,7 @@
   <rect x="80" y="220" width="220" height="160" fill="#b7c0c8"/>
   <rect x="330" y="180" width="180" height="200" fill="#c3cbd2"/>
   <rect x="540" y="250" width="180" height="130" fill="#b7c0c8"/>
-  <g font-family="Arial, Helvetica, sans-serif" fill="#6b7684">
+  <g font-family="Arial, Helvetica, sans-serif" fill="#55606c">
     <text x="400" y="460" text-anchor="middle" font-size="20" font-weight="700">PROYECTO — imagen referencial</text>
   </g>
 </svg>
