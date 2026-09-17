@@ -557,4 +557,36 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p14",
+    slug: "horno-shawarma-4-quemadores",
+    name: "Horno para Shawarma 4 Quemadores",
+    category: "linea-caliente",
+    subcategory: "hornos",
+    businessTypes: ["restaurantes", "comida-rapida", "otros"],
+    images: [
+      "assets/images/products/horno-shawarma-4-quemadores-1.webp",
+      "assets/images/products/horno-shawarma-4-quemadores-2.webp",
+      "assets/images/products/horno-shawarma-4-quemadores-3.webp",
+    ],
+    shortDescription:
+      "Horno vertical para shawarma de 4 quemadores en acero inoxidable, con bandeja recolectora y gabinete inferior sobre ruedas.",
+    description:
+      "Horno vertical para shawarma de 4 quemadores, construido en acero inoxidable, con bandeja recolectora de grasa y asador giratorio central. Panel de control lateral con perillas independientes por quemador. Estructura montada sobre ruedas giratorias, con gabinete inferior con puerta para almacenamiento. Pensado para negocios con alta demanda de producción de shawarma y döner kebab. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroQuemadores: "4",
+      potencia: "-- (por confirmar)",
+      capacidad: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
