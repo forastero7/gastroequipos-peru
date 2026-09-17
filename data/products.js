@@ -624,4 +624,34 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p16",
+    slug: "caja-china-4en1",
+    name: "Caja China 4 en 1 con Tapa",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "pollerias", "otros"],
+    images: [
+      "assets/images/products/caja-china-4en1-1.webp",
+      "assets/images/products/caja-china-4en1-2.webp",
+      "assets/images/products/caja-china-4en1-3.webp",
+    ],
+    shortDescription:
+      "Caja china 4 en 1 con tapa, en acero inoxidable: caja china, parrilla, chancho al palo y pollo a las brasas, con ventana con visor y motor independiente. Capacidad 20 kg.",
+    description:
+      "Caja china 4 en 1 con tapa, construida en acero inoxidable, pensada para cubrir cuatro modos de cocción en un solo equipo: caja china, parrilla, chancho al palo y pollo a las brasas. Incorpora ventana con visor que permite supervisar la cocción en el interior de la caja china sin necesidad de abrir la tapa, y motor independiente para el sistema de rotación, lo que facilita un dorado uniforme con menor intervención manual. Cuenta con capacidad para 20 kg, adecuada para preparaciones de alto volumen. Su fabricación en acero inoxidable favorece la resistencia al uso intensivo y facilita la limpieza. Diseño orientado a restaurantes, pollerías y negocios de comida a las brasas que requieren un equipo versátil para distintos tipos de cocción. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Carbón",
+      capacidad: "20 kg",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
