@@ -593,18 +593,14 @@ export const products = [
     id: "p15",
     slug: "parrilla-mesa-empotrable",
     name: "Parrilla de Mesa Empotrable",
-    category: "linea-caliente",
-    subcategory: "parrillas",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
     businessTypes: ["restaurantes", "hoteles", "otros"],
-    // NOTA: fotos reales pendientes de reemplazar. El equipo compartió 5
-    // fotos del producto en el chat, pero esta sesión no logró guardar los
-    // archivos en disco para poder optimizarlos (a diferencia de los
-    // productos anteriores). Se usan placeholders genéricos mientras se
-    // reenvían las fotos. Ver README, sección 6, para el procedimiento.
     images: [
-      "assets/images/products/placeholder-1.svg",
-      "assets/images/products/placeholder-2.svg",
-      "assets/images/products/placeholder-3.svg",
+      "assets/images/products/parrilla-mesa-empotrable-1.webp",
+      "assets/images/products/parrilla-mesa-empotrable-2.webp",
+      "assets/images/products/parrilla-mesa-empotrable-3.webp",
+      "assets/images/products/parrilla-mesa-empotrable-4.webp",
     ],
     shortDescription:
       "Parrilla de mesa empotrable a carbón, con parrilla ajustable por manivela y bandeja extraíble en acero inoxidable.",
