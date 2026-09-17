@@ -940,6 +940,8 @@ body.nav-is-open { overflow: hidden; }
 .location-list { display: flex; flex-direction: column; gap: var(--space-4); }
 .location-list li { display: flex; gap: var(--space-3); }
 .location-list .icon { color: var(--color-accent-dark); flex-shrink: 0; margin-top: 2px; }
+.location-list a { color: var(--color-accent-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.location-list a:hover { color: var(--color-accent); }
 
 /* --------------------------------------------------------------------------
    18. CTA FINAL
