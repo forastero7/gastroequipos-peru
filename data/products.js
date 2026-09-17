@@ -680,4 +680,33 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p18",
+    slug: "cocina-industrial-2-hornillas-chifero",
+    name: "Cocina Industrial 2 Hornillas + Chifero",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "chifas", "otros"],
+    images: [
+      "assets/images/products/cocina-industrial-2-hornillas-chifero-1.webp",
+    ],
+    shortDescription:
+      "Cocina industrial de 2 hornillas más chifero (quemador tipo wok), en acero inoxidable, con repisa inferior. Ideal para cocina criolla y de wok en un solo mueble.",
+    description:
+      "Cocina industrial de 2 hornillas con chifero incorporado, construida en acero inoxidable. Las dos hornillas cuentan con quemadores de fundición y perillas de control independientes, mientras que el chifero incluye un quemador circular tipo wok de mayor potencia, pensado para salteados y preparaciones que requieren fuego intenso y concentrado. Incorpora repisa inferior en acero inoxidable para almacenamiento y patas regulables para nivelación en piso. Diseño pensado para negocios que combinan cocción tradicional con preparaciones al wok en un mismo mueble, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroHornillas: "2 + 1 chifero",
+      potencia: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
