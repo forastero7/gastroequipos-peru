@@ -3,20 +3,26 @@
  * ------------------------------------------------------------------
  * "Mi cotización": lista temporal de equipos guardada en localStorage.
  *
- * IMPORTANTE — CONFIGURACIÓN FUTURA DE WHATSAPP
- * WHATSAPP_NUMBER está vacío a propósito. Esta fase NO conecta un
- * número real. Cuando se defina el número comercial, colócalo en
- * formato internacional sin "+" ni espacios (ej: "51987654321") y el
- * botón "Solicitar cotización" abrirá automáticamente WhatsApp con el
- * mensaje generado por buildWhatsAppMessage(). Ver README.
+ * CONFIGURACIÓN DE WHATSAPP
+ * WHATSAPP_NUMBERS lista los números comerciales habilitados para
+ * recibir solicitudes de cotización por WhatsApp (formato
+ * internacional, sin "+" ni espacios). cotizacion.html muestra un
+ * botón por cada número; al hacer clic se abre WhatsApp con el
+ * mensaje generado por buildWhatsAppMessage(). Para agregar, quitar o
+ * cambiar un número, edita este arreglo — no hace falta tocar el
+ * HTML (los botones también se pueden generar a mano en
+ * cotizacion.html si prefieres controlarlos ahí, ver README).
  * ------------------------------------------------------------------
  */
 import { products } from "../data/products.js";
 
 const STORAGE_KEY = "gastroequipos:quote:v1";
 
-/** Configurar aquí el número de WhatsApp comercial cuando esté disponible. */
-export const WHATSAPP_NUMBER = ""; // ej: "51987654321"
+/** Números de WhatsApp comerciales habilitados. */
+export const WHATSAPP_NUMBERS = [
+  { number: "51943688374", label: "+51 943 688 374" },
+  { number: "51926669669", label: "+51 926 669 669" },
+];
 
 /* ---------------------------------------------------------------- */
 /* Persistencia (localStorage)                                       */
@@ -89,8 +95,8 @@ export function getQuoteDetailed() {
 }
 
 /**
- * Genera el mensaje de texto que se enviará por WhatsApp cuando el
- * número comercial esté configurado (ver WHATSAPP_NUMBER arriba).
+ * Genera el mensaje de texto que se enviará por WhatsApp al elegir
+ * cualquiera de los números en WHATSAPP_NUMBERS (arriba).
  */
 export function buildWhatsAppMessage() {
   const detailed = getQuoteDetailed();
@@ -99,12 +105,12 @@ export function buildWhatsAppMessage() {
   return `Hola, quisiera cotizar los siguientes equipos:\n\n${lines.join("\n")}`;
 }
 
-/** Devuelve la URL de WhatsApp lista para usar, o null si falta el número. */
-export function buildWhatsAppUrl() {
-  if (!WHATSAPP_NUMBER) return null;
+/** Devuelve la URL de WhatsApp lista para usar para un número dado, o null si no hay nada que cotizar. */
+export function buildWhatsAppUrl(number) {
+  if (!number) return null;
   const message = buildWhatsAppMessage();
   if (!message) return null;
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
 
 /* ---------------------------------------------------------------- */
@@ -154,7 +160,7 @@ function renderQuotePage() {
   const tableWrap = document.getElementById("quoteTableWrap");
   const summaryCount = document.getElementById("quoteSummaryCount");
   const messagePreview = document.getElementById("quoteMessagePreview");
-  const requestBtn = document.getElementById("quoteRequestBtn");
+  const whatsappBtns = root.querySelectorAll("[data-whatsapp]");
   const clearBtn = document.getElementById("quoteClearBtn");
 
   function render() {
@@ -165,14 +171,14 @@ function renderQuotePage() {
       if (emptyState) emptyState.hidden = false;
       if (summaryCount) summaryCount.textContent = "0";
       if (messagePreview) messagePreview.textContent = "Agrega equipos a tu cotización para generar el mensaje.";
-      if (requestBtn) requestBtn.setAttribute("disabled", "true");
+      whatsappBtns.forEach((btn) => btn.setAttribute("disabled", "true"));
       if (clearBtn) clearBtn.setAttribute("disabled", "true");
       return;
     }
 
     if (tableWrap) tableWrap.hidden = false;
     if (emptyState) emptyState.hidden = true;
-    if (requestBtn) requestBtn.removeAttribute("disabled");
+    whatsappBtns.forEach((btn) => btn.removeAttribute("disabled"));
     if (clearBtn) clearBtn.removeAttribute("disabled");
 
     if (tbody) {
@@ -217,6 +223,13 @@ function renderQuotePage() {
   }
 
   root.addEventListener("click", (event) => {
+    const waBtn = event.target.closest("[data-whatsapp]");
+    if (waBtn) {
+      const url = buildWhatsAppUrl(waBtn.getAttribute("data-whatsapp"));
+      if (url) window.open(url, "_blank", "noopener");
+      return;
+    }
+
     const row = event.target.closest("tr[data-row]");
     if (!row) return;
     const productId = row.dataset.row;
@@ -244,21 +257,6 @@ function renderQuotePage() {
     clearBtn.addEventListener("click", () => {
       clearQuote();
       showToast("Cotización vaciada");
-    });
-  }
-
-  if (requestBtn) {
-    requestBtn.addEventListener("click", () => {
-      const url = buildWhatsAppUrl();
-      if (url) {
-        window.open(url, "_blank", "noopener");
-        return;
-      }
-      // El número de WhatsApp aún no está configurado (ver WHATSAPP_NUMBER).
-      // Mostramos el mensaje generado para que el equipo comercial lo revise.
-      const preview = document.getElementById("quoteMessagePreview");
-      if (preview) preview.scrollIntoView({ behavior: "smooth", block: "center" });
-      showToast("WhatsApp aún no está configurado. Mensaje generado abajo.");
     });
   }
 

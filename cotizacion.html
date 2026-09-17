@@ -93,14 +93,22 @@
                 <strong id="quoteSummaryCount">0</strong>
               </div>
               <p class="quote-note">Esta cotización no incluye precios finales: nuestro equipo comercial confirmará el detalle y el costo de cada equipo.</p>
+              <p class="quote-note" style="margin-top: var(--space-3);">Elige el número de WhatsApp al que prefieras escribir:</p>
               <div style="display:flex; flex-direction: column; gap: var(--space-3);">
-                <button type="button" class="btn btn-primary btn-block" id="quoteRequestBtn">Solicitar cotización</button>
+                <button type="button" class="btn btn-primary btn-block" data-whatsapp="51943688374">
+                  <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-whatsapp"/></svg>
+                  WhatsApp +51 943 688 374
+                </button>
+                <button type="button" class="btn btn-primary btn-block" data-whatsapp="51926669669">
+                  <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-whatsapp"/></svg>
+                  WhatsApp +51 926 669 669
+                </button>
                 <button type="button" class="btn btn-outline btn-block" id="quoteClearBtn">Vaciar lista</button>
               </div>
             </div>
             <div>
               <h2 class="h4">Mensaje que se enviará</h2>
-              <p class="placeholder-note" style="margin-bottom: var(--space-3);">El número de WhatsApp aún no está configurado en esta fase (ver README). Este es el mensaje que se generará automáticamente.</p>
+              <p class="placeholder-note" style="margin-bottom: var(--space-3);">Este es el mensaje que se enviará automáticamente al elegir cualquiera de los números de WhatsApp.</p>
               <pre class="quote-message-preview" id="quoteMessagePreview">Agrega equipos a tu cotización para generar el mensaje.</pre>
             </div>
           </div>

@@ -145,25 +145,29 @@ Ambos viven en `data/products.js`:
   chifas, etc.). Se renderizan en "¿Qué negocio estás equipando?" y
   se usan para filtrar el catálogo vía `catalogo.html?business=id`.
 
-## 8. Cómo configurar WhatsApp en el futuro
+## 8. Cómo configurar WhatsApp
 
-El sistema de cotización ya genera el mensaje de texto, pero **no
-tiene un número de WhatsApp real conectado** en esta fase.
+El sistema de cotización ya está conectado a WhatsApp con los dos
+números comerciales reales:
 
-Para activarlo:
+- +51 943 688 374
+- +51 926 669 669
+
+En `cotizacion.html`, cada uno tiene su propio botón ("WhatsApp +51
+9XX XXX XXX"); al hacer clic se abre WhatsApp en una pestaña nueva
+con el mensaje de la cotización ya armado (ver
+`buildWhatsAppMessage()` / `buildWhatsAppUrl()` en `js/quote.js`).
+
+**Para agregar, quitar o cambiar un número:**
 
 1. Abre `js/quote.js`.
-2. Ubica la constante `WHATSAPP_NUMBER` (cerca del inicio del
-   archivo) y coloca el número comercial en formato internacional,
-   sin `+` ni espacios (ejemplo: `"51987654321"`).
-3. El botón "Solicitar cotización" en `cotizacion.html` detectará
-   automáticamente que el número está configurado y abrirá WhatsApp
-   con el mensaje ya armado (ver `buildWhatsAppUrl()` /
-   `buildWhatsAppMessage()`).
-
-Mientras el número no esté configurado, el botón muestra el mensaje
-generado en pantalla para que el equipo comercial lo revise
-manualmente.
+2. Edita el arreglo `WHATSAPP_NUMBERS` (cerca del inicio del
+   archivo): cada entrada es `{ number, label }`, con `number` en
+   formato internacional sin `+` ni espacios (ejemplo:
+   `"51987654321"`).
+3. Si agregas o quitas un número, actualiza también los botones
+   correspondientes en `cotizacion.html` (cada uno usa
+   `data-whatsapp="<number>"` para saber a qué número abrir).
 
 ## 9. Placeholders pendientes de información real
 
@@ -171,12 +175,9 @@ Antes de publicar el sitio, reemplazar:
 
 - Precios, disponibilidad y especificaciones técnicas de todos los
   productos (`data/products.js`) — son datos demostrativos.
-- Horario de atención (sección "Visítanos" en `index.html`), y
-  confirmar cuál de los dos teléfonos (o ambos) es el número de
-  WhatsApp para activar el envío automático (ver sección 8). El
-  correo (`jeinox2020@gmail.com`), los teléfonos (+51 943 688 374 /
-  +51 926 669 669) y la ubicación (mapa de Google Maps) ya son datos
-  reales.
+- Correo (`jeinox2020@gmail.com`), teléfonos/WhatsApp (+51 943 688 374
+  y +51 926 669 669), horario de atención (lunes a sábado, 9:00 a. m.
+  a 8:00 p. m.) y ubicación (mapa de Google Maps) ya son datos reales.
 - Años de experiencia, garantía, "taller propio" y cobertura
   (sección "Por qué elegirnos").
 - Contenido de "Nosotros" (historia, misión, visión).
