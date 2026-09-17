@@ -285,8 +285,34 @@ h4, .h4 { font-size: 1.05rem; line-height: 1.35; font-weight: 700; color: var(--
   min-height: var(--header-h);
 }
 
-.logo { display: inline-flex; align-items: center; }
+.logo { display: inline-flex; align-items: center; gap: 0.55rem; }
 .logo-img { height: 30px; width: auto; }
+
+/* Ícono de marca del header (assets/images/branding/logo-mark.webp).
+   Cuadrado 1:1, object-fit:contain evita cualquier deformación. */
+.logo-mark {
+  display: block;
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.logo-wordmark {
+  font-weight: 800;
+  font-size: 1.02rem;
+  line-height: 1.15;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+.logo-wordmark strong { color: var(--color-accent); font-weight: 800; }
+
+@media (min-width: 768px) {
+  .logo-mark { height: 42px; width: 42px; }
+  .logo-wordmark { font-size: 1.1rem; }
+}
+@media (min-width: 1024px) {
+  .logo-mark { height: 46px; width: 46px; }
+}
 
 .main-nav {
   position: fixed;
