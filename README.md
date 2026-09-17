@@ -171,9 +171,12 @@ Antes de publicar el sitio, reemplazar:
 
 - Precios, disponibilidad y especificaciones técnicas de todos los
   productos (`data/products.js`) — son datos demostrativos.
-- Teléfono/WhatsApp y horario de atención (sección "Visítanos" en
-  `index.html`). El correo (`jeinox2020@gmail.com`) y la ubicación
-  (enlace a Google Maps) ya son datos reales.
+- Horario de atención (sección "Visítanos" en `index.html`), y
+  confirmar cuál de los dos teléfonos (o ambos) es el número de
+  WhatsApp para activar el envío automático (ver sección 8). El
+  correo (`jeinox2020@gmail.com`), los teléfonos (+51 943 688 374 /
+  +51 926 669 669) y la ubicación (mapa de Google Maps) ya son datos
+  reales.
 - Años de experiencia, garantía, "taller propio" y cobertura
   (sección "Por qué elegirnos").
 - Contenido de "Nosotros" (historia, misión, visión).
