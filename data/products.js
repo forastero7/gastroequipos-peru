@@ -650,4 +650,34 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p17",
+    slug: "cocina-industrial-2-hornillas",
+    name: "Cocina Industrial 2 Hornillas",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "panaderias", "cafeterias", "otros"],
+    images: [
+      "assets/images/products/cocina-industrial-2-hornillas-1.webp",
+      "assets/images/products/cocina-industrial-2-hornillas-2.webp",
+    ],
+    shortDescription:
+      "Cocina industrial de 2 hornillas en acero inoxidable, con parrillas de fundición y repisa inferior. Versión compacta para espacios reducidos.",
+    description:
+      "Cocina industrial de 2 hornillas, construida en acero inoxidable, con quemadores de fundición de alta resistencia y perillas de control independientes para cada hornilla. Incorpora repisa inferior en acero inoxidable para almacenamiento u ollas de reserva, y patas regulables para nivelación en piso. Su tamaño compacto la hace adecuada para cocinas con espacio limitado que igualmente requieren capacidad de cocción industrial, como negocios de producción moderada o como complemento de una línea de cocción más amplia. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroHornillas: "2",
+      potencia: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
