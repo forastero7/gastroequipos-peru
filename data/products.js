@@ -523,4 +523,38 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p13",
+    slug: "freidora-automatica-industrial",
+    name: "Freidora Automática Industrial",
+    category: "linea-caliente",
+    subcategory: "freidoras",
+    businessTypes: ["restaurantes", "pollerias", "chifas", "comida-rapida"],
+    images: [
+      "assets/images/products/freidora-automatica-industrial-1.webp",
+      "assets/images/products/freidora-automatica-industrial-2.webp",
+      "assets/images/products/freidora-automatica-industrial-3.webp",
+      "assets/images/products/freidora-automatica-industrial-4.webp",
+    ],
+    shortDescription:
+      "Freidora automática industrial de doble cesta en acero inoxidable, con gabinete inferior y ruedas para fácil desplazamiento.",
+    description:
+      "Freidora automática industrial de doble cesta, construida en acero inoxidable para resistir el uso intensivo en cocinas de alta demanda. Incluye cestas colgantes con mango ergonómico y gabinete inferior con puerta, montado sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Pensada para negocios con producción constante de frituras. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      capacidad: "-- (por confirmar)",
+      potencia: "-- (por confirmar)",
+      voltaje: "-- (por confirmar)",
+      combustible: "-- (por confirmar)",
+      numeroCestas: "2",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];

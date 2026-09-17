@@ -101,6 +101,7 @@ export const SPEC_LABELS = {
   combustible: "Combustible",
   numeroPuertas: "Número de puertas",
   numeroHornillas: "Número de hornillas",
+  numeroCestas: "Número de cestas",
   temperatura: "Temperatura",
   peso: "Peso",
   garantia: "Garantía",
