@@ -589,4 +589,39 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p15",
+    slug: "parrilla-mesa-empotrable",
+    name: "Parrilla de Mesa Empotrable",
+    category: "linea-caliente",
+    subcategory: "parrillas",
+    businessTypes: ["restaurantes", "hoteles", "otros"],
+    // NOTA: fotos reales pendientes de reemplazar. El equipo compartió 5
+    // fotos del producto en el chat, pero esta sesión no logró guardar los
+    // archivos en disco para poder optimizarlos (a diferencia de los
+    // productos anteriores). Se usan placeholders genéricos mientras se
+    // reenvían las fotos. Ver README, sección 6, para el procedimiento.
+    images: [
+      "assets/images/products/placeholder-1.svg",
+      "assets/images/products/placeholder-2.svg",
+      "assets/images/products/placeholder-3.svg",
+    ],
+    shortDescription:
+      "Parrilla de mesa empotrable a carbón, con parrilla ajustable por manivela y bandeja extraíble en acero inoxidable.",
+    description:
+      "Parrilla de mesa empotrable a carbón, construida en acero inoxidable. Cuenta con parrilla superior ajustable en altura mediante manivela, para regular la intensidad del calor sobre las brasas, y bandeja/cajón extraíble para el manejo de cenizas. Incluye asas laterales para facilitar su traslado. Diseño pensado para integrarse en una línea de cocción empotrada en restaurantes y parrilladas de alto volumen. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Carbón",
+      capacidad: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
