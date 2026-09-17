@@ -190,7 +190,7 @@ export function createProductCard(product) {
       </p>
       <div class="product-card__actions">
         <a class="btn btn-outline btn-sm" href="producto.html?slug=${encodeURIComponent(product.slug)}">Ver equipo</a>
-        <button type="button" class="btn btn-primary btn-sm" data-add-to-quote="${product.id}">Agregar a cotización</button>
+        <button type="button" class="btn btn-quote btn-sm" data-add-to-quote="${product.id}">Agregar a cotización</button>
       </div>
     </div>
   `;
