@@ -923,23 +923,38 @@ body.nav-is-open { overflow: hidden; }
    -------------------------------------------------------------------------- */
 .location-grid { display: grid; gap: var(--space-6); grid-template-columns: 1fr; }
 @media (min-width: 900px) { .location-grid { grid-template-columns: 1fr 1fr; } }
-.location-map-placeholder {
-  aspect-ratio: 4 / 3;
+/* Mapa real de Google Maps embebido (iframe, sin API key). Altura fija
+   por breakpoint en vez de aspect-ratio, para controlar el alto en
+   escritorio (~350-400px) y reducirlo en móvil según lo pedido. */
+.location-map { display: flex; flex-direction: column; }
+.location-map__frame {
+  position: relative;
+  width: 100%;
+  height: 260px;
   border-radius: var(--radius-md);
-  border: 1px dashed var(--color-border);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
   background: var(--color-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  color: var(--color-text-muted);
-  text-align: center;
-  padding: var(--space-5);
 }
+.location-map__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (min-width: 768px) {
+  .location-map__frame { height: 320px; }
+}
+@media (min-width: 1024px) {
+  .location-map__frame { height: 380px; }
+}
+
 .location-list { display: flex; flex-direction: column; gap: var(--space-4); }
 .location-list li { display: flex; gap: var(--space-3); }
 .location-list .icon { color: var(--color-accent-dark); flex-shrink: 0; margin-top: 2px; }
+.location-list span { display: flex; flex-direction: column; gap: 2px; }
+.location-list__name { font-weight: 800; color: var(--color-ink); }
 .location-list a { color: var(--color-accent-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 .location-list a:hover { color: var(--color-accent); }
 

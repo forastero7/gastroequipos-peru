@@ -396,16 +396,29 @@
           <span class="eyebrow">Visítanos</span>
           <h2 id="ubicanosTitle">Visítanos</h2>
           <ul class="location-list" style="margin-top: var(--space-5);">
-            <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg><span><a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener">Ver ubicación en Google Maps</a></span></li>
+            <li>
+              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>
+              <span>
+                <strong class="location-list__name">JEINOX GastroSystems</strong>
+                <a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener">Ver en Google Maps</a>
+              </span>
+            </li>
             <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-phone"/></svg><span>[Teléfono / WhatsApp pendiente]</span></li>
             <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"/></svg><span><a href="mailto:jeinox2020@gmail.com">jeinox2020@gmail.com</a></span></li>
             <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"/></svg><span>[Horario de atención pendiente]</span></li>
           </ul>
         </div>
-        <div class="location-map-placeholder">
-          <svg class="icon icon--lg" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>
-          <p>Consulta nuestra ubicación exacta en Google Maps.</p>
-          <a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top: var(--space-2);">
+        <div class="location-map">
+          <div class="location-map__frame">
+            <iframe
+              src="https://www.google.com/maps?q=-12.044493,-77.0409056&z=17&output=embed"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de JEINOX GastroSystems en Google Maps"></iframe>
+          </div>
+          <a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top: var(--space-3);">
             Abrir en Google Maps
             <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-right"/></svg>
           </a>
