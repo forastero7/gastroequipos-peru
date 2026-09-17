@@ -709,4 +709,34 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p19",
+    slug: "cocina-industrial-3-hornillas-horno",
+    name: "Cocina Industrial 3 Hornillas + Horno",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "panaderias", "otros"],
+    images: [
+      "assets/images/products/cocina-industrial-3-hornillas-horno-1.webp",
+      "assets/images/products/cocina-industrial-3-hornillas-horno-2.webp",
+    ],
+    shortDescription:
+      "Cocina industrial de 3 hornillas con horno y gratinador incorporados, en acero inoxidable, con repisa inferior. Cocción, horneado y gratinado en un solo mueble.",
+    description:
+      "Cocina industrial de 3 hornillas con horno incorporado, construida en acero inoxidable. Las tres hornillas cuentan con quemadores de fundición y perillas de control independientes, mientras que el módulo inferior integra horno con puerta de visor y función de gratinador, además de repisa lateral para almacenamiento. Panel de control frontal con mando de presión y perillas identificadas por función (cocina, gratinador, horno), lo que facilita su operación. Diseño pensado para negocios que requieren cocción, horneado y gratinado en un mismo mueble, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroHornillas: "3 + horno",
+      potencia: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
