@@ -858,4 +858,40 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p24",
+    slug: "lavadero-industrial-2-pozas-anaqueles",
+    name: "Lavadero Industrial 2 Pozas con Anaqueles",
+    category: "acero-inoxidable",
+    subcategory: "lavaderos",
+    businessTypes: [
+      "restaurantes",
+      "pollerias",
+      "chifas",
+      "panaderias",
+      "cafeterias",
+      "comida-rapida",
+      "hoteles",
+    ],
+    images: [
+      "assets/images/products/lavadero-2pozas-anaqueles-1.webp",
+      "assets/images/products/lavadero-2pozas-anaqueles-2.webp",
+      "assets/images/products/lavadero-2pozas-anaqueles-3.webp",
+    ],
+    shortDescription:
+      "Lavadero industrial de 2 pozas en acero inoxidable, con anaqueles superiores para escurrir platos y panel con ganchos para colgar utensilios y vasos.",
+    description:
+      "Lavadero industrial de 2 pozas en acero inoxidable, que además de las dos pozas profundas para el lavado incorpora una estructura superior con 2 anaqueles de rejilla para escurrir y almacenar platos, y un panel con ganchos para colgar utensilios de cocina y vasos. Estructura tubular en acero inoxidable con patas regulables para nivelación en piso. Diseño pensado para negocios que buscan concentrar el lavado, escurrido y almacenamiento de vajilla y utensilios en una sola estación, optimizando el orden y el espacio del área de lavado. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
