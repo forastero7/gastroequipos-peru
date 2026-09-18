@@ -771,4 +771,32 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p21",
+    slug: "mesa-trabajo-5-niveles",
+    name: "Mesa de Trabajo 5 Niveles",
+    category: "acero-inoxidable",
+    subcategory: "mesas",
+    businessTypes: ["restaurantes", "panaderias", "cafeterias", "hoteles", "otros"],
+    images: [
+      "assets/images/products/mesa-trabajo-5-niveles-1.webp",
+      "assets/images/products/mesa-trabajo-5-niveles-2.webp",
+    ],
+    shortDescription:
+      "Mesa de trabajo en acero inoxidable de 5 niveles: superficie principal, 2 repisas superiores y 2 repisas inferiores, para máximo aprovechamiento del espacio.",
+    description:
+      "Mesa de trabajo en acero inoxidable de 5 niveles, pensada para maximizar el aprovechamiento del espacio en cocina. Además de la superficie principal de trabajo, incorpora un entrepaño superior de 2 repisas para tener a la mano utensilios, insumos o vajilla, y 2 repisas inferiores adicionales para almacenamiento. Estructura tubular en acero inoxidable con patas regulables para nivelación en piso. Diseño pensado para negocios que requieren ordenar y tener accesible una mayor cantidad de utensilios e insumos en un solo mueble. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      capacidad: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
