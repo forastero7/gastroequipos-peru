@@ -159,14 +159,13 @@ export const products = [
     subcategory: "cocinas",
     businessTypes: ["restaurantes", "pollerias", "chifas", "comida-rapida"],
     images: [
-      "assets/images/products/placeholder-1.svg",
-      "assets/images/products/placeholder-2.svg",
-      "assets/images/products/placeholder-3.svg",
+      "assets/images/products/cocina-industrial-4-hornillas-1.webp",
+      "assets/images/products/cocina-industrial-4-hornillas-2.webp",
     ],
     shortDescription:
-      "Cocina de 4 hornillas en acero inoxidable para cocinas de alta producción.",
+      "Cocina de 4 hornillas en acero inoxidable para cocinas de alta producción, con quemadores de fundición y repisa inferior.",
     description:
-      "Cocina industrial de 4 hornillas construida en acero inoxidable, pensada para negocios con producción constante. Estructura reforzada y diseño pensado para uso intensivo. Especificaciones exactas sujetas a confirmación según modelo.",
+      "Cocina industrial de 4 hornillas construida en acero inoxidable, pensada para negocios con producción constante. Cuenta con quemadores de fundición de alta resistencia, perillas de control independientes por hornilla y repisa inferior en acero inoxidable para almacenamiento. Estructura tubular reforzada y diseño pensado para uso intensivo. Especificaciones exactas sujetas a confirmación según modelo.",
     specifications: {
       dimensiones: "-- (por confirmar)",
       material: "Acero inoxidable",
