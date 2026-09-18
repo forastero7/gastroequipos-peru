@@ -799,4 +799,33 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p22",
+    slug: "caja-china-3en1",
+    name: "Caja China 3 en 1",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "pollerias", "otros"],
+    images: [
+      "assets/images/products/caja-china-3en1-1.webp",
+      "assets/images/products/caja-china-3en1-2.webp",
+    ],
+    shortDescription:
+      "Caja china 3 en 1 en acero inoxidable, con parrilla superior y asador giratorio de accionamiento manual mediante manivela. Capacidad 20 kg.",
+    description:
+      "Caja china 3 en 1, construida en acero inoxidable, que combina tres modos de cocción en un solo equipo: caja china abierta para cocción a las brasas, parrilla superior para grillar y asador giratorio de accionamiento manual mediante manivela, ideal para pollo o chancho al palo. El asador se ubica en una estructura elevada sobre la caja, lo que permite aprovechar el calor de las brasas de forma indirecta mientras gira. Incluye bandeja lateral para el manejo de residuos, asas para su traslado y estructura montada sobre ruedas giratorias con freno. Cuenta con capacidad para 20 kg, adecuada para preparaciones de alto volumen. Diseño orientado a restaurantes y pollerías que buscan un equipo versátil operado sin necesidad de motor eléctrico. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Carbón",
+      capacidad: "20 kg",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
