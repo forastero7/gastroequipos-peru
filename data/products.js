@@ -828,4 +828,34 @@ export const products = [
     featured: false,
     warranty: "Por confirmar",
   },
+  {
+    id: "p23",
+    slug: "caja-china-2en1",
+    name: "Caja China 2 en 1",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "pollerias", "otros"],
+    images: [
+      "assets/images/products/caja-china-2en1-1.webp",
+      "assets/images/products/caja-china-2en1-2.webp",
+      "assets/images/products/caja-china-2en1-3.webp",
+    ],
+    shortDescription:
+      "Caja china 2 en 1 en acero inoxidable, con parrilla superior fija. Capacidad 10 kg, ideal para negocios de menor volumen.",
+    description:
+      "Caja china 2 en 1, construida en acero inoxidable, que combina caja china para cocción a las brasas y parrilla superior fija para grillar, en una estructura compacta. Cuenta con asas laterales para su traslado y estructura montada sobre ruedas giratorias con freno, que facilitan su desplazamiento y limpieza. Con capacidad para 10 kg, es una opción práctica para negocios de menor volumen de producción o espacios más reducidos que igualmente requieren la versatilidad de la caja china y la parrilla en un solo equipo. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Carbón",
+      capacidad: "10 kg",
+      peso: "-- (por confirmar)",
+      garantia: "-- (por confirmar)",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "Por confirmar",
+  },
 ];
