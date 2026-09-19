@@ -48,7 +48,7 @@ export const categories = [
     name: "Línea caliente",
     description:
       "Cocinas, hornos, freidoras, parrillas y planchas para producción en volumen.",
-    image: "assets/images/categories/linea-caliente.svg",
+    image: "assets/images/categories/linea-caliente.webp",
     subcategories: [
       { id: "cocinas", name: "Cocinas industriales" },
       { id: "hornos", name: "Hornos" },
@@ -62,7 +62,7 @@ export const categories = [
     name: "Línea fría",
     description:
       "Refrigeración y conservación profesional para tu negocio gastronómico.",
-    image: "assets/images/categories/linea-fria.svg",
+    image: "assets/images/categories/linea-fria.webp",
     subcategories: [
       { id: "refrigeradores", name: "Refrigeradores" },
       { id: "congeladores", name: "Congeladores" },
@@ -76,7 +76,7 @@ export const categories = [
     name: "Acero inoxidable",
     description:
       "Mobiliario, campanas y fabricaciones especiales en acero inoxidable a medida.",
-    image: "assets/images/categories/acero-inoxidable.svg",
+    image: "assets/images/categories/acero-inoxidable.webp",
     subcategories: [
       { id: "mesas", name: "Mesas" },
       { id: "lavaderos", name: "Lavaderos" },
