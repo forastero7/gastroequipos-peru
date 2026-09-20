@@ -1,0 +1,1867 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditoría web — Jeinox GastroSystems</title>
+<style>
+  :root {
+    --color-ink: #0d1117;
+    --color-accent: #1d4ed8;
+    --color-accent-dark: #1739ad;
+    --color-bg: #f5f7fa;
+    --color-surface: #ffffff;
+    --color-border: #dde1e6;
+    --color-text: #10151c;
+    --color-text-muted: #55606c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .topbar {
+    background: var(--color-ink);
+    color: #fff;
+    padding: 18px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .topbar strong { font-size: 1.05rem; }
+  .topbar span { color: #9fb3d9; font-size: 0.85rem; }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  .doc {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 40px clamp(20px, 5vw, 56px);
+    box-shadow: 0 4px 16px rgba(26,31,38,0.06);
+  }
+  h1 { font-size: 1.7rem; line-height: 1.25; margin: 1.6em 0 0.5em; color: var(--color-ink); }
+  h1:first-child { margin-top: 0; }
+  h2 {
+    font-size: 1.3rem;
+    margin: 1.8em 0 0.6em;
+    color: var(--color-ink);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 6px;
+  }
+  h3 { font-size: 1.08rem; margin: 1.4em 0 0.5em; color: var(--color-ink); }
+  p, li { font-size: 0.98rem; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.35em; }
+  a { color: var(--color-accent); text-decoration: underline; }
+  a:hover { color: var(--color-accent-dark); }
+  code {
+    background: #eef1f5;
+    border-radius: 4px;
+    padding: 0.12em 0.4em;
+    font-size: 0.88em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  pre {
+    background: #0d1117;
+    color: #e6edf3;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+  pre code { background: none; color: inherit; padding: 0; }
+  blockquote {
+    margin: 1em 0;
+    padding: 10px 18px;
+    background: #eef4ff;
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0 6px 6px 0;
+    color: var(--color-text-muted);
+  }
+  hr { border: none; border-top: 1px solid var(--color-border); margin: 2.2em 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--color-border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--color-ink); color: #fff; font-weight: 600; }
+  tr:nth-child(even) td { background: #f7f9fb; }
+  strong { color: var(--color-ink); }
+  .doc > h1:nth-of-type(2) {
+    text-align: center;
+    font-size: 2.6rem;
+    color: var(--color-accent);
+    border: none;
+    margin: 0.2em 0;
+  }
+  @media print {
+    .topbar { position: static; }
+    body { background: #fff; }
+    .doc { box-shadow: none; border: none; }
+  }
+  @media (max-width: 600px) {
+    .wrap { padding: 16px 8px 60px; }
+    .doc { padding: 24px 16px; }
+    table { font-size: 0.8rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <strong>Auditoría web — Jeinox GastroSystems</strong>
+    <span>Generado el 20 de septiembre de 2026 · No se modificó ningún archivo del proyecto</span>
+  </div>
+  <div class="wrap">
+    <div class="doc">
+<h1 id="auditoria-tecnica-y-comercial-jeinox-gastrosystems">Auditoría técnica y comercial — Jeinox GastroSystems</h1>
+<p><strong>Sitio auditado:</strong> https://forastero7.github.io/gastroequipos-peru/
+<strong>Repositorio:</strong> <code>forastero7/gastroequipos-peru</code> (rama <code>claude/gifted-goldberg-54hj0c</code>)
+<strong>Fecha de auditoría:</strong> 20 de septiembre de 2026
+<strong>Tipo de auditoría:</strong> Frontend, UX/UI, SEO técnico, rendimiento, accesibilidad, responsive, conversión y arquitectura.
+<strong>Alcance:</strong> Análisis únicamente. <strong>No se modificó ningún archivo del proyecto.</strong>
+<strong>Metodología:</strong> Lectura completa del código fuente real (9 páginas HTML, 1 hoja CSS, 5 módulos JS, archivo de datos de 29 productos), inspección de las 47 imágenes reales del repositorio, medición de peso de red y errores de consola con navegador automatizado (Playwright/Chromium) en 9 páginas y 8 anchos de pantalla (320–1920 px), y verificación uno a uno de los 40 enlaces internos únicos del sitio.</p>
+<blockquote>
+<p><strong>Nota para lectores no técnicos:</strong> cada término técnico (LCP, CLS, canonical, schema, etc.) se explica la primera vez que aparece. Las tablas indican siempre el archivo exacto donde está cada hallazgo, para que cualquier desarrollador pueda ubicarlo de inmediato.</p>
+</blockquote>
+<hr />
+<h2 id="1-resumen-ejecutivo">1. Resumen ejecutivo</h2>
+<p>Jeinox GastroSystems tiene una web <strong>bien construida técnicamente para su etapa actual</strong> (una "Base V1" sin backend, según el propio <code>README.md</code> del proyecto): código limpio, modular, sin errores de consola en ninguna de las 9 páginas, sin enlaces internos rotos, con buen uso de accesibilidad básica y un flujo de cotización por WhatsApp que funciona de punta a punta.</p>
+<p>Sin embargo, la auditoría encontró <strong>problemas concretos que sí afectan ventas y percepción de marca hoy mismo</strong>:</p>
+<ol>
+<li>El <strong>dominio usado en las etiquetas SEO no existe</strong> (<code>jeinoxgastronomic.example</code>) en las 9 páginas — Google y las vistas previas de WhatsApp/Facebook no van a mostrar la información correcta.</li>
+<li>El <strong>botón principal "Cotizar equipos" del header se corta visualmente</strong> en anchos de pantalla muy comunes (1024–1250 px: tablets en horizontal, laptops pequeñas, ventanas no maximizadas).</li>
+<li>La marca aparece con <strong>tres nombres distintos</strong> en el propio sitio: "Jeinox Gastronomic" (dominante), "Jeinox GastroSystems" (FAQ, WhatsApp, ubicación) e "INDUSTRIAS JEINOX" (dentro del propio logo).</li>
+<li>Hay <strong>páginas con contenido de relleno ("placeholder") totalmente inventado</strong> (<code>proyectos.html</code>, <code>garantia.html</code>, <code>nosotros.html</code>) que Google puede indexar porque están marcadas como <code>index, follow</code>, y que son accesibles desde el menú y el pie de página de casi todas las páginas.</li>
+<li>El catálogo (<code>catalogo.html</code>) pesa <strong>1.2 MB</strong> por visita porque cada tarjeta descarga la imagen a resolución completa (hasta 2002×1200 px) aunque se muestre en una tarjeta pequeña.</li>
+</ol>
+<p>Ninguno de estos problemas es catastrófico por sí solo, pero juntos <strong>sí reducen conversión, confianza y posicionamiento en Google</strong> — exactamente los tres objetivos comerciales que la empresa persigue con esta web.</p>
+<h3 id="puntuacion-tecnica-general">Puntuación técnica general</h3>
+<h1 id="68-100"><strong>68 / 100</strong></h1>
+<p>(ver desglose completo en la sección 21)</p>
+<hr />
+<h2 id="2-estado-actual-del-proyecto">2. Estado actual del proyecto</h2>
+<ul>
+<li><strong>Tipo de sitio:</strong> estático, sin framework, sin paso de build (<code>package.json</code> no existe). HTML + CSS + JavaScript nativo con módulos ES (<code>&lt;script type="module"&gt;</code>).</li>
+<li><strong>Hosting:</strong> GitHub Pages, desplegado directo desde la rama <code>claude/gifted-goldberg-54hj0c</code>.</li>
+<li><strong>Backend:</strong> ninguno. No hay base de datos, login, checkout ni pasarela de pagos (confirmado en <code>README.md</code>, sección 1: "No es un e-commerce").</li>
+<li><strong>Peso total del proyecto (sin <code>.git</code>):</strong> ≈ 2.94 MB.</li>
+<li><strong>9 páginas HTML, 1 hoja CSS, 5 módulos JS, 1 archivo de datos, 47 imágenes WebP + 10 SVG.</strong></li>
+<li><strong>Última actividad de commits:</strong> 34 commits en el historial de la rama de trabajo.</li>
+</ul>
+<hr />
+<h2 id="3-arquitectura-del-proyecto">3. Arquitectura del proyecto</h2>
+<h3 id="31-estructura-de-archivos">3.1 Estructura de archivos</h3>
+<pre><code>/
+├── index.html, catalogo.html, producto.html, cotizacion.html,
+│   nosotros.html, proyectos.html, garantia.html,
+│   privacidad.html, libro-reclamaciones.html      (9 páginas HTML)
+├── css/styles.css                                  (1 hoja, 37.4 KB)
+├── js/
+│   ├── main.js        Menú móvil, acordeón FAQ, formulario &quot;a medida&quot;
+│   ├── products.js     Render de tarjetas, ficha de producto, destacados
+│   ├── catalog.js        Buscador y filtros del catálogo
+│   └── quote.js            Carrito &quot;Mi cotización&quot; (localStorage) + WhatsApp
+├── data/products.js                                (29 productos, 48 KB)
+└── assets/
+    ├── images/products/    43 fotos reales .webp + 3 placeholders .svg
+    ├── images/categories/   3 imágenes .webp
+    ├── images/projects/      3 placeholders .svg (reutilizados)
+    ├── images/branding/       logo .svg/.webp
+    ├── icons/                  sprite.svg + favicon.svg
+    └── videos/                  carpeta vacía (solo .gitkeep)
+</code></pre>
+<h3 id="32-evaluacion-de-la-organizacion">3.2 Evaluación de la organización</h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Evaluación</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claridad</td>
+<td><strong>Buena.</strong> Cada archivo JS tiene una responsabilidad única y documentada (comentario de cabecera explica su rol).</td>
+<td><code>js/main.js</code>, <code>js/products.js</code>, <code>js/catalog.js</code>, <code>js/quote.js</code></td>
+</tr>
+<tr>
+<td>Mantenibilidad</td>
+<td><strong>Buena para el tamaño actual.</strong> Un solo archivo de datos (<code>data/products.js</code>) es la fuente única de verdad; agregar un producto no requiere tocar HTML.</td>
+<td>Confirmado por el flag <code>visible</code> agregado recientemente sin tocar HTML</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td><strong>Limitada más allá de ~100 productos</strong> (ver sección 20).</td>
+<td>Todo el catálogo se carga como un único array JS en cada página</td>
+</tr>
+<tr>
+<td>Desorden / repetición</td>
+<td><strong>Repetición real detectada:</strong> el <code>&lt;header&gt;</code> y <code>&lt;footer&gt;</code> completos (≈50 líneas cada uno) están <strong>copiados y pegados de forma idéntica en las 9 páginas HTML</strong>, en vez de generarse una sola vez.</td>
+<td>Comparación directa de <code>index.html</code>, <code>catalogo.html</code>, <code>garantia.html</code>, etc.</td>
+</tr>
+<tr>
+<td>Archivos innecesarios/duplicados</td>
+<td><code>assets/videos/</code> existe pero está vacía (solo <code>.gitkeep</code>): no hay video en el sitio, así que la carpeta no aporta nada todavía. Las 3 imágenes SVG de <code>assets/images/projects/</code> se reutilizan 2 veces cada una en <code>proyectos.html</code> (6 tarjetas, 3 imágenes distintas).</td>
+<td><code>find</code> del proyecto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consecuencia práctica de la repetición de header/footer:</strong> cualquier cambio de menú, teléfono o enlace debe repetirse a mano en 9 archivos. Esto ya generó una inconsistencia real y verificada: <strong>el enlace "Proyectos" del menú está oculto en <code>index.html</code> pero visible en las otras 8 páginas</strong> (ver sección 4 y 23).</p>
+<hr />
+<h2 id="4-auditoria-visual-ux">4. Auditoría visual / UX</h2>
+<h3 id="41-header">4.1 Header</h3>
+<ul>
+<li><strong>Logo:</strong> correcto, enlaza a inicio, <code>alt</code> descriptivo. El archivo gráfico del logo (<code>logo-mark.webp</code>) incluye el texto "INDUSTRIAS JEINOX" dentro de la propia imagen — ver sección 21 (coherencia de marca).</li>
+<li><strong>Menú:</strong> <code>index.html</code> muestra <strong>6 enlaces</strong> (Inicio, Productos, Línea caliente, Línea fría, Acero inoxidable, Nosotros). Las otras 8 páginas muestran <strong>7 enlaces</strong> (se agrega "Proyectos"). Esta diferencia es intencional según un comentario en el código (<code>index.html:47-49</code>: <em>"Enlace 'Proyectos' oculto temporalmente: proyectos.html solo contiene proyectos de ejemplo"</em>), pero <strong>no se replicó en el resto del sitio</strong>, así que el objetivo de ocultarlo se cumple solo en la portada.</li>
+<li><strong>CTA "Cotizar equipos":</strong> visible y bien jerarquizado (botón azul sólido) en pantallas grandes. <strong>Problema confirmado:</strong> entre 1024 px y ~1250 px de ancho, el botón se corta visualmente o queda fuera del área visible (ver sección 8, hallazgo crítico).</li>
+<li><strong>Sticky header:</strong> no es sticky (se desplaza con el scroll). No es un error, es una decisión de diseño; para un catálogo con muchos productos, un header fijo facilitaría volver a "Cotizar equipos" sin subir. Se sugiere como mejora, no como defecto.</li>
+<li><strong>Comportamiento móvil:</strong> el menú hamburguesa funciona correctamente (verificado con teclado: abre, cierra con <code>Escape</code>, cierra al hacer clic fuera). Buen manejo de <code>aria-expanded</code>.</li>
+</ul>
+<h3 id="42-hero-portada">4.2 Hero (portada)</h3>
+<ul>
+<li>Mensaje principal: <em>"Equipamiento profesional para negocios gastronómicos"</em> + subtítulo con las 3 líneas de producto. <strong>Es claro y directo</strong>, cumple el objetivo de explicar qué hace Jeinox en segundos.</li>
+<li>Dos CTA bien diferenciados: "Ver catálogo" (primario) y "Solicitar cotización" (secundario). Correcto.</li>
+<li>4 "trust badges" (Equipamiento profesional, Fabricación a medida, Atención especializada, Envíos nacionales) — genéricos pero coherentes con el rubro.</li>
+<li>No hay imagen ni video en el hero: es texto sobre un fondo de color. Es rápido de cargar (positivo para rendimiento) pero <strong>menos persuasivo</strong> que mostrar equipos reales de entrada — hoy la primera imagen de producto real aparece varios scrolls más abajo.</li>
+</ul>
+<h3 id="43-catalogo">4.3 Catálogo</h3>
+<ul>
+<li>Buscador + 5 filtros por línea de producto (Todos, Línea caliente, Línea fría, Acero inoxidable, Fabricación especial). <strong>Funciona correctamente</strong> (verificado: cambia resultados y contador en tiempo real).</li>
+<li>Tarjetas de producto: imagen, categoría, nombre, hasta 3 características clave, disponibilidad, "Cotizar" y dos botones ("Ver equipo" / "Agregar a cotización"). Diseño limpio y consistente.</li>
+<li><strong>Problema confirmado:</strong> el botón "Agregar a cotización" pierde parte de su texto (queda cortado, p. ej. "Agregar a co...") en el mismo rango de ancho (1024–1250 px) que el header, por la misma causa técnica (ver sección 8).</li>
+<li>No existe forma de comparar dos o más productos entre sí (no es un defecto — es una función que no fue construida — pero es una oportunidad de mejora dado que muchos productos son variantes entre sí, p. ej. cocinas de 2 y 3 hornillas).</li>
+<li>El aviso <em>"Filtros avanzados (precio, capacidad, dimensiones) próximamente"</em> es honesto pero puede leerse como una web incompleta; es una decisión de producto, no un error.</li>
+</ul>
+<h3 id="44-secciones-corporativas">4.4 Secciones corporativas</h3>
+<table>
+<thead>
+<tr>
+<th>Sección</th>
+<th>Estado</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Por qué elegirnos</td>
+<td>Textos genéricos pero coherentes con el rubro. Sin datos verificables (años de experiencia, certificaciones).</td>
+<td><code>index.html:134-169</code></td>
+</tr>
+<tr>
+<td>Garantía</td>
+<td>El resumen en portada dice <em>"se detallarán próximamente"</em>, pero cada ficha de producto ya declara "Garantía: 1 año" — <strong>mensaje contradictorio entre secciones del mismo sitio.</strong></td>
+<td><code>index.html:343</code> vs. <code>data/products.js</code> (<code>warranty: "1 año"</code> en los 29 productos)</td>
+</tr>
+<tr>
+<td>Fabricación a medida</td>
+<td>Formulario funcional y completo (tipo, cantidad, medidas, material, funcionamiento, comentarios) que arma un mensaje de WhatsApp bien estructurado. <strong>Es de las mejores piezas de UX del sitio.</strong></td>
+<td><code>index.html:172-234</code>, <code>js/main.js:138-177</code></td>
+</tr>
+<tr>
+<td>Automatización / equipos digitales</td>
+<td>Mencionados como diferenciales en "Por qué elegirnos" y FAQ, pero <strong>no hay ningún producto en el catálogo marcado como automático o digital de forma filtrable</strong> — es una promesa de marca sin respaldo visible en el catálogo.</td>
+<td><code>data/products.js</code> (no existe campo que distinga "automático/digital" como filtro)</td>
+</tr>
+<tr>
+<td>Acero inoxidable</td>
+<td>Tiene categoría propia en el catálogo, con productos reales. Correcto.</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Cobertura</td>
+<td>"Todo el Perú" se menciona en dos lugares distintos con formato distinto: <code>"Todo el Perú"</code> (home) y <code>[Todo el Perú]</code> entre corchetes (nosotros.html), delatando que en <code>nosotros.html</code> sigue siendo un placeholder.</td>
+<td><code>index.html:144</code>, <code>nosotros.html:125</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-formularios">4.5 Formularios</h3>
+<p>Hay dos formularios reales en el sitio:</p>
+<ol>
+<li><strong>"¿Necesitas un equipo a medida?"</strong> (<code>index.html</code>): 7 campos, 2 obligatorios (tipo y cantidad). Validación simple pero funcional (resalta campos vacíos, mensaje de error visible). Buena fricción — no pide de más.</li>
+<li><strong>Selección de cantidad en "Mi cotización"</strong> (<code>cotizacion.html</code>): controles +/- y campo numérico editable, con <code>aria-label</code> por producto. Funciona correctamente.</li>
+</ol>
+<p>No hay formulario de "contacto general" tradicional (nombre/correo/mensaje) — todo el contacto pasa por WhatsApp, lo cual es coherente con el modelo de negocio declarado.</p>
+<h3 id="46-footer">4.6 Footer</h3>
+<ul>
+<li>Idéntico y consistente en las 9 páginas (correcto).</li>
+<li>Contiene un enlace a <code>proyectos.html</code> bajo "Empresa" en <strong>todas</strong> las páginas, incluida la portada — es decir, aunque el menú superior de <code>index.html</code> oculta "Proyectos", el pie de página de esa misma portada sí lo enlaza. La ocultación es incompleta.</li>
+<li>Texto <strong>"Razón social y RUC pendientes de definir"</strong> visible en las 9 páginas — información legal pendiente (ver sección 26).</li>
+</ul>
+<hr />
+<h2 id="5-mobile-responsive">5. Mobile / Responsive</h2>
+<p>Se probaron 8 anchos: 320, 375, 390, 430, 768, 1024, 1366 y 1920 px, en <code>index.html</code>, <code>catalogo.html</code>, <code>producto.html</code> y <code>cotizacion.html</code>, con detección automática de scroll horizontal.</p>
+<table>
+<thead>
+<tr>
+<th>Ancho</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>320 px</td>
+<td>Overflow horizontal muy leve (2–8 px) en las 4 páginas — probablemente por redondeo de la barra de scroll del navegador de prueba, no es perceptible para el usuario real. <strong>Prioridad baja.</strong></td>
+</tr>
+<tr>
+<td>375 / 390 / 430 px</td>
+<td>Sin overflow. Menú hamburguesa, tarjetas en una columna, formularios legibles.</td>
+</tr>
+<tr>
+<td>768 px</td>
+<td>Sin overflow. Catálogo pasa a 2 columnas.</td>
+</tr>
+<tr>
+<td><strong>1024 px</strong></td>
+<td><strong>Overflow real de hasta 116 px.</strong> El botón "Cotizar equipos" del header y el botón "Agregar a cotización" de cada tarjeta quedan cortados (ver sección 8, capturas).</td>
+</tr>
+<tr>
+<td>1366 / 1920 px</td>
+<td>Sin overflow. Diseño correcto en escritorio grande.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> el sitio está bien resuelto en móvil puro (320–430 px) y en escritorio grande (≥1280 px), pero tiene un <strong>hueco real en el rango de tablets en horizontal y laptops pequeñas (1024–1250 px aprox.)</strong>, justo donde vive el menú de escritorio "completo". Ver causa técnica exacta en la sección 8.</p>
+<hr />
+<h2 id="6-rendimiento-performance">6. Rendimiento (Performance)</h2>
+<h3 id="61-peso-medido-por-pagina-transferencia-real-de-red-medida-con-navegador-automatizado">6.1 Peso medido por página (transferencia real de red, medida con navegador automatizado)</h3>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Peticiones</th>
+<th>Peso total</th>
+<th>Mayor consumidor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index.html</code></td>
+<td>21</td>
+<td><strong>649 KB</strong></td>
+<td>Imágenes WebP: 484 KB (8 productos destacados)</td>
+</tr>
+<tr>
+<td><code>catalogo.html</code></td>
+<td>28</td>
+<td><strong>1206 KB (1.2 MB)</strong></td>
+<td>Imágenes WebP: 1070 KB (18 productos visibles)</td>
+</tr>
+<tr>
+<td><code>producto.html</code> (ficha individual)</td>
+<td>17</td>
+<td><strong>509 KB</strong></td>
+<td>Imágenes WebP: 372 KB (galería + relacionados)</td>
+</tr>
+</tbody>
+</table>
+<p>CSS (36.5 KB) y JS (84.5 KB, repartido en 4 archivos) se cargan en <strong>todas</strong> las páginas aunque no siempre se usen todas sus funciones (por ejemplo, <code>js/catalog.js</code> se carga hasta en <code>privacidad.html</code>, donde no hay catálogo). El costo real es bajo (84.5 KB sin minificar) pero es una petición HTTP extra innecesaria por página.</p>
+<h3 id="62-causas-de-imagenes-pesadas">6.2 Causas de imágenes pesadas</h3>
+<p>Cada imagen de producto se sirve a su <strong>resolución de captura original</strong> (hasta 1600×1200 px, y en un caso 2002×1200 px), sin versiones más pequeñas (<code>srcset</code>) para móviles. Una tarjeta del catálogo se muestra en pantalla a ~300×225 px, pero el navegador descarga igualmente el archivo completo. Esto explica por qué <code>catalogo.html</code> (18 imágenes a la vez) pesa 1.2 MB.</p>
+<ul>
+<li>Las imágenes sí usan <code>loading="lazy"</code> (correcto) y declaran <code>width</code>/<code>height</code> en el HTML, lo que <strong>evita saltos de layout (CLS)</strong> — esto está bien hecho y no debe tocarse.</li>
+<li>No se usa <code>srcset</code>/<code>sizes</code> en ninguna imagen del catálogo.</li>
+<li>No hay imágenes en formato AVIF (serían ~20-30% más livianas que WebP), aunque WebP ya es una elección correcta y muy superior a JPG/PNG sin optimizar.</li>
+</ul>
+<h3 id="63-impacto-estimado-en-metricas-core-web-vitals">6.3 Impacto estimado en métricas Core Web Vitals</h3>
+<p><em>(Explicación breve: estas son las métricas que Google usa para medir qué tan rápida y estable se siente una página.)</em></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Qué mide</th>
+<th>Riesgo en este sitio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LCP</strong> (Largest Contentful Paint — tiempo hasta que se ve el elemento más grande de la pantalla)</td>
+<td>En <code>catalogo.html</code>, el elemento más grande suele ser la primera imagen de producto visible, servida a resolución completa sin <code>srcset</code>. Riesgo <strong>medio-alto</strong> en conexiones móviles 3G/4G lentas.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>CLS</strong> (Cumulative Layout Shift — saltos de diseño mientras carga)</td>
+<td><strong>Bajo riesgo.</strong> Las imágenes declaran <code>width</code>/<code>height</code>, y el mapa de Google usa <code>loading="lazy"</code> con un contenedor de altura fija. Buen trabajo ya hecho aquí.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>INP</strong> (Interaction to Next Paint — qué tan rápido responde la página a un clic)</td>
+<td><strong>Bajo riesgo.</strong> No hay JavaScript pesado ni librerías externas; los listeners son simples y delegados.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>FCP</strong> (First Contentful Paint)</td>
+<td><strong>Bajo-medio riesgo.</strong> El CSS (37 KB) no está minificado y bloquea el render hasta descargarse, pero su tamaño es pequeño.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>TTFB</strong> (Time To First Byte)</td>
+<td>Depende de GitHub Pages/CDN, fuera del control del código; en general GitHub Pages responde rápido para sitios estáticos pequeños.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-los-10-archivos-mas-pesados-del-proyecto">6.4 Los 10 archivos más pesados del proyecto</h3>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Tipo</th>
+<th>Peso</th>
+<th>Uso</th>
+<th>Problema</th>
+<th>Recomendación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>assets/images/products/parrilla-mesa-empotrable-1.webp</code></td>
+<td>Imagen</td>
+<td>118 KB</td>
+<td>Imagen principal de producto</td>
+<td>1600×1200, sin versión reducida</td>
+<td>Generar versión ~800×600 para catálogo</td>
+</tr>
+<tr>
+<td><code>assets/images/products/freidora-automatica-industrial-4.webp</code></td>
+<td>Imagen</td>
+<td>113 KB</td>
+<td>Miniatura de galería</td>
+<td>900×1200 (formato vertical) a un peso alto para ser una miniatura</td>
+<td>Comprimir más / recortar antes de subir</td>
+</tr>
+<tr>
+<td><code>assets/images/products/cocina-industrial-2-hornillas-chifero-1.webp</code></td>
+<td>Imagen</td>
+<td>104 KB</td>
+<td>Imagen principal de producto</td>
+<td>Resolución completa en tarjeta pequeña</td>
+<td>Redimensionar a tamaño de tarjeta</td>
+</tr>
+<tr>
+<td><code>assets/images/products/cocina-industrial-2-hornillas-2.webp</code></td>
+<td>Imagen</td>
+<td>103 KB</td>
+<td>Miniatura de galería</td>
+<td>Igual que arriba</td>
+<td>Igual que arriba</td>
+</tr>
+<tr>
+<td><code>assets/images/products/cocina-industrial-3-hornillas-chifero-horno-2.webp</code></td>
+<td>Imagen</td>
+<td>101 KB</td>
+<td>Miniatura de galería</td>
+<td>Igual que arriba</td>
+<td>Igual que arriba</td>
+</tr>
+<tr>
+<td><code>assets/images/products/parrilla-mesa-empotrable-3.webp</code></td>
+<td>Imagen</td>
+<td>101 KB</td>
+<td>Miniatura de galería</td>
+<td>Igual que arriba</td>
+<td>Igual que arriba</td>
+</tr>
+<tr>
+<td><code>assets/images/products/cocina-industrial-3-hornillas-horno-2.webp</code></td>
+<td>Imagen</td>
+<td>97 KB</td>
+<td>Miniatura de galería</td>
+<td>Igual que arriba</td>
+<td>Igual que arriba</td>
+</tr>
+<tr>
+<td><code>assets/images/products/cocina-industrial-3-hornillas-horno-1.webp</code></td>
+<td>Imagen</td>
+<td>97 KB</td>
+<td>Imagen principal</td>
+<td>Igual que arriba</td>
+<td>Igual que arriba</td>
+</tr>
+<tr>
+<td><code>assets/images/products/cocina-industrial-4-hornillas-2.webp</code></td>
+<td>Imagen</td>
+<td>81 KB</td>
+<td>Miniatura de galería</td>
+<td>2002×1200: la imagen más ancha del proyecto</td>
+<td>Recortar el encuadre antes de subir</td>
+</tr>
+<tr>
+<td><code>assets/images/products/caja-china-2en1-3.webp</code></td>
+<td>Imagen</td>
+<td>80 KB</td>
+<td>Miniatura de galería</td>
+<td>Resolución completa</td>
+<td>Redimensionar</td>
+</tr>
+<tr>
+<td><code>data/products.js</code> (código, no imagen)</td>
+<td>JS/datos</td>
+<td>46 KB</td>
+<td>Fuente única de datos de 29 productos</td>
+<td>No es "pesado" para la web (se sirve como texto comprimible), pero es el único archivo de código que crecerá con cada producto nuevo</td>
+<td>Vigilar tamaño si el catálogo crece a 100+ productos (ver sección 20)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Peso total de imágenes del proyecto:</strong> 2.6 MB en 47 archivos WebP/SVG. <strong>Peso total del proyecto (sin <code>.git</code>):</strong> 2.94 MB.</p>
+<hr />
+<h2 id="7-seo-tecnico">7. SEO técnico</h2>
+<h3 id="71-hallazgo-critico-dominio-inexistente-en-todas-las-etiquetas-seo">7.1 Hallazgo crítico: dominio inexistente en todas las etiquetas SEO</h3>
+<p>Las 9 páginas declaran:</p>
+<pre><code class="language-html">&lt;link rel=&quot;canonical&quot; href=&quot;https://www.jeinoxgastronomic.example/index.html&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://www.jeinoxgastronomic.example/index.html&quot;&gt;
+</code></pre>
+<p>El dominio <code>jeinoxgastronomic.example</code> <strong>no existe</strong> (<code>.example</code> es un dominio reservado que nunca se resuelve, usado normalmente solo en ejemplos de documentación). El sitio real vive en <code>https://forastero7.github.io/gastroequipos-peru/</code>. Esto significa:</p>
+<ul>
+<li>La etiqueta <strong>canonical</strong> (le dice a Google "esta es la versión oficial de esta URL") apunta a una dirección que no existe — en la práctica Google la ignora o la trata como señal confusa, y no consolida el posicionamiento en la URL real.</li>
+<li>Las etiquetas <strong>Open Graph</strong> (<code>og:url</code>, <code>og:title</code>, <code>og:image</code>) son las que WhatsApp, Facebook e Instagram leen para mostrar la vista previa de un enlace compartido. Con esta configuración, si alguien comparte el link del sitio por WhatsApp, la vista previa puede no cargar imagen ni datos correctos.</li>
+<li><strong>Esto es especialmente grave para el modelo de negocio de Jeinox</strong>, que depende de compartir enlaces por WhatsApp.</li>
+</ul>
+<h3 id="72-etiquetas-por-pagina-auditadas-una-por-una">7.2 Etiquetas por página (auditadas una por una)</h3>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th><code>&lt;title&gt;</code></th>
+<th>Meta description</th>
+<th>Canonical</th>
+<th>Robots</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index.html</code></td>
+<td>Correcto y descriptivo</td>
+<td>Correcta, con palabras clave relevantes</td>
+<td>Dominio inexistente</td>
+<td><code>index, follow</code></td>
+</tr>
+<tr>
+<td><code>catalogo.html</code></td>
+<td>Correcto</td>
+<td>Correcta</td>
+<td>Dominio inexistente</td>
+<td><code>index, follow</code></td>
+</tr>
+<tr>
+<td><code>producto.html</code></td>
+<td><strong>Genérico: "Equipo | Jeinox Gastronomic" para todos los productos</strong> (se actualiza con JavaScript después de cargar, pero el HTML fuente es siempre el mismo)</td>
+<td>Genérica ("Ficha técnica del equipo gastronómico")</td>
+<td><strong>Un solo canonical genérico sin <code>?slug=</code> para las 29 fichas de producto</strong></td>
+<td><code>index, follow</code></td>
+</tr>
+<tr>
+<td><code>nosotros.html</code>, <code>garantia.html</code>, <code>proyectos.html</code></td>
+<td>Correctos y descriptivos</td>
+<td>Correctas</td>
+<td>Dominio inexistente</td>
+<td><code>index, follow</code> (ver 7.4)</td>
+</tr>
+<tr>
+<td><code>cotizacion.html</code></td>
+<td>Correcto</td>
+<td>Correcta</td>
+<td>Dominio inexistente</td>
+<td><code>noindex, follow</code> ✅ correcto (es una página de utilidad, no debe indexarse)</td>
+</tr>
+<tr>
+<td><code>privacidad.html</code>, <code>libro-reclamaciones.html</code></td>
+<td>Correctos</td>
+<td>Correctas</td>
+<td>Dominio inexistente</td>
+<td><code>noindex, follow</code> ✅ correcto</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-producto-cada-ficha-comparte-la-misma-identidad-seo">7.3 Producto: cada ficha comparte la misma "identidad" SEO</h3>
+<p><code>producto.html</code> es una única plantilla que recibe el producto por <code>?slug=</code> y lo pinta con JavaScript (<code>js/products.js</code>, función <code>initProductDetail</code>). Esa función <strong>sí actualiza dinámicamente</strong> el <code>&lt;title&gt;</code> de la pestaña y el contenido de la meta description, pero <strong>no actualiza el <code>&lt;link rel="canonical"&gt;</code> ni las etiquetas Open Graph</strong> (<code>og:title</code>, <code>og:url</code>, <code>og:image</code>).</p>
+<p><strong>Consecuencia real:</strong>
+- Un buscador que no ejecute JavaScript (o un bot de vista previa como el de WhatsApp o Facebook, que generalmente <strong>no ejecutan JavaScript</strong>) verá <strong>siempre</strong> el mismo título genérico "Equipo | Jeinox Gastronomic" y ninguna imagen específica, sin importar qué producto se comparta.
+- Si un vendedor de Jeinox comparte el link de una freidora industrial específica por WhatsApp a un cliente, la vista previa que verá el cliente <strong>no mostrará el nombre ni la foto de esa freidora.</strong>
+- Esto reduce directamente la efectividad de compartir productos — un canal de venta clave para un negocio que cotiza por WhatsApp.</p>
+<h3 id="74-inconsistencia-entre-paginas-con-contenido-placeholder">7.4 Inconsistencia entre páginas con contenido placeholder</h3>
+<p><code>garantia.html</code> y <code>proyectos.html</code> tienen contenido explícitamente de relleno (ver sección 17) pero están marcadas <code>index, follow</code> (indexables por Google), mientras que <code>privacidad.html</code> y <code>libro-reclamaciones.html</code> — que también son "placeholders" según su propio texto — están correctamente marcadas <code>noindex, follow</code>. No hay un criterio único aplicado.</p>
+<h3 id="75-ausencias">7.5 Ausencias</h3>
+<ul>
+<li><strong>No existe <code>robots.txt</code></strong> en el proyecto.</li>
+<li><strong>No existe <code>sitemap.xml</code>.</strong></li>
+<li>No hay archivo de verificación de Google Search Console.</li>
+</ul>
+<h3 id="76-lo-que-si-funciona-bien-en-seo">7.6 Lo que SÍ funciona bien en SEO</h3>
+<ul>
+<li><code>lang="es-PE"</code> correcto en las 9 páginas.</li>
+<li>Jerarquía de encabezados razonable: un solo <code>&lt;h1&gt;</code> por página, <code>&lt;h2&gt;</code> para secciones.</li>
+<li>Todas las imágenes de producto tienen <code>alt</code> descriptivo (verificado en <code>js/products.js</code>: genera <code>alt="{nombre} — imagen referencial"</code>).</li>
+<li><code>viewport</code> correcto en las 9 páginas.</li>
+<li>Favicon presente y en SVG (liviano).</li>
+<li>Existen dos bloques de datos estructurados (JSON-LD) en <code>index.html</code>: <code>Organization</code> y <code>FAQPage</code> — ver sección 12.</li>
+</ul>
+<hr />
+<h2 id="8-bug-responsive-confirmado-el-cta-principal-se-corta-entre-10241250-px">8. Bug responsive confirmado: el CTA principal se corta entre 1024–1250 px</h2>
+<p>Este es, junto con el problema SEO del dominio, <strong>el hallazgo más importante de la auditoría</strong> porque afecta directamente la conversión.</p>
+<p><strong>Evidencia (capturas tomadas en vivo con el sitio corriendo localmente):</strong></p>
+<ul>
+<li>A 1024 px de ancho, el botón <strong>"Cotizar equipos"</strong> del header queda casi completamente fuera del área visible (solo se alcanza a ver el borde azul del botón), y el botón <strong>"Agregar a cotización"</strong> de cada tarjeta del catálogo muestra el texto cortado ("Agregar a co...").</li>
+<li>El mismo problema persiste, en menor grado, hasta ~1250 px (a 1100 px el botón se lee "Cotizar equi...").</li>
+<li>A partir de 1280 px el problema desaparece, pero el botón queda con muy poco margen respecto al borde de la pantalla.</li>
+<li>Se confirmó automáticamente overflow horizontal de <strong>116 px</strong> en <code>catalogo.html</code>, <code>producto.html</code> y <code>cotizacion.html</code> exactamente a 1024 px de ancho.</li>
+</ul>
+<p><strong>Causa técnica exacta</strong> (para quien vaya a corregirlo):</p>
+<p>En <code>css/styles.css</code>, línea 424, el bloque <code>@media (min-width: 1024px)</code> activa <strong>al mismo tiempo</strong>:
+- el menú de navegación completo en línea (7 elementos: Inicio, Productos, Línea caliente, Línea fría, Acero inoxidable, Proyectos, Nosotros) — antes de esto estaba oculto tras el botón de menú hamburguesa;
+- el botón <code>.header-cta</code> ("Cotizar equipos"), antes oculto (<code>display: none</code> en <code>css/styles.css:406</code>).</p>
+<p>Además, la clase <code>.btn</code> (línea ~236 de <code>css/styles.css</code>) tiene <code>white-space: nowrap</code>, es decir, el texto del botón <strong>nunca se parte en dos líneas ni se acorta</strong>. Como resultado, en el rango 1024–1250 px la suma de: logo + 7 enlaces + indicador "Mi cotización" + botón "Cotizar equipos" <strong>es más ancha que la pantalla</strong>, y no existe ningún mecanismo (recorte del texto, ocultar la etiqueta "Mi cotización", reducir espacios) que compense esa falta de espacio hasta que la pantalla es lo bastante ancha (~1280 px).</p>
+<p><strong>Por qué importa:</strong> 1024 px es el ancho de un iPad en horizontal y de muchas laptops pequeñas o ventanas de navegador no maximizadas — un segmento de tráfico real, no un caso extremo.</p>
+<hr />
+<h2 id="9-auditoria-de-imagenes">9. Auditoría de imágenes</h2>
+<ul>
+<li><strong>47 imágenes</strong> en el proyecto: 43 fotos reales de producto (.webp), 3 imágenes de categoría (.webp), 3 placeholders SVG de producto (reutilizados en 11 productos aún sin foto real) y 3 placeholders SVG de "proyectos" (reutilizados 2 veces cada uno).</li>
+<li><strong>Formato:</strong> WebP para fotos reales — es la elección correcta (mejor compresión que JPG/PNG a igual calidad visual). No se identificaron imágenes en PNG/JPG sin optimizar.</li>
+<li><strong>Dimensiones:</strong> heterogéneas e inconsistentes: la mayoría 1600×1200, pero también hay 675×1200, 800×1200, 900×1200, 1025×1200, 1131×1200, 2002×1200 — es decir, fotos tomadas en distintas relaciones de aspecto (algunas verticales, otras muy panorámicas), en vez de un estándar único de captura.</li>
+<li><strong>object-fit y recorte:</strong> las tarjetas usan <code>object-fit: cover</code> sobre un marco 4:3; la ficha de producto usa <code>object-fit: contain</code> (no recorta, correcto). Se revisó visualmente una miniatura generada a partir de una imagen extremadamente vertical (675×1200) y el recorte resultante seguía siendo reconocible, pero <strong>no hay garantía de que esto se cumpla para las demás imágenes con proporciones atípicas</strong> sin revisarlas una por una.</li>
+<li><strong><code>loading="lazy"</code>:</strong> presente en todas las imágenes de tarjetas y galerías (correcto).</li>
+<li><strong><code>alt</code>:</strong> presente y descriptivo en todas las imágenes de producto.</li>
+<li><strong><code>srcset</code>/imágenes responsivas:</strong> <strong>ausente en todo el proyecto.</strong> Es la causa principal del peso de <code>catalogo.html</code> (sección 6).</li>
+<li><strong>CLS (saltos de layout):</strong> bajo riesgo, porque todas las imágenes declaran <code>width</code> y <code>height</code> en el HTML.</li>
+<li><strong>Imágenes duplicadas/innecesarias:</strong> los 3 placeholders de <code>assets/images/projects/</code> se usan 2 veces cada uno en <code>proyectos.html</code> (6 tarjetas, solo 3 imágenes distintas) — no es grave, pero es visible para cualquier persona que note que dos tarjetas comparten exactamente la misma foto.</li>
+<li><strong>Recomendación de conversión (no ejecutar todavía):</strong> generar, para cada foto de producto, una versión adicional ~800×600 (o usar <code>srcset</code>) para que el catálogo no fuerce la descarga de la resolución completa en cada tarjeta.</li>
+</ul>
+<hr />
+<h2 id="10-video">10. Video</h2>
+<p>No hay ningún archivo de video en el proyecto: la carpeta <code>assets/videos/</code> existe pero está vacía (solo contiene un <code>.gitkeep</code>, un archivo vacío que Git usa para no eliminar carpetas vacías). El hero de la portada es texto puro, sin imagen ni video de fondo. No hay impacto negativo en velocidad por este concepto — pero tampoco hay el impacto positivo en conversión que un video corto de la fábrica/taller podría aportar.</p>
+<hr />
+<h2 id="11-accesibilidad">11. Accesibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Evaluación</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enlace "saltar al contenido"</td>
+<td>✅ Presente en las 9 páginas</td>
+<td><code>&lt;a class="skip-link" href="#main"&gt;</code></td>
+</tr>
+<tr>
+<td>Navegación por teclado</td>
+<td>✅ Verificado: el menú móvil abre, cierra con <code>Escape</code> y devuelve el foco al botón</td>
+<td><code>js/main.js:16-63</code>, verificado en vivo</td>
+</tr>
+<tr>
+<td><code>aria-expanded</code> / <code>aria-controls</code></td>
+<td>✅ Correcto en menú y acordeón FAQ</td>
+<td><code>js/main.js</code>, <code>index.html</code> (FAQ)</td>
+</tr>
+<tr>
+<td><code>aria-live</code></td>
+<td>✅ Usado en grillas dinámicas (catálogo, destacados) y en el toast de notificaciones</td>
+<td><code>index.html</code>, <code>catalogo.html</code></td>
+</tr>
+<tr>
+<td>Foco visible</td>
+<td>✅ Regla global <code>:focus-visible</code> con contorno de 3 px</td>
+<td><code>css/styles.css:75-78</code></td>
+</tr>
+<tr>
+<td>Etiquetas de formulario (<code>&lt;label&gt;</code>)</td>
+<td>✅ Todos los campos de "Fabricación a medida" y de cantidad en "Mi cotización" tienen <code>&lt;label&gt;</code> o <code>aria-label</code></td>
+<td><code>index.html</code>, <code>js/quote.js</code></td>
+</tr>
+<tr>
+<td>Botones solo-ícono</td>
+<td>✅ Tienen <code>aria-label</code> (ej. "Disminuir cantidad de {producto}")</td>
+<td><code>js/quote.js:199-204</code></td>
+</tr>
+<tr>
+<td>Jerarquía de encabezados</td>
+<td>✅ Un <code>&lt;h1&gt;</code> por página, sin saltos de nivel evidentes</td>
+<td>Revisión manual de las 9 páginas</td>
+</tr>
+<tr>
+<td>Contraste de color</td>
+<td>🟡 No se ejecutó un test de contraste automatizado (tipo axe-core), pero el azul principal (<code>#1d4ed8</code>) sobre blanco y el texto oscuro (<code>#10151c</code>) sobre fondos claros cumplen visualmente un contraste alto. Revisar puntualmente el texto gris claro (<code>#cbd2d9</code>) sobre el fondo oscuro de la sección "Garantía" en <code>index.html:343</code>.</td>
+<td><code>css/styles.css</code> (tokens de color)</td>
+</tr>
+<tr>
+<td>Tamaño táctil de botones</td>
+<td>🟡 No medido con regla exacta, pero los botones usan <code>padding: 0.75rem 1.25rem</code>, que en la mayoría de los casos supera el mínimo recomendado de 44×44 px.</td>
+<td><code>css/styles.css</code></td>
+</tr>
+<tr>
+<td>Contenido cargado por JavaScript sin alternativa</td>
+<td>🟡 <code>producto.html</code> muestra literalmente el texto "Cargando equipo…" en el <code>&lt;h1&gt;</code> inicial del HTML fuente. Un lector de pantalla o un buscador que no ejecute JavaScript vería ese texto en vez del nombre real del producto.</td>
+<td><code>producto.html:84</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clasificación de impacto:</strong> ningún hallazgo de accesibilidad es crítico; los de impacto medio son el contraste sin verificar puntualmente y el contenido de producto dependiente de JavaScript.</p>
+<hr />
+<h2 id="12-schema-datos-estructurados-json-ld">12. Schema / datos estructurados (JSON-LD)</h2>
+<p><strong>Sí existen</strong>, únicamente en <code>index.html</code>:</p>
+<ol>
+<li><strong><code>Organization</code></strong>: nombre, URL (con el dominio inexistente, ver sección 7), logo, correo, enlace de Google Maps y dos <code>ContactPoint</code> con los teléfonos. Correctamente formado.</li>
+<li><strong><code>FAQPage</code></strong>: las 9 preguntas frecuentes completas, duplicando exactamente el texto que ya está visible en el acordeón HTML de la misma página (no es un error — es el patrón recomendado por Google para FAQ — pero infla el peso del HTML de <code>index.html</code>, que con 35.7 KB es más de 3 veces el tamaño de cualquier otra página del sitio).</li>
+</ol>
+<p><strong>No existen</strong> (y podrían ser apropiados):</p>
+<ul>
+<li><strong><code>LocalBusiness</code></strong>: sería el más valioso para un negocio físico con dirección y horario — permitiría que Google muestre horario, teléfono y ubicación directamente en los resultados de búsqueda. Actualmente solo hay <code>Organization</code>, que es más genérico.</li>
+<li><strong><code>Product</code></strong>: <code>js/products.js</code> tiene una función <code>injectProductSchema()</code> que ya inyecta <code>Product</code> + <code>BreadcrumbList</code> en cada ficha de producto — <strong>esto sí existe</strong>, mediante JavaScript en <code>producto.html</code> (no aparece en el HTML fuente porque se genera dinámicamente). Es correcto, aunque hereda el mismo problema de la sección 7.3: no incluye <code>offers</code> (precio), lo cual es una decisión consciente y documentada en el propio código (los precios son "cotizar").</li>
+<li><strong><code>BreadcrumbList</code></strong> en el resto de páginas interiores (<code>nosotros.html</code>, <code>garantia.html</code>, etc.) — existe visualmente el breadcrumb en HTML, pero no está marcado con datos estructurados fuera de <code>producto.html</code>.</li>
+</ul>
+<p><em>(Solo se documenta lo encontrado; no se implementa nada nuevo en esta auditoría.)</em></p>
+<hr />
+<h2 id="13-seo-local">13. SEO local</h2>
+<p>Búsquedas objetivo mencionadas por el negocio: <em>"equipos gastronómicos Perú"</em>, <em>"equipos gastronómicos Lima"</em>, <em>"equipos de cocina industrial"</em>, <em>"fabricación de cocinas industriales"</em>, <em>"equipos en acero inoxidable"</em>, <em>"maquinaria gastronómica"</em>, <em>"equipos automáticos para restaurantes"</em>, <em>"equipos digitales gastronómicos"</em>, <em>"fabricación de equipos gastronómicos"</em>.</p>
+<p><strong>Lo que el contenido actual ya cubre bien, de forma natural (sin relleno de palabras clave):</strong>
+- "equipos gastronómicos", "línea caliente", "línea fría", "acero inoxidable" y "fabricación a medida" aparecen de forma orgánica y repetida en títulos, meta descriptions y encabezados de las páginas principales.
+- Las categorías del catálogo (<code>linea-caliente</code>, <code>linea-fria</code>, <code>acero-inoxidable</code>) y sus URLs (<code>catalogo.html?cat=linea-caliente</code>) refuerzan esos mismos términos.</p>
+<p><strong>Lo que falta para reforzar el posicionamiento local en Lima/Perú:</strong>
+- No hay ninguna mención textual de <strong>"Lima"</strong> como ciudad de operación fuera de la sección de envíos del FAQ ("Coordinamos entregas en Lima..."). No hay una frase clara tipo "Equipos gastronómicos en Lima, Perú" en el <code>&lt;h1&gt;</code> o la meta description de la portada.
+- "Equipos automáticos" y "equipos digitales" se mencionan como diferenciales de marca, pero <strong>ningún producto del catálogo está etiquetado ni es filtrable como "automático" o "digital"</strong> — quien busque específicamente "freidora automática" en Google puede llegar a la home, pero no hay una categoría o filtro que lo lleve directo a esos productos (sí existe, por ejemplo, el producto "Freidora Automática Industrial" en el catálogo — el problema es que no es una categoría navegable, solo un nombre de producto).
+- No existe <code>LocalBusiness</code> schema (ver sección 12), que es la señal más directa para SEO local.
+- No existe <code>sitemap.xml</code> ni <code>robots.txt</code> (ver sección 7.5), lo que dificulta que Google rastree e indexe todas las páginas de forma eficiente, especialmente las 29 fichas de producto individuales, que no están enlazadas desde ningún sitemap.</p>
+<hr />
+<h2 id="14-conversion">14. Conversión</h2>
+<h3 id="141-prueba-de-los-5-segundos">14.1 Prueba de los "5 segundos"</h3>
+<p>Un visitante nuevo que llega a <code>index.html</code> puede identificar en los primeros segundos:</p>
+<ul>
+<li>✅ <strong>Qué vende Jeinox:</strong> sí, el hero es explícito ("Equipamiento profesional para negocios gastronómicos").</li>
+<li>✅ <strong>A quién le vende:</strong> sí, aparece "restaurantes y negocios gastronómicos" y más abajo la sección "¿Qué negocio estás equipando?" con 9 rubros.</li>
+<li>🟡 <strong>Qué la diferencia:</strong> parcialmente. La sección "Por qué elegirnos" está más abajo (requiere scroll) y usa frases genéricas ("Experiencia especializada", "Taller propio") sin cifras que las respalden (años, cantidad de proyectos).</li>
+<li>✅ <strong>Cómo cotizar:</strong> sí, hay dos CTA visibles de inmediato ("Ver catálogo" / "Solicitar cotización").</li>
+<li>✅ <strong>Cómo contactar:</strong> sí, aunque el WhatsApp directo no está en el hero — está más abajo, en la sección "Visítanos", y el CTA principal del header dice "Cotizar equipos" (lleva al carrito, no abre WhatsApp directo).</li>
+</ul>
+<h3 id="142-auditoria-de-textos-de-los-cta">14.2 Auditoría de textos de los CTA</h3>
+<table>
+<thead>
+<tr>
+<th>Texto</th>
+<th>Dónde aparece</th>
+<th>Evaluación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Cotizar equipos"</td>
+<td>Header (todas las páginas)</td>
+<td>Lleva a <code>cotizacion.html</code> (el carrito), no abre WhatsApp directamente. Puede generar una expectativa distinta a la acción real (el usuario podría esperar un chat inmediato).</td>
+</tr>
+<tr>
+<td>"Ver catálogo"</td>
+<td>Hero, CTA final</td>
+<td>Claro y sin ambigüedad.</td>
+</tr>
+<tr>
+<td>"Solicitar cotización"</td>
+<td>Hero, footer de páginas internas</td>
+<td>Lleva a <code>cotizacion.html</code>, mismo destino que "Cotizar equipos" — <strong>dos textos distintos para el mismo destino</strong>, sin ser un error, sí es una inconsistencia de microcopy que se puede unificar.</td>
+</tr>
+<tr>
+<td>"Agregar a cotización"</td>
+<td>Cada tarjeta de producto</td>
+<td>Claro, consistente en todo el sitio.</td>
+</tr>
+<tr>
+<td>"Mi cotización"</td>
+<td>Header (indicador con contador)</td>
+<td>Claro.</td>
+</tr>
+<tr>
+<td>"Ver equipo"</td>
+<td>Cada tarjeta de producto</td>
+<td>Claro.</td>
+</tr>
+<tr>
+<td>Botones "WhatsApp +51 9XX XXX XXX"</td>
+<td><code>cotizacion.html</code></td>
+<td>Estos sí abren WhatsApp directamente con el mensaje armado — es el único lugar del sitio donde el usuario ve el número exacto antes de hacer clic.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Riesgo de confusión real:</strong> el usuario que hace clic en "Cotizar equipos" (header) espera posiblemente ir directo a WhatsApp, pero llega a una página intermedia (el carrito) que puede estar vacía si aún no agregó productos — mostrando el mensaje "Aún no agregaste equipos a tu cotización". No es un error técnico, pero es una fricción de expectativa que vale la pena revisar.</p>
+<h3 id="143-recorrido-visitante-whatsapp">14.3 Recorrido visitante → WhatsApp</h3>
+<p><code>Visitante → Catálogo → Producto → "Agregar a cotización" → "Mi cotización" → Elegir número de WhatsApp → WhatsApp con mensaje pre-armado.</code></p>
+<p>Este recorrido <strong>se probó de punta a punta y funciona sin errores.</strong> Los puntos donde un visitante real podría abandonar son:</p>
+<ol>
+<li><strong>Al llegar a "Mi cotización" vacío</strong> desde el CTA del header sin haber agregado nada antes (fricción de expectativa, sección 14.2).</li>
+<li><strong>En el rango 1024–1250 px</strong>, si el botón "Cotizar equipos" está cortado, el usuario podría no encontrarlo y abandonar sin cotizar (sección 8).</li>
+<li><strong>Al compartir un link de producto específico por WhatsApp</strong>, la vista previa no mostrará el producto correcto (sección 7.3) — esto no afecta al visitante que ya está en el sitio, pero sí a la persona que <strong>recibe</strong> el link compartido, reduciendo el interés de abrirlo.</li>
+</ol>
+<hr />
+<h2 id="15-sistema-de-cotizacion-mi-cotizacion">15. Sistema de cotización ("Mi cotización")</h2>
+<p><strong>Cómo funciona (verificado en código y en vivo):</strong> cada clic en "Agregar a cotización" guarda <code>{id, cantidad}</code> en <code>localStorage</code> (clave <code>gastroequipos:quote:v1</code>). La página <code>cotizacion.html</code> lee esa lista, la cruza con <code>data/products.js</code> para mostrar nombre/imagen, y permite subir/bajar cantidad, eliminar productos o vaciar todo. Al elegir un número de WhatsApp, arma un mensaje de texto con la lista de productos y cantidades y abre <code>wa.me</code> en una pestaña nueva.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Evaluación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Persistencia</td>
+<td>✅ Correcta: sobrevive a recargar la página y a navegar entre páginas (usa <code>localStorage</code>, no se pierde al cerrar la pestaña). Verificado en pruebas automatizadas.</td>
+</tr>
+<tr>
+<td>Productos duplicados</td>
+<td>✅ No ocurre: si se agrega el mismo producto dos veces, se <strong>suma la cantidad</strong> en la misma fila en vez de crear una fila duplicada — comportamiento correcto.</td>
+</tr>
+<tr>
+<td>Cantidad de clics para cotizar</td>
+<td>Bajo: Producto → Agregar (1 clic) → Mi cotización (1 clic, o automático si ya se está ahí) → elegir WhatsApp (1 clic) = 3 clics mínimo desde una ficha de producto. Razonable.</td>
+</tr>
+<tr>
+<td>Contador del header</td>
+<td>✅ Se actualiza en tiempo real en cualquier página tras agregar/quitar (usa un evento personalizado <code>gq:quote-updated</code>).</td>
+</tr>
+<tr>
+<td>Experiencia móvil</td>
+<td>✅ Los controles +/- de cantidad tienen tamaño adecuado y <code>aria-label</code> individual.</td>
+</tr>
+<tr>
+<td>Mensaje enviado a WhatsApp</td>
+<td>Es <strong>funcional pero mínimo</strong>: solo lista <code>- Nombre del producto x{cantidad}</code>. <strong>No incluye:</strong> el nombre del cliente, ningún dato de contacto adicional, ni un link de vuelta a la página del producto. El vendedor recibe una lista de equipos, pero deberá preguntar manualmente los datos del cliente y el negocio al que pertenece.</td>
+</tr>
+<tr>
+<td>Errores detectados</td>
+<td>Ninguno funcional. Es una limitación de contenido del mensaje, no un bug.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Comparación útil:</strong> el formulario de "Fabricación a medida" (sección 4.4) sí arma un mensaje mucho más completo (tipo de equipo, medidas, material, funcionamiento, comentarios) — sería razonable llevar ese mismo nivel de detalle al mensaje de "Mi cotización".</p>
+<hr />
+<h2 id="16-whatsapp">16. WhatsApp</h2>
+<ul>
+<li><strong>Formato de los números:</strong> correcto en los dos casos encontrados en el código — <code>51943688374</code> y <code>51926669669</code> (código de país + número, sin <code>+</code>, sin espacios, tal como exige la API de <code>wa.me</code>). Verificado en <code>js/quote.js:22-25</code>.</li>
+<li><strong>Enlaces <code>wa.me</code>:</strong> se construyen dinámicamente como <code>https://wa.me/{numero}?text={mensaje codificado}</code> — formato correcto, con el mensaje correctamente codificado con <code>encodeURIComponent</code> (evita errores por caracteres especiales, tildes o saltos de línea).</li>
+<li><strong>Apertura:</strong> todos los enlaces de WhatsApp se abren con <code>window.open(url, "_blank", "noopener")</code> — <strong>uso correcto de <code>noopener</code></strong>, que es una buena práctica de seguridad (evita que la pestaña nueva pueda manipular la pestaña original).</li>
+<li><strong>Compatibilidad:</strong> <code>wa.me</code> funciona igual en móvil (abre la app de WhatsApp) y en escritorio (abre WhatsApp Web) — no se detectó ninguna lógica que rompa esto.</li>
+<li><strong>Contenido de los mensajes:</strong> ver comparación en la sección 15. El del formulario "a medida" es completo; el de "Mi cotización" es mínimo.</li>
+<li><strong>Duplicidad de números:</strong> el sitio maneja dos números de WhatsApp (<code>cotizacion.html</code> los muestra ambos como botones separados), pero el formulario de "Fabricación a medida" <strong>solo usa el primero</strong> (<code>WHATSAPP_NUMBERS[0]</code>) — no es un error, pero es una inconsistencia menor: un cliente que llegue por ese formulario siempre escribirá al mismo número, mientras que el resto del sitio ofrece elegir.</li>
+</ul>
+<hr />
+<h2 id="17-contenido-placeholders-datos-inventados-y-textos-pendientes">17. Contenido: placeholders, datos inventados y textos pendientes</h2>
+<p>Se identificaron, leyendo el HTML real de cada página, los siguientes contenidos que el propio sitio declara como no definitivos:</p>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Contenido de relleno encontrado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nosotros.html</code></td>
+<td>"[Historia de la empresa pendiente...]", "Misión: [Pendiente de definir.]", "Visión: [Pendiente de definir.]", "[XX]+ Años de experiencia", "[X año] Garantía", "[Taller propio] Fabricación", "Producción en taller propio (<strong>dato a confirmar</strong>)"</td>
+</tr>
+<tr>
+<td><code>proyectos.html</code></td>
+<td>6 tarjetas de proyectos <strong>explícitamente ficticios</strong> ("Estas tarjetas son PLACEHOLDERS: no representan clientes reales"), con "[Ubicación pendiente]" repetido 6 veces y solo 3 imágenes SVG genéricas reutilizadas</td>
+</tr>
+<tr>
+<td><code>garantia.html</code></td>
+<td>"Todo el contenido siguiente es un PLACEHOLDER", con 4 bloques de texto entre corchetes sin definir (duración, cobertura, exclusiones, servicio técnico)</td>
+</tr>
+<tr>
+<td><code>index.html</code></td>
+<td>Nota visible sobre "Equipos destacados": <em>"Datos de demostración para probar la interfaz — no representan precios ni especificaciones reales"</em> — <strong>aplicada sobre 8 productos que ya tienen fotografías reales y especificaciones reales</strong> (ver 17.1)</td>
+</tr>
+<tr>
+<td>Footer (las 9 páginas)</td>
+<td>"Razón social y RUC pendientes de definir"</td>
+</tr>
+<tr>
+<td><code>privacidad.html</code></td>
+<td>Declarado explícitamente como marcador de posición</td>
+</tr>
+<tr>
+<td><code>libro-reclamaciones.html</code></td>
+<td>Declarado explícitamente como marcador de posición, pendiente de RUC/razón social</td>
+</tr>
+</tbody>
+</table>
+<h3 id="171-inconsistencia-importante-el-aviso-de-datos-de-demostracion-ya-no-es-cierto-para-8-de-los-productos">17.1 Inconsistencia importante: el aviso de "datos de demostración" ya no es cierto para 8 de los productos</h3>
+<p>La sección "Equipos destacados" de la portada muestra el aviso genérico de datos ficticios, pero los 8 productos que ahí aparecen <strong>ya tienen fotografías reales</strong> y especificaciones mayormente reales (material, combustible, número de hornillas, garantía de 1 año). El único dato realmente pendiente en esos productos es el <strong>precio</strong> (que de forma correcta y consciente el sitio no muestra: usa "Cotizar" en su lugar). Mantener el aviso tal como está <strong>resta credibilidad a información que ya es real</strong>, y no ayuda a que el visitante confíe en el catálogo.</p>
+<h3 id="172-no-se-encontraron">17.2 No se encontraron</h3>
+<ul>
+<li>Testimonios falsos activos (la sección de testimonios está <strong>comentada/desactivada</strong> en el HTML de <code>index.html</code>, con una nota explícita de "activar únicamente cuando existan reseñas reales" — buena práctica, no se toca).</li>
+<li>Errores ortográficos evidentes en el contenido revisado.</li>
+<li>Imágenes referenciales presentadas engañosamente como reales — al contrario, el sitio es transparente y marca explícitamente qué es "imagen referencial" y qué es un placeholder.</li>
+</ul>
+<hr />
+<h2 id="18-coherencia-de-marca">18. Coherencia de marca</h2>
+<p>Se buscaron variantes del nombre en todo el código (<code>Jeinox</code>, <code>Jainox</code>, <code>Jenox</code>, <code>Jeinox Gastronomic</code>, <code>Jeinox GastroSystems</code>, <code>Industrias Jeinox</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Variante</th>
+<th>Dónde aparece</th>
+<th>Cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>"Jeinox Gastronomic"</strong></td>
+<td><code>&lt;title&gt;</code> de las 9 páginas, logo (texto), footer, meta description, <code>Organization</code> schema, nombre de archivo del proyecto</td>
+<td>64 apariciones — es la variante dominante</td>
+</tr>
+<tr>
+<td><strong>"Jeinox GastroSystems" / "JEINOX GastroSystems"</strong></td>
+<td>Sección "Visítanos" (<code>index.html:454</code>, nombre del local en el mapa), título del iframe de Google Maps (<code>index.html:483</code>), una respuesta del FAQ visible <strong>y</strong> su copia idéntica en el JSON-LD (<code>index.html:27</code> y <code>429</code>), y el mensaje de WhatsApp que arma el formulario de "Fabricación a medida" (<code>js/main.js:151</code>, la primera línea que lee el vendedor)</td>
+<td>5 ubicaciones en el código</td>
+</tr>
+<tr>
+<td><strong>"INDUSTRIAS JEINOX"</strong></td>
+<td>Texto visible <strong>dentro de la propia imagen del logo</strong> (<code>assets/images/branding/logo-mark.webp</code>), confirmado visualmente junto al texto "Jeinox Gastronomic" del header</td>
+<td>1 (pero es el logo, visible en las 9 páginas)</td>
+</tr>
+<tr>
+<td>"Jainox", "Jenox", "Industrias Jeinox" (como texto)</td>
+<td>No se encontraron</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Por qué esto importa más de lo que parece:</strong> el nombre del negocio que aparece en la ubicación de Google Maps y en el primer mensaje que recibe el vendedor por WhatsApp ("Jeinox GastroSystems") <strong>no coincide</strong> con el nombre que aparece en el título de la pestaña del navegador, el logo de texto y los datos estructurados que Google lee ("Jeinox Gastronomic"). Si el negocio tiene o va a crear un perfil de Google Business, el nombre debe ser <strong>idéntico en todos lados</strong> (esto se llama consistencia de "NAP" — Nombre, Dirección, Teléfono — y es uno de los factores más importantes del SEO local). Actualmente no hay un nombre único y definitivo.</p>
+<hr />
+<h2 id="19-pagina-de-garantia-garantiahtml">19. Página de garantía (<code>garantia.html</code>)</h2>
+<ul>
+<li><strong>Claridad:</strong> la intención de la página es clara (explicar condiciones de garantía y servicio técnico), pero el 100% del contenido sustantivo está entre corchetes como pendiente.</li>
+<li><strong>Contenido:</strong> 5 bloques ("Duración", "Qué cubre", "Qué no cubre", "Servicio técnico", "Canales de soporte", "Horario") — la estructura es correcta y suficiente; falta solo el contenido real.</li>
+<li><strong>Navegación:</strong> correcta, con breadcrumb funcional (Inicio &gt; Garantía y servicio).</li>
+<li><strong>Coherencia:</strong> contradice al resto del sitio, que ya declara "Garantía: 1 año" en las 29 fichas de producto (ver sección 4.4) — un visitante que llegue aquí buscando el detalle de esa garantía de 1 año no lo encontrará.</li>
+<li><strong>Responsive:</strong> sin problemas detectados (no tiene tablas ni elementos anchos).</li>
+<li><strong>CTA:</strong> dos botones al final ("Ver datos de contacto", "Solicitar cotización") — correctos y funcionales.</li>
+<li><strong>Enlaces WhatsApp/teléfono:</strong> presentes y con formato correcto (<code>tel:+51943688374</code>).</li>
+<li><strong>Riesgo:</strong> al estar indexada (<code>index, follow</code>), un cliente podría llegar a esta página <strong>desde una búsqueda de Google</strong> y encontrarse con texto entre corchetes tipo "[Detalle pendiente: defectos de fabricación, componentes, etc.]" — esto se ve poco profesional si ocurre con un visitante real, no con quien ya conoce que el sitio está en desarrollo.</li>
+</ul>
+<hr />
+<h2 id="20-enlaces-internos">20. Enlaces internos</h2>
+<p>Se recorrieron automáticamente las 9 páginas y se verificó cada uno de los <strong>40 enlaces internos únicos</strong> del sitio (excluyendo enlaces externos, <code>mailto:</code>, <code>tel:</code> y anclas <code>#</code>) contra el servidor real.</p>
+<p><strong>Resultado: los 40 enlaces devuelven código 200 (correcto). No se encontró ningún enlace roto, ninguna URL con error 404, ni ningún <code>href="#"</code> sin destino real, en ninguna de las 9 páginas.</strong> Esto es un punto a favor claro del proyecto — <strong>no hay nada que corregir en este punto.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ubicación</th>
+<th>Texto del enlace</th>
+<th>Destino</th>
+<th>Estado</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Menú (8 de 9 páginas)</td>
+<td>"Proyectos"</td>
+<td><code>proyectos.html</code></td>
+<td>200 OK (destino existe)</td>
+<td>El destino es una página con contenido 100% ficticio declarado (ver sección 17) — el enlace no está "roto", pero <strong>enlaza a contenido que la propia portada decidió ocultar</strong></td>
+</tr>
+<tr>
+<td>Footer (9 páginas)</td>
+<td>"Proyectos"</td>
+<td><code>proyectos.html</code></td>
+<td>200 OK</td>
+<td>Mismo caso — aparece incluso en la portada, donde el menú superior lo oculta</td>
+</tr>
+<tr>
+<td>Footer (9 páginas)</td>
+<td>"Preguntas frecuentes"</td>
+<td><code>index.html#faq</code></td>
+<td>200 OK</td>
+<td>Correcto</td>
+</tr>
+<tr>
+<td>Footer (9 páginas)</td>
+<td>"Contacto"</td>
+<td><code>index.html#ubicanos</code></td>
+<td>200 OK</td>
+<td>Correcto</td>
+</tr>
+<tr>
+<td>Todas las páginas</td>
+<td>Enlace del logo</td>
+<td><code>index.html</code></td>
+<td>200 OK</td>
+<td>Correcto</td>
+</tr>
+<tr>
+<td><code>index.html</code></td>
+<td>"Ver en Google Maps" / "Abrir en Google Maps"</td>
+<td>Enlace externo a <code>maps.app.goo.gl</code></td>
+<td>No verificable como interno (es externo)</td>
+<td>Formato correcto, <code>target="_blank"</code> con <code>rel="noopener"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="21-google-business">21. Google Business</h2>
+<p>Para que la web complemente correctamente un perfil de Google Business Profile, la información debe coincidir exactamente. Se compara lo que hay en el código contra lo que necesitaría un perfil de Google Business:</p>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>En la web</th>
+<th>Consistencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre comercial</td>
+<td>"Jeinox Gastronomic" (dominante) vs. "Jeinox GastroSystems" (ubicación/WhatsApp) vs. "INDUSTRIAS JEINOX" (logo)</td>
+<td>❌ <strong>Inconsistente</strong> — ver sección 18</td>
+</tr>
+<tr>
+<td>Teléfonos</td>
+<td><code>+51 943 688 374</code> y <code>+51 926 669 669</code>, usados de forma consistente en todo el sitio (footer, header, garantía, ubicación)</td>
+<td>✅ Consistente</td>
+</tr>
+<tr>
+<td>Ubicación</td>
+<td>Un enlace de Google Maps (<code>maps.app.goo.gl/Go7pqGee3JetVSw69</code>) y un mapa embebido con coordenadas <code>-12.044493, -77.0409056</code> — ambos apuntan al mismo punto</td>
+<td>✅ Consistente (no se verificó si la dirección física real coincide con esas coordenadas, por ser información externa al código)</td>
+</tr>
+<tr>
+<td>Horario</td>
+<td>"Lunes a sábado: 9:00 a. m. – 8:00 p. m. Domingos y feriados: cerrado" — igual en <code>index.html</code> y <code>garantia.html</code></td>
+<td>✅ Consistente</td>
+</tr>
+<tr>
+<td>Correo</td>
+<td><code>jeinox2020@gmail.com</code> en todas las páginas donde aparece</td>
+<td>✅ Consistente. Nota: es una cuenta de Gmail genérica, no un correo corporativo (<code>@jeinox.com</code> o similar) — no es un error, pero un correo propio del dominio se ve más profesional</td>
+</tr>
+<tr>
+<td>Categoría/rubro</td>
+<td>"Equipamiento gastronómico profesional" — coherente en todo el sitio</td>
+<td>✅ Consistente</td>
+</tr>
+<tr>
+<td>Enlaces</td>
+<td>El sitio no tiene ningún enlace hacia un perfil de Google Business ni redes sociales (Facebook/Instagram)</td>
+<td>🟡 No se encontró ningún enlace saliente a redes sociales en ninguna página</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> la información de contacto operativa (teléfono, correo, horario, ubicación) es sólida y consistente. El problema real para Google Business es el <strong>nombre de marca inconsistente</strong> (sección 18).</p>
+<hr />
+<h2 id="22-github-pages-limitaciones-reales-vs-no-reales">22. GitHub Pages: limitaciones reales vs. no reales</h2>
+<table>
+<thead>
+<tr>
+<th>Limitación</th>
+<th>¿Es real para este proyecto?</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No hay backend/servidor propio</td>
+<td><strong>Real, pero irrelevante hoy.</strong> El sitio no necesita backend: todo el carrito funciona con <code>localStorage</code> y el contacto es por WhatsApp. Sería una limitación real solo si se quisiera un formulario que envíe correos desde el servidor o un panel de administración.</td>
+<td></td>
+</tr>
+<tr>
+<td>No se pueden procesar formularios server-side</td>
+<td><strong>Real.</strong> Si en el futuro se quiere un formulario de contacto que envíe un correo (en vez de abrir WhatsApp), GitHub Pages no lo soporta nativamente — se necesitaría un servicio externo (Formspree, un backend propio, etc.). Hoy no aplica porque todo pasa por WhatsApp.</td>
+<td></td>
+</tr>
+<tr>
+<td>Rendimiento / CDN</td>
+<td><strong>No es un problema real.</strong> GitHub Pages sirve archivos estáticos a través de una CDN (Fastly); es rápido para sitios de este tamaño.</td>
+<td></td>
+</tr>
+<tr>
+<td>Caché de archivos</td>
+<td><strong>Real pero menor.</strong> GitHub Pages aplica cabeceras de caché estándar; no hay control fino sobre invalidación de caché por archivo, así que tras cada despliegue puede haber unos minutos de retraso hasta que todos los visitantes vean la versión más nueva. No representa un riesgo práctico para este sitio.</td>
+<td></td>
+</tr>
+<tr>
+<td>Tipos MIME</td>
+<td><strong>No es un problema.</strong> Se comprobó que las imágenes <code>.webp</code>, el CSS y el JS se sirven con el tipo de contenido correcto (confirmado en las pruebas de red: <code>image/webp</code>, <code>text/css</code>, <code>text/javascript</code>).</td>
+<td></td>
+</tr>
+<tr>
+<td>Seguridad (HTTPS)</td>
+<td><strong>No es un problema.</strong> GitHub Pages sirve todo el sitio por HTTPS automáticamente.</td>
+<td></td>
+</tr>
+<tr>
+<td>Límite de tamaño de repositorio</td>
+<td><strong>No aplica todavía.</strong> El proyecto pesa 2.94 MB; GitHub Pages soporta hasta 1 GB de forma cómoda.</td>
+<td></td>
+</tr>
+<tr>
+<td>Rutas / URLs limpias</td>
+<td><strong>No es un problema.</strong> Al ser un sitio simple con archivos <code>.html</code> explícitos en los enlaces (<code>catalogo.html</code>, no <code>/catalogo</code>), no depende de reescritura de URLs que GitHub Pages no soporta.</td>
+<td></td>
+</tr>
+<tr>
+<td>Escalabilidad de tráfico</td>
+<td><strong>No es un problema esperable</strong> en el corto/mediano plazo — GitHub Pages soporta bien picos de tráfico normales de una pyme.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> GitHub Pages <strong>no es, hoy, un factor limitante real</strong> para Jeinox. El único escenario donde dejaría de ser suficiente es si en el futuro se necesita un backend real (base de datos de productos administrable sin tocar código, formulario que envíe correos, panel de administración, pasarela de pagos) — ver sección 20 (escalabilidad).</p>
+<hr />
+<h2 id="23-escalabilidad">23. Escalabilidad</h2>
+<p>Se analiza cómo se comportaría la arquitectura actual (un array de JavaScript en <code>data/products.js</code>, cargado completo en cada página) a distintos volúmenes de catálogo:</p>
+<table>
+<thead>
+<tr>
+<th>Cantidad de productos</th>
+<th>HTML/JS</th>
+<th>Imágenes</th>
+<th>Catálogo/búsqueda</th>
+<th>Mantenimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>50 productos</strong> (actual: 29)</td>
+<td>Sin problema — <code>data/products.js</code> pesaría ~85 KB, insignificante</td>
+<td>Sin problema si se sigue el mismo ritmo de fotos (2-3 por producto)</td>
+<td>El filtro y buscador actuales (JavaScript puro sobre un array en memoria) siguen siendo instantáneos</td>
+<td>Editar un solo archivo sigue siendo manejable a mano</td>
+</tr>
+<tr>
+<td><strong>100 productos</strong></td>
+<td><code>data/products.js</code> rondaría ~165 KB — aceptable, pero ya es un archivo largo para editar a mano sin errores de sintaxis</td>
+<td>El peso de <code>catalogo.html</code> (si se muestran todos a la vez, sin paginación) podría superar los 3-4 MB por visita — <strong>aquí sí conviene paginación o "cargar más"</strong></td>
+<td>Sigue siendo rápido (JavaScript maneja bien arrays de cientos de elementos), pero ya vale la pena paginar visualmente</td>
+<td>Empieza a ser recomendable dividir el archivo de datos por categoría o migrar a un archivo JSON validable</td>
+</tr>
+<tr>
+<td><strong>300 productos</strong></td>
+<td>El archivo de datos ya es difícil de mantener a mano sin un editor con validación; alto riesgo de errores de sintaxis al copiar/pegar productos</td>
+<td><strong>Aquí el catálogo sin paginación ni <code>srcset</code> se vuelve un problema real de rendimiento</strong> (varios MB por visita si se cargan todas las imágenes)</td>
+<td>Sigue siendo técnicamente viable en JavaScript puro, pero ya es momento de plantear generación estática (un HTML por producto, generado con un script) o un pequeño backend/CMS</td>
+<td>Un cambio de precio o texto en 50 productos a la vez ya no es práctico a mano</td>
+</tr>
+<tr>
+<td><strong>500 productos</strong></td>
+<td>Aquí la arquitectura actual (todo en un solo array, sin build, sin CMS) <strong>deja de ser recomendable como método principal de gestión</strong></td>
+<td>Imprescindible paginación, <code>srcset</code> y probablemente un CDN de imágenes con redimensionado automático</td>
+<td>Se recomienda migrar a un generador de sitios estáticos (Astro, Eleventy, Next.js en modo estático) o a un CMS headless (p. ej. uno gratuito) que genere las páginas de producto automáticamente</td>
+<td>El mantenimiento manual del catálogo ya no es razonable; se necesita algún tipo de panel o planilla conectada</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Punto recomendado para migrar de arquitectura:</strong> entre <strong>100 y 300 productos</strong>, dependiendo de cuántas fotos por producto se mantengan. No es urgente hoy (29 productos), pero es la señal a vigilar a futuro.</p>
+<hr />
+<h2 id="24-codigo-calidad-y-mantenibilidad">24. Código: calidad y mantenibilidad</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Hallazgo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arquitectura JS</td>
+<td>Buena separación de responsabilidades: <code>main.js</code> (UI general), <code>products.js</code> (render), <code>catalog.js</code> (filtros), <code>quote.js</code> (carrito). Sin librerías externas, sin dependencias que puedan quedar desactualizadas.</td>
+</tr>
+<tr>
+<td>Documentación en código</td>
+<td>Cada archivo JS tiene un comentario de cabecera explicando su propósito; <code>data/products.js</code> incluye un <code>@typedef</code> (documentación de tipos) completo para la forma de cada producto. Buena práctica, poco común en proyectos de este tamaño.</td>
+</tr>
+<tr>
+<td>Repetición de HTML</td>
+<td>El <code>&lt;header&gt;</code> y <code>&lt;footer&gt;</code> (~50 líneas cada uno) están duplicados de forma idéntica en las 9 páginas HTML — es la mayor fuente de repetición del proyecto, y la causa directa de la inconsistencia del enlace "Proyectos" (sección 3.2).</td>
+</tr>
+<tr>
+<td>Estilos en línea (<code>style="..."</code>)</td>
+<td>Se contaron 29 usos de <code>style=""</code> repartidos en 8 de las 9 páginas (el máximo es <code>index.html</code>, con 10). La mayoría son ajustes menores de espaciado (<code>margin-bottom: var(--space-5)</code>), pero <strong>dos casos usan colores fijos en vez de las variables de diseño</strong>: <code>style="color:#6ea8fe;"</code> y <code>style="color:#cbd2d9;"</code> en la sección de garantía de <code>index.html:341-343</code>, en vez de usar los tokens ya definidos en <code>css/styles.css</code> (<code>--color-accent</code>, etc.). Esto es un riesgo de inconsistencia de marca si la paleta de colores cambia en el futuro: esos dos colores no se actualizarían junto con el resto.</td>
+</tr>
+<tr>
+<td>IDs duplicados</td>
+<td>No se encontraron IDs duplicados dentro de una misma página.</td>
+</tr>
+<tr>
+<td>Código muerto</td>
+<td>No se encontró código muerto relevante; las secciones desactivadas (Proyectos realizados, Testimonios en <code>index.html</code>) están correctamente comentadas con una nota explicando cuándo reactivarlas, no eliminadas ni dejadas a medias.</td>
+</tr>
+<tr>
+<td>Comentarios obsoletos</td>
+<td>No se encontraron comentarios que contradigan el código actual, salvo el ya mencionado de "Proyectos oculto temporalmente" que no se replicó en las demás páginas.</td>
+</tr>
+<tr>
+<td>Herramientas de calidad</td>
+<td>No hay configuración de linter (ESLint) ni formateador (Prettier) ni tests automatizados en el repositorio. Para el tamaño actual del proyecto no es indispensable, pero facilitaría detectar automáticamente el tipo de inconsistencias que esta auditoría encontró a mano (como el color fijo en vez de variable).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="25-javascript-errores-potenciales">25. JavaScript: errores potenciales</h2>
+<p>Se revisó el código de los 4 módulos JS buscando referencias a elementos inexistentes, problemas de eventos, <code>localStorage</code> y listeners duplicados.</p>
+<table>
+<thead>
+<tr>
+<th>Hallazgo</th>
+<th>Gravedad</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Todas las funciones que buscan un elemento por <code>id</code> (<code>document.getElementById(...)</code>) validan que exista antes de usarlo (<code>if (!el) return;</code>)</td>
+<td>— (positivo)</td>
+<td>Patrón consistente en <code>js/main.js</code>, <code>js/products.js</code>, <code>js/catalog.js</code>, <code>js/quote.js</code> — esto evita que el sitio se rompa si una página no tiene cierto elemento (por ejemplo, <code>js/catalog.js</code> se carga en <code>privacidad.html</code>, que no tiene catálogo, pero no genera error porque <code>initCatalog()</code> revisa <code>if (!grid) return;</code>)</td>
+</tr>
+<tr>
+<td><code>producto.html</code> sin parámetro <code>?slug=</code> válido</td>
+<td>Baja</td>
+<td>Se maneja correctamente: muestra un mensaje "Equipo no encontrado" en vez de fallar (<code>js/products.js:278-285</code>) — ya fue reforzado recientemente para tratar productos ocultos (<code>visible:false</code>) de la misma forma</td>
+</tr>
+<tr>
+<td>Listeners duplicados</td>
+<td>No encontrados</td>
+<td>Cada <code>initX()</code> se llama una sola vez desde el único <code>DOMContentLoaded</code> de cada archivo; no hay registro repetido de eventos</td>
+</tr>
+<tr>
+<td><code>localStorage</code> sin <code>try/catch</code></td>
+<td>No aplica</td>
+<td><code>js/quote.js</code> sí envuelve las lecturas/escrituras de <code>localStorage</code> en <code>try/catch</code> (líneas 31-49), protegiendo contra navegadores con almacenamiento bloqueado (modo incógnito estricto, por ejemplo)</td>
+</tr>
+<tr>
+<td>Funciones globales innecesarias</td>
+<td>No encontradas</td>
+<td>Todo el código usa módulos ES (<code>import</code>/<code>export</code>), sin variables filtradas al objeto <code>window</code></td>
+</tr>
+<tr>
+<td>Errores de consola en producción</td>
+<td><strong>Ninguno detectado</strong></td>
+<td>Verificado con navegador automatizado en las 9 páginas: 0 errores de consola, 0 recursos con error HTTP</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> el JavaScript del proyecto está escrito de forma defensiva y no se encontraron errores reales en ejecución.</p>
+<hr />
+<h2 id="26-seguridad-basica-frontend">26. Seguridad básica frontend</h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Evaluación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target="_blank"</code> sin <code>rel="noopener"</code></td>
+<td><strong>No se encontró ningún caso</strong> — se verificó con búsqueda automatizada en las 9 páginas; todos los enlaces externos usan <code>rel="noopener"</code> correctamente. Buena práctica ya aplicada.</td>
+</tr>
+<tr>
+<td>Uso de <code>innerHTML</code></td>
+<td>Se usa en varias partes (<code>js/products.js</code>, <code>js/catalog.js</code>, <code>js/quote.js</code>) para pintar tarjetas y filas dinámicamente. El contenido insertado proviene siempre de <code>data/products.js</code> (datos internos y controlados por el propio desarrollador, no ingresados por usuarios externos), por lo que <strong>el riesgo de inyección de código (XSS) es bajo</strong> en el estado actual. El propio código incluye una función <code>escapeHtml()</code> (<code>js/products.js:144-148</code>) que sanea el texto antes de insertarlo en atributos HTML como <code>alt</code>, lo cual es una buena práctica preventiva.</td>
+</tr>
+<tr>
+<td>Datos sensibles expuestos</td>
+<td>No se encontraron claves de API, tokens ni contraseñas en el código. Los únicos datos "sensibles" son el correo y los teléfonos de contacto, que son públicos por diseño (es la información de contacto comercial).</td>
+</tr>
+<tr>
+<td>Formularios</td>
+<td>No envían datos a ningún servidor (confirmado en <code>privacidad.html</code>: "Esta fase del proyecto no envía datos de formularios a ningún servidor"); solo arman una URL de WhatsApp. No hay superficie de ataque de backend porque no existe backend.</td>
+</tr>
+<tr>
+<td><code>localStorage</code></td>
+<td>Solo almacena <code>{id, cantidad}</code> de productos del catálogo — no se guarda ningún dato personal del visitante.</td>
+</tr>
+<tr>
+<td>Dependencias externas</td>
+<td>El único recurso externo cargado es el <code>&lt;iframe&gt;</code> de Google Maps (<code>index.html</code>) — es un dominio de confianza (<code>google.com</code>) y usa <code>referrerpolicy="no-referrer-when-downgrade"</code> y <code>loading="lazy"</code>. No se cargan scripts de terceros (no hay Google Analytics, Facebook Pixel, ni ninguna librería externa).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conclusión:</strong> no se identificó ningún riesgo de seguridad relevante. El sitio, al no tener backend ni recolectar datos de usuarios, tiene una superficie de ataque mínima.</p>
+<hr />
+<h2 id="27-priorizacion-de-todos-los-problemas-encontrados">27. Priorización de todos los problemas encontrados</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problema</th>
+<th>Severidad</th>
+<th>Archivo(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Canonical y Open Graph apuntan a un dominio inexistente (<code>.example</code>) en las 9 páginas</td>
+<td><strong>ALTO</strong></td>
+<td>Las 9 páginas HTML</td>
+</tr>
+<tr>
+<td>2</td>
+<td>El botón "Cotizar equipos" y "Agregar a cotización" se cortan entre 1024–1250 px</td>
+<td><strong>ALTO</strong></td>
+<td><code>css/styles.css</code> (líneas 236, 406, 424-449)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ficha de producto: canonical/Open Graph genéricos, no específicos por producto</td>
+<td><strong>ALTO</strong></td>
+<td><code>producto.html</code>, <code>js/products.js</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Nombre de marca inconsistente (3 variantes)</td>
+<td><strong>ALTO</strong></td>
+<td><code>index.html</code>, <code>js/main.js</code>, logo</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>proyectos.html</code> y <code>garantia.html</code> indexables por Google con contenido de relleno declarado</td>
+<td><strong>ALTO</strong></td>
+<td><code>proyectos.html</code>, <code>garantia.html</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Menú "Proyectos" inconsistente entre <code>index.html</code> y las demás páginas</td>
+<td><strong>MEDIO</strong></td>
+<td><code>index.html</code> vs. resto</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Mensaje contradictorio sobre garantía (portada dice "próximamente", fichas dicen "1 año")</td>
+<td><strong>MEDIO</strong></td>
+<td><code>index.html</code>, <code>data/products.js</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Aviso de "datos de demostración" aplicado también a productos ya reales</td>
+<td><strong>MEDIO</strong></td>
+<td><code>index.html</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Imágenes servidas a resolución completa sin <code>srcset</code>, catálogo pesa 1.2 MB</td>
+<td><strong>MEDIO</strong></td>
+<td><code>js/products.js</code>, <code>assets/images/products/*</code></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Falta <code>robots.txt</code> y <code>sitemap.xml</code></td>
+<td><strong>MEDIO</strong></td>
+<td>Raíz del proyecto</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Mensaje de WhatsApp de "Mi cotización" muy básico (sin datos de contacto)</td>
+<td><strong>MEDIO</strong></td>
+<td><code>js/quote.js</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Header y footer duplicados literalmente en 9 archivos (causa de la inconsistencia #6)</td>
+<td><strong>MEDIO</strong></td>
+<td>Las 9 páginas HTML</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Dos colores fijos en HTML en vez de variables de diseño</td>
+<td><strong>BAJO</strong></td>
+<td><code>index.html</code> (líneas 341-343)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Robots meta inconsistente entre páginas con contenido similar (<code>garantia</code>/<code>proyectos</code> indexables vs. <code>privacidad</code>/<code>libro-reclamaciones</code> no indexables)</td>
+<td><strong>BAJO</strong></td>
+<td>Comparación entre páginas</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Overflow horizontal mínimo (2–8 px) a 320 px de ancho</td>
+<td><strong>BAJO</strong></td>
+<td>Todas las páginas</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Dos textos distintos ("Cotizar equipos" / "Solicitar cotización") para el mismo destino</td>
+<td><strong>BAJO</strong></td>
+<td><code>index.html</code> y otras</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Formulario "a medida" usa solo el primer número de WhatsApp</td>
+<td><strong>BAJO</strong></td>
+<td><code>js/main.js</code></td>
+</tr>
+<tr>
+<td>18</td>
+<td>No hay categoría/filtro navegable para "equipos automáticos/digitales"</td>
+<td><strong>BAJO</strong></td>
+<td><code>data/products.js</code>, <code>js/catalog.js</code></td>
+</tr>
+<tr>
+<td>19</td>
+<td>Correo de contacto es una cuenta de Gmail genérica</td>
+<td><strong>BAJO</strong></td>
+<td>Todas las páginas</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Placeholders de "proyectos" duplicados visualmente (3 imágenes reutilizadas 2 veces)</td>
+<td><strong>BAJO</strong></td>
+<td><code>proyectos.html</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="28-puntuaciones-tecnicas-0100">28. Puntuaciones técnicas (0–100)</h2>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Puntaje</th>
+<th>Motivo breve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diseño visual</td>
+<td>78</td>
+<td>Paleta consistente, tipografía clara, diseño moderno; penaliza el uso puntual de colores fijos fuera del sistema de diseño</td>
+</tr>
+<tr>
+<td>UX</td>
+<td>72</td>
+<td>Recorridos claros y funcionales, pero con fricciones de mensaje (garantía contradictoria, aviso de "demo" sobre datos reales) y navegación inconsistente ("Proyectos")</td>
+</tr>
+<tr>
+<td>Mobile</td>
+<td>75</td>
+<td>Excelente en 320–768 px; penaliza fuerte el bug confirmado de 1024–1250 px</td>
+</tr>
+<tr>
+<td>Rendimiento</td>
+<td>68</td>
+<td>Sin JS pesado ni terceros, buen uso de <code>lazy loading</code>, pero imágenes sin <code>srcset</code> encarecen el catálogo (1.2 MB)</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td>45</td>
+<td>Buena base semántica y schema, pero el dominio inexistente en canonical/OG y la falta de <code>robots.txt</code>/<code>sitemap.xml</code> son fallas de fondo</td>
+</tr>
+<tr>
+<td>Accesibilidad</td>
+<td>80</td>
+<td>Buen manejo de teclado, ARIA y foco; falta verificación puntual de contraste y depende de JS para el contenido de producto</td>
+</tr>
+<tr>
+<td>Conversión</td>
+<td>65</td>
+<td>Flujo de WhatsApp probado y funcional, pero el bug del CTA cortado y las vistas previas genéricas de producto restan efectividad</td>
+</tr>
+<tr>
+<td>Código</td>
+<td>74</td>
+<td>Modular, documentado, sin dependencias externas; penaliza la duplicación de header/footer y ausencia de linter/tests</td>
+</tr>
+<tr>
+<td>Catálogo</td>
+<td>80</td>
+<td>Buscador y filtros funcionan correctamente, sin huecos visuales, recién reforzado con el sistema <code>visible</code></td>
+</tr>
+<tr>
+<td>Cotización</td>
+<td>78</td>
+<td>Carrito robusto y persistente, sin duplicados; mensaje final de WhatsApp podría ser más completo</td>
+</tr>
+<tr>
+<td>Confianza</td>
+<td>42</td>
+<td>Contenido de relleno visible y accesible por Google en varias páginas clave, más la inconsistencia de nombre de marca</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>60</td>
+<td>Cómodo hasta ~100 productos; requiere plan de migración más allá de eso</td>
+</tr>
+</tbody>
+</table>
+<h1 id="puntuacion-tecnica-general-68-100"><strong>PUNTUACIÓN TÉCNICA GENERAL: 68 / 100</strong></h1>
+<p><em>(Promedio de las 12 categorías. Esta nota evalúa el estado técnico del sitio, no el valor del negocio ni la calidad de sus productos o servicios.)</em></p>
+<hr />
+<h2 id="29-top-10-problemas-mas-importantes">29. Top 10 problemas más importantes</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Problema</th>
+<th>Impacto</th>
+<th>Gravedad</th>
+<th>Archivo</th>
+<th>Cómo corregirlo (a alto nivel)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Canonical/Open Graph con dominio inexistente</td>
+<td>Confunde a Google y rompe las vistas previas de WhatsApp/Facebook en todo el sitio</td>
+<td>ALTO</td>
+<td>Las 9 páginas HTML</td>
+<td>Reemplazar <code>https://www.jeinoxgastronomic.example/</code> por la URL real del sitio en producción en cada <code>&lt;link rel="canonical"&gt;</code> y <code>&lt;meta property="og:*"&gt;</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>CTA "Cotizar equipos" cortado entre 1024–1250 px</td>
+<td>Un visitante en tablet horizontal o laptop pequeña puede no encontrar el botón principal de conversión</td>
+<td>ALTO</td>
+<td><code>css/styles.css</code></td>
+<td>Ajustar el punto de quiebre de 1024px, permitir que el texto del botón se acorte o reducir elementos del menú antes de esa medida</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ficha de producto sin SEO/Open Graph propio por producto</td>
+<td>Compartir un producto por WhatsApp no muestra su nombre ni su foto</td>
+<td>ALTO</td>
+<td><code>producto.html</code>, <code>js/products.js</code></td>
+<td>Actualizar también <code>canonical</code>, <code>og:title</code>, <code>og:url</code> y <code>og:image</code> con JavaScript al cargar cada producto (mismo mecanismo que ya actualiza el <code>&lt;title&gt;</code>)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Nombre de marca inconsistente (Gastronomic / GastroSystems / Industrias Jeinox)</td>
+<td>Confunde a clientes y perjudica el SEO local (Google Business necesita un nombre único)</td>
+<td>ALTO</td>
+<td><code>index.html</code>, <code>js/main.js</code>, logo</td>
+<td>Definir un único nombre oficial y reemplazarlo en todo el sitio, incluyendo el logo</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Páginas con contenido inventado indexables por Google</td>
+<td>Un cliente puede llegar por Google a una página que dice literalmente "PLACEHOLDER"</td>
+<td>ALTO</td>
+<td><code>proyectos.html</code>, <code>garantia.html</code></td>
+<td>Cambiar su meta robots a <code>noindex, follow</code> hasta tener contenido real, igual que ya se hizo con <code>privacidad.html</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Menú "Proyectos" visible en 8 páginas pero oculto en la portada</td>
+<td>Inconsistencia de navegación; el objetivo de ocultar la sección no se cumple</td>
+<td>MEDIO</td>
+<td><code>index.html</code> vs. resto</td>
+<td>Aplicar el mismo criterio en las 9 páginas (ocultar o mostrar en todas por igual)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Mensaje contradictorio sobre la garantía</td>
+<td>Un cliente puede desconfiar al ver "1 año" en un producto y "próximamente" en la portada</td>
+<td>MEDIO</td>
+<td><code>index.html</code>, <code>data/products.js</code></td>
+<td>Unificar el mensaje: si ya hay una garantía de 1 año definida, reflejarlo también en el resumen de portada</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Catálogo pesa 1.2 MB por visita</td>
+<td>Carga más lenta en conexiones móviles, afecta LCP</td>
+<td>MEDIO</td>
+<td><code>js/products.js</code>, imágenes</td>
+<td>Generar versiones más livianas de cada imagen para el tamaño de tarjeta y usar <code>srcset</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Falta <code>robots.txt</code> y <code>sitemap.xml</code></td>
+<td>Dificulta que Google rastree todas las fichas de producto de forma ordenada</td>
+<td>MEDIO</td>
+<td>Raíz del proyecto</td>
+<td>Crear ambos archivos apuntando a la URL real</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Header y footer duplicados en 9 archivos</td>
+<td>Cualquier cambio (teléfono, enlace, menú) debe hacerse 9 veces, con riesgo de inconsistencias como la del punto 6</td>
+<td>MEDIO</td>
+<td>Las 9 páginas HTML</td>
+<td>Evaluar una solución de "incluir" HTML (aunque GitHub Pages es estático, existen soluciones simples como Web Components o un pequeño script de build)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="30-top-10-mejoras-con-mayor-impacto">30. Top 10 mejoras con mayor impacto</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Mejora</th>
+<th>Beneficio principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Corregir canonical/Open Graph con la URL real</td>
+<td>SEO + vistas previas de WhatsApp correctas de inmediato</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Arreglar el CTA cortado en 1024–1250 px</td>
+<td>Conversión — el botón principal vuelve a ser 100% visible y usable</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SEO dinámico por producto (canonical/OG por <code>slug</code>)</td>
+<td>Cada producto compartido por WhatsApp se ve profesional con su nombre y foto</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Unificar el nombre de marca</td>
+<td>Confianza + mejor SEO local / Google Business</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>noindex</code> en páginas con contenido de relleno</td>
+<td>Evita que un cliente real llegue por Google a una página de "placeholder"</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Generar imágenes en tamaño de tarjeta (~800×600) para el catálogo</td>
+<td>Reduce el peso de <code>catalogo.html</code> de 1.2 MB a una fracción, mejora velocidad móvil</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Agregar <code>robots.txt</code> y <code>sitemap.xml</code></td>
+<td>Mejora la indexación completa del catálogo en Google</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Enriquecer el mensaje de WhatsApp de "Mi cotización" (nombre, referencia)</td>
+<td>El vendedor recibe cotizaciones más completas, responde más rápido</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Unificar el mensaje sobre garantía entre portada y fichas de producto</td>
+<td>Refuerza confianza con un dato ya real (garantía de 1 año)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Completar contenido real de "Nosotros" y "Garantía" (años de experiencia, condiciones reales)</td>
+<td>Aumenta directamente la confianza — es el bloque de menor puntaje de toda la auditoría (42/100)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="31-plan-de-accion-por-fases">31. Plan de acción por fases</h2>
+<h3 id="fase-1-urgente-afecta-ventas-o-credibilidad-hoy">FASE 1 — Urgente (afecta ventas o credibilidad hoy)</h3>
+<ol>
+<li>Corregir el dominio en <code>canonical</code> y Open Graph en las 9 páginas.</li>
+<li>Corregir el bug de overflow del header en 1024–1250 px.</li>
+<li>Poner <code>noindex, follow</code> en <code>proyectos.html</code> y <code>garantia.html</code> mientras su contenido sea de relleno.</li>
+<li>Unificar el enlace "Proyectos" del menú (mostrarlo u ocultarlo igual en las 9 páginas).</li>
+<li>Definir y unificar el nombre oficial de marca en todo el sitio (incluye decidir si se actualiza el logo).</li>
+</ol>
+<h3 id="fase-2-optimizacion-rendimiento-ux-y-seo">FASE 2 — Optimización (rendimiento, UX y SEO)</h3>
+<ol>
+<li>Generar imágenes de catálogo en un tamaño acorde a su uso real (<code>srcset</code> o versiones redimensionadas).</li>
+<li>Implementar SEO dinámico por producto (canonical + Open Graph específico por <code>slug</code>).</li>
+<li>Crear <code>robots.txt</code> y <code>sitemap.xml</code>.</li>
+<li>Unificar el mensaje sobre garantía entre la portada y las fichas de producto.</li>
+<li>Revisar y ajustar el aviso de "datos de demostración" para que no aplique a los productos que ya son reales.</li>
+</ol>
+<h3 id="fase-3-crecimiento-contenido-seo-local-y-conversion">FASE 3 — Crecimiento (contenido, SEO local y conversión)</h3>
+<ol>
+<li>Redactar contenido real para <code>nosotros.html</code> (historia, misión, visión, años de experiencia).</li>
+<li>Redactar condiciones reales de garantía para <code>garantia.html</code>.</li>
+<li>Reemplazar <code>proyectos.html</code> con proyectos reales y fotos reales (o mantenerlo oculto hasta entonces).</li>
+<li>Enriquecer el mensaje de WhatsApp de "Mi cotización" con más contexto para el vendedor.</li>
+<li>Agregar mención explícita de "Lima, Perú" y considerar datos estructurados <code>LocalBusiness</code>.</li>
+<li>Crear una categoría o filtro navegable para "equipos automáticos/digitales" si se quiere reforzar ese diferencial de marca.</li>
+</ol>
+<h3 id="fase-4-escala-arquitectura-futura">FASE 4 — Escala (arquitectura futura)</h3>
+<ol>
+<li>Si el catálogo supera ~100 productos: evaluar paginación del catálogo y división del archivo de datos.</li>
+<li>Si supera ~300 productos: evaluar migrar a un generador de sitios estáticos o un CMS headless.</li>
+<li>Evaluar reemplazar la duplicación de header/footer por una solución de "incluir" HTML, para reducir el riesgo de inconsistencias como la del enlace "Proyectos".</li>
+<li>Definir un correo corporativo propio (en vez de Gmail) y una razón social/RUC definitivos, para poder completar <code>libro-reclamaciones.html</code> conforme a la normativa de INDECOPI.</li>
+</ol>
+<hr />
+<h2 id="32-matriz-impacto-esfuerzo">32. Matriz impacto / esfuerzo</h2>
+<table>
+<thead>
+<tr>
+<th>Mejora</th>
+<th>Impacto</th>
+<th>Esfuerzo</th>
+<th>Prioridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Corregir dominio en canonical/Open Graph</td>
+<td>Alto</td>
+<td>Bajo</td>
+<td><strong>Inmediata</strong></td>
+</tr>
+<tr>
+<td>Arreglar overflow del header (1024–1250 px)</td>
+<td>Alto</td>
+<td>Bajo</td>
+<td><strong>Inmediata</strong></td>
+</tr>
+<tr>
+<td><code>noindex</code> en páginas de relleno</td>
+<td>Alto</td>
+<td>Bajo</td>
+<td><strong>Inmediata</strong></td>
+</tr>
+<tr>
+<td>Unificar nombre de marca</td>
+<td>Alto</td>
+<td>Medio</td>
+<td><strong>Inmediata</strong></td>
+</tr>
+<tr>
+<td>Unificar enlace "Proyectos" en el menú</td>
+<td>Medio</td>
+<td>Bajo</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>SEO dinámico por producto (canonical/OG por slug)</td>
+<td>Alto</td>
+<td>Medio</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Unificar mensaje de garantía</td>
+<td>Medio</td>
+<td>Bajo</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Crear <code>robots.txt</code> / <code>sitemap.xml</code></td>
+<td>Medio</td>
+<td>Bajo</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Redimensionar imágenes del catálogo / <code>srcset</code></td>
+<td>Medio</td>
+<td>Medio</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Enriquecer mensaje de WhatsApp de cotización</td>
+<td>Medio</td>
+<td>Bajo</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Contenido real de "Nosotros" y "Garantía"</td>
+<td>Alto</td>
+<td>Alto (depende de información que solo Jeinox tiene)</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Filtro de "equipos automáticos/digitales"</td>
+<td>Bajo</td>
+<td>Medio</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Reemplazar duplicación de header/footer</td>
+<td>Medio</td>
+<td>Alto</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Proyectos reales con fotos reales</td>
+<td>Alto</td>
+<td>Alto (depende de material fotográfico real)</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Migrar arquitectura (100+ productos)</td>
+<td>Alto (a futuro)</td>
+<td>Alto</td>
+<td>Baja (por ahora)</td>
+</tr>
+<tr>
+<td>Correo corporativo propio / razón social-RUC</td>
+<td>Medio</td>
+<td>Depende de terceros (trámite legal)</td>
+<td>Media</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="33-datos-pendientes-de-confirmar-con-jeinox-gastrosystems">33. Datos pendientes de confirmar con Jeinox GastroSystems</h2>
+<p><em>(Detectados automáticamente en el código; no se inventó ninguna respuesta.)</em></p>
+<ul>
+<li>Nombre de marca definitivo (¿"Jeinox Gastronomic" o "Jeinox GastroSystems"?).</li>
+<li>Razón social y RUC (bloquea completar <code>libro-reclamaciones.html</code> conforme a INDECOPI).</li>
+<li>Años de experiencia de la empresa (<code>nosotros.html</code> los deja como "[XX]+").</li>
+<li>Historia real de la empresa (origen, hitos).</li>
+<li>Misión y visión oficiales.</li>
+<li>Si la fabricación realmente se hace en "taller propio" (<code>nosotros.html</code> lo marca como "dato a confirmar").</li>
+<li>Condiciones exactas de garantía por línea de producto (duración real, qué cubre, qué no cubre) — hoy coexisten "1 año" (en productos) y "próximamente" (en la portada y en <code>garantia.html</code>).</li>
+<li>Detalle real del servicio técnico post-venta.</li>
+<li>Formas de pago aceptadas (el FAQ dice "diferentes alternativas" sin especificar cuáles).</li>
+<li>Proyectos reales terminados, con fotos y ubicaciones reales (para reemplazar <code>proyectos.html</code>).</li>
+<li>Reseñas o testimonios reales de clientes (la sección ya existe en el código, solo está desactivada a la espera de contenido real).</li>
+<li>Certificaciones (si las hay: normas técnicas, certificaciones sanitarias, etc. — no se menciona ninguna actualmente).</li>
+<li>Correo corporativo propio (actualmente se usa una cuenta de Gmail).</li>
+<li>Enlaces a redes sociales, si existen (no se encontró ninguno en el sitio).</li>
+<li>Confirmación de que las coordenadas del mapa (<code>-12.044493, -77.0409056</code>) corresponden a la dirección real y actual del negocio.</li>
+<li>Nombre oficial a usar frente a Google Business (debe coincidir exactamente con el que se use en la web).</li>
+</ul>
+<hr />
+<h2 id="34-conclusion-tecnica">34. Conclusión técnica</h2>
+<p>Jeinox GastroSystems tiene, para tratarse de un sitio sin backend construido como "Base V1", una <strong>base de código sólida</strong>: sin errores de consola, sin enlaces rotos, con buena accesibilidad básica, un carrito de cotización que funciona de punta a punta y un catálogo que ya filtra correctamente los productos sin fotos reales (mejora aplicada en la sesión anterior a esta auditoría).</p>
+<p>Los problemas reales no están en "el código está mal escrito", sino en <strong>tres frentes muy concretos y corregibles</strong>:</p>
+<ol>
+<li><strong>Metadatos técnicos mal configurados</strong> (dominio de ejemplo en canonical/OG, falta de <code>robots.txt</code>/<code>sitemap.xml</code>, SEO no dinámico por producto) — esto es una corrección de bajo esfuerzo y alto impacto.</li>
+<li><strong>Un bug real de layout</strong> en un rango de pantalla específico (1024–1250 px) que oculta el botón de conversión más importante del sitio.</li>
+<li><strong>Contenido y marca todavía en construcción</strong> (nombre inconsistente, páginas con placeholders indexables, mensajes contradictorios sobre la garantía) — esto requiere decisiones de negocio de Jeinox, no solo código.</li>
+</ol>
+<p>Ninguno de estos problemas exige rehacer el sitio: son ajustes puntuales, bien localizados por archivo y línea en este informe, sobre una base técnica que ya funciona.</p>
+<hr />
+<h1 id="respuestas-directas-a-las-5-preguntas-finales">Respuestas directas a las 5 preguntas finales</h1>
+<p><strong>1. Puntuación técnica general:</strong> <strong>68 / 100</strong></p>
+<p><strong>2. Los 5 problemas más urgentes:</strong>
+1. El <code>canonical</code> y las etiquetas Open Graph de las 9 páginas apuntan a un dominio que no existe (<code>jeinoxgastronomic.example</code>), rompiendo las vistas previas de WhatsApp/Facebook y confundiendo a Google.
+2. El botón "Cotizar equipos" (y "Agregar a cotización" en las tarjetas) se corta visualmente en pantallas de 1024 a ~1250 px de ancho (tablets en horizontal, laptops pequeñas).
+3. Cada ficha de producto comparte el mismo título/imagen genéricos al compartirse por WhatsApp o redes — no se actualiza el <code>canonical</code> ni el Open Graph por producto.
+4. El nombre de la marca aparece de 3 formas distintas en el propio sitio ("Jeinox Gastronomic", "Jeinox GastroSystems", "INDUSTRIAS JEINOX" en el logo).
+5. <code>proyectos.html</code> y <code>garantia.html</code> tienen contenido explícitamente ficticio ("PLACEHOLDER") pero están configuradas para que Google las indexe.</p>
+<p><strong>3. Qué NO tocaría porque funciona correctamente hoy:</strong>
+- El sistema de "Mi cotización" (carrito con <code>localStorage</code>): persiste, suma cantidades correctamente, sin duplicados, sin errores.
+- El formulario de "Fabricación a medida": arma un mensaje de WhatsApp completo y bien estructurado.
+- El buscador y los filtros del catálogo (recién reforzados con el sistema <code>visible</code> para ocultar productos sin fotos reales).
+- El manejo de accesibilidad por teclado del menú móvil y del acordeón de FAQ.
+- Todos los enlaces <code>target="_blank"</code> ya usan <code>rel="noopener"</code> correctamente — no hay nada que corregir en seguridad de enlaces externos.
+- Los 40 enlaces internos del sitio funcionan sin ningún 404.
+- El uso de <code>loading="lazy"</code> y <code>width</code>/<code>height</code> en las imágenes, que ya evita saltos de layout (CLS).</p>
+<p><strong>4. Dónde se guardó el archivo de auditoría:</strong>
+- <code>auditoria/AUDITORIA_WEB_JEINOX_GASTROSYSTEMS.md</code> (dentro del proyecto, dado que la carpeta <code>auditoria/</code> no formaba parte del sitio publicado, no se subió a <code>git</code> — sigue como archivo local sin confirmar/pushear hasta que Jeinox lo autorice).
+- También se generó una versión navegable en <code>auditoria/AUDITORIA_WEB_JEINOX_GASTROSYSTEMS.html</code>.</p>
+<p><strong>5. Autorización:</strong>
+No se modificó ningún archivo del proyecto durante esta auditoría. Quedo a la espera de tu autorización para aplicar cualquiera de las correcciones descritas (se recomienda empezar por la Fase 1).</p>
+    </div>
+  </div>
+</body>
+</html>
