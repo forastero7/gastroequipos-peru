@@ -952,4 +952,34 @@ export const products = [
     featured: false,
     warranty: "1 año",
   },
+  {
+    id: "p27",
+    slug: "cocina-industrial-2-hornillas-chifero-freidora-horno",
+    name: "Cocina Industrial 2 Hornillas + Chifero + Freidora con Horno",
+    category: "linea-caliente",
+    subcategory: "cocinas",
+    businessTypes: ["restaurantes", "pollerias", "chifas", "comida-rapida"],
+    images: [
+      "assets/images/products/cocina-industrial-2-hornillas-chifero-freidora-horno-1.webp",
+      "assets/images/products/cocina-industrial-2-hornillas-chifero-freidora-horno-2.webp",
+    ],
+    shortDescription:
+      "Cocina industrial de 2 hornillas con chifero, freidora incorporada y horno, en acero inoxidable. Cocción, wok, fritura y horneado en un solo mueble.",
+    description:
+      "Cocina industrial de 2 hornillas con chifero, freidora incorporada y horno, construida en acero inoxidable. Las hornillas cuentan con quemadores de fundición y perillas de control independientes, el chifero incorpora un quemador circular tipo wok para salteados a fuego intenso, y la freidora integrada incluye cesta con mango ergonómico para el escurrido. El módulo inferior integra horno con puerta de visor, manija y perilla de temperatura, con bandeja extraíble en su interior. Diseño pensado para negocios que requieren concentrar cocción tradicional, preparaciones al wok, frituras y horneado en un solo equipo, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroHornillas: "2 + chifero + freidora + horno",
+      potencia: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "1 año",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "1 año",
+  },
 ];
