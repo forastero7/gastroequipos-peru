@@ -922,4 +922,34 @@ export const products = [
     featured: false,
     warranty: "1 año",
   },
+  {
+    id: "p26",
+    slug: "cocina-industrial-3-hornillas-chifero-horno",
+    name: "Cocina Industrial 3 Hornillas + Chifero con Horno",
+    category: "linea-caliente",
+    subcategory: "cocinas",
+    businessTypes: ["restaurantes", "pollerias", "chifas", "comida-rapida"],
+    images: [
+      "assets/images/products/cocina-industrial-3-hornillas-chifero-horno-1.webp",
+      "assets/images/products/cocina-industrial-3-hornillas-chifero-horno-2.webp",
+    ],
+    shortDescription:
+      "Cocina industrial de 3 hornillas con chifero y horno incorporados, en acero inoxidable, montada sobre ruedas. Cocción tradicional, wok y horneado en un solo mueble.",
+    description:
+      "Cocina industrial de 3 hornillas con chifero y horno incorporados, construida en acero inoxidable. Las tres hornillas cuentan con quemadores de fundición y perillas identificadas por colores para facilitar su operación, mientras que el chifero incorpora un quemador circular tipo wok de mayor potencia para salteados y preparaciones a fuego intenso. El módulo inferior integra horno con puerta de visor, manija y perilla de temperatura, además de repisa lateral para almacenamiento. Estructura montada sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios que requieren cocción tradicional, preparaciones al wok y horneado en un mismo equipo, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroHornillas: "3 + chifero + horno",
+      potencia: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "1 año",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "1 año",
+  },
 ];
