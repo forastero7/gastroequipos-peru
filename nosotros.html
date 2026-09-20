@@ -30,7 +30,9 @@
           <li><a href="catalogo.html?cat=linea-caliente">Línea caliente</a></li>
           <li><a href="catalogo.html?cat=linea-fria">Línea fría</a></li>
           <li><a href="catalogo.html?cat=acero-inoxidable">Acero inoxidable</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
+          <!-- Enlace "Proyectos" oculto temporalmente: proyectos.html solo contiene
+               proyectos de ejemplo. Reactivar este <li> cuando existan proyectos
+               reales, o cuando la página proyectos.html tenga contenido real. -->
           <li><a href="nosotros.html">Nosotros</a></li>
         </ul>
       </nav>
@@ -62,24 +64,15 @@
         <div class="section-head">
           <span class="eyebrow">La empresa</span>
           <h1>Equipamiento gastronómico con visión industrial</h1>
-          <p class="lead">Jeinox Gastronomic nace para ofrecer equipamiento profesional en acero inoxidable, línea caliente y línea fría a restaurantes y negocios gastronómicos. El contenido de esta sección es provisional y se actualizará con información real de la empresa.</p>
+          <p class="lead">Jeinox Gastronomic nace para ofrecer equipamiento profesional en acero inoxidable, línea caliente y línea fría a restaurantes y negocios gastronómicos.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section--muted">
-      <div class="container grid grid-2" style="align-items:center;">
-        <div>
-          <h2>Nuestra historia</h2>
-          <p class="text-muted">[Historia de la empresa pendiente de redactar con información real: origen, hitos y trayectoria.]</p>
-        </div>
-        <div>
-          <h2>Misión y visión</h2>
-          <p class="text-muted"><strong>Misión:</strong> [Pendiente de definir.]</p>
-          <p class="text-muted"><strong>Visión:</strong> [Pendiente de definir.]</p>
-        </div>
-      </div>
-    </section>
+    <!-- Sección "Nuestra historia" / "Misión y visión" oculta temporalmente:
+         depende de información empresarial (origen, hitos, misión, visión) que
+         todavía no ha sido proporcionada por Jeinox. No inventar contenido aquí;
+         reactivar esta sección completa cuando esos datos estén confirmados. -->
 
     <section class="section" aria-labelledby="procesoTitle">
       <div class="container">
@@ -101,7 +94,7 @@
           <div class="why-item">
             <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-wrench"/></svg></span>
             <h3 class="h4">3. Fabricación</h3>
-            <p class="text-muted">Producción en taller propio (dato a confirmar) con acero inoxidable.</p>
+            <p class="text-muted">Producción en taller propio con acero inoxidable.</p>
           </div>
           <div class="why-item">
             <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-truck"/></svg></span>
@@ -118,11 +111,13 @@
           <span class="eyebrow">Confianza</span>
           <h2 id="whyTitle2">Por qué elegirnos</h2>
         </div>
-        <div class="stats-grid">
-          <div class="stat-item"><span class="stat-value">[XX]+</span><span class="stat-label">Años de experiencia</span></div>
-          <div class="stat-item"><span class="stat-value">[X año]</span><span class="stat-label">Garantía</span></div>
-          <div class="stat-item"><span class="stat-value">[Taller propio]</span><span class="stat-label">Fabricación</span></div>
-          <div class="stat-item"><span class="stat-value">[Todo el Perú]</span><span class="stat-label">Cobertura</span></div>
+        <!-- Se retiró temporalmente "Años de experiencia": no hay una cifra
+             confirmada por Jeinox en ningún otro lugar del proyecto. Los 3
+             datos restantes ya se presentan como reales en index.html. -->
+        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+          <div class="stat-item"><span class="stat-value">1 año</span><span class="stat-label">Garantía</span></div>
+          <div class="stat-item"><span class="stat-value">Taller propio</span><span class="stat-label">Fabricación</span></div>
+          <div class="stat-item"><span class="stat-value">Todo el Perú</span><span class="stat-label">Cobertura</span></div>
         </div>
       </div>
     </section>
@@ -151,7 +146,7 @@
         <h4>Empresa</h4>
         <ul>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
+          <!-- Enlace "Proyectos" oculto temporalmente (ver nota en el menú principal). -->
           <li><a href="garantia.html">Garantía y servicio</a></li>
         </ul>
       </div>
@@ -176,7 +171,8 @@
     </div>
     <div class="container footer-bottom">
       <p>© <span data-year>2026</span> Jeinox Gastronomic. Todos los derechos reservados.</p>
-      <p class="placeholder-note">Razón social y RUC pendientes de definir.</p>
+      <!-- Pendiente interno: agregar razón social y RUC en cuanto Jeinox los confirme
+           (no visible para el público hasta entonces). -->
     </div>
   </footer>
 
