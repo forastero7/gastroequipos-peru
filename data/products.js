@@ -982,4 +982,35 @@ export const products = [
     featured: false,
     warranty: "1 año",
   },
+  {
+    id: "p28",
+    slug: "freidora-industrial-digital-4-quemadores",
+    name: "Freidora Industrial Digital 4 Quemadores",
+    category: "linea-caliente",
+    subcategory: "freidoras",
+    businessTypes: ["restaurantes", "pollerias", "chifas", "comida-rapida"],
+    images: [
+      "assets/images/products/freidora-industrial-digital-4-quemadores-1.webp",
+      "assets/images/products/freidora-industrial-digital-4-quemadores-2.webp",
+    ],
+    shortDescription:
+      "Freidora industrial de tanque único con 4 quemadores y control digital de temperatura, en acero inoxidable, montada sobre ruedas.",
+    description:
+      "Freidora industrial de tanque único, construida en acero inoxidable, con 4 quemadores independientes que brindan una distribución de calor uniforme en toda la superficie de fritura. Incorpora control digital de temperatura con interruptor de encendido/apagado, lo que permite mantener una cocción constante y precisa. El tanque cuenta con canaletas internas que facilitan la circulación del aceite y la limpieza del equipo, además de asas laterales superiores para su manipulación. Estructura montada sobre ruedas giratorias que facilitan su desplazamiento. Diseño pensado para negocios con producción constante de frituras que requieren control preciso de temperatura. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      capacidad: "-- (por confirmar)",
+      combustible: "Gas (GLP / natural)",
+      numeroQuemadores: "4",
+      temperatura: "Regulable (control digital)",
+      peso: "-- (por confirmar)",
+      garantia: "1 año",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "1 año",
+  },
 ];
