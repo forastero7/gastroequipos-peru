@@ -1013,4 +1013,35 @@ export const products = [
     featured: false,
     warranty: "1 año",
   },
+  {
+    id: "p29",
+    slug: "congeladora-2-puertas",
+    name: "Congeladora Vertical 2 Puertas",
+    category: "linea-fria",
+    subcategory: "congeladores",
+    businessTypes: ["restaurantes", "minimarkets", "chifas", "pollerias"],
+    images: [
+      "assets/images/products/congeladora-2-puertas-1.webp",
+      "assets/images/products/congeladora-2-puertas-2.webp",
+    ],
+    shortDescription:
+      "Congeladora vertical de 2 puertas en acero inoxidable, con control digital de temperatura, entrepaños interiores y ruedas giratorias.",
+    description:
+      "Congeladora vertical de 2 puertas, construida en acero inoxidable, pensada para la conservación a bajas temperaturas por periodos prolongados en negocios gastronómicos. Incorpora panel de control digital con interruptor de encendido/apagado para monitorear la temperatura interior, y entrepaños ajustables que permiten organizar el almacenamiento según el tipo de insumo. Estructura montada sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios que requieren mayor capacidad de conservación en un solo mueble, con acceso independiente a cada compartimento. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      capacidad: "-- (por confirmar)",
+      voltaje: "220V (referencial)",
+      numeroPuertas: "2",
+      temperatura: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "1 año",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "1 año",
+  },
 ];
