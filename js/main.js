@@ -3,11 +3,12 @@
  * ------------------------------------------------------------------
  * UI general presente en TODAS las páginas: menú de navegación,
  * resaltado del enlace activo, año del footer, acordeón de FAQ,
- * validación del formulario de fabricación a medida y el "toast" de
- * notificaciones (usado por js/quote.js mediante el evento
- * personalizado "gq:toast").
+ * formulario de fabricación a medida (valida y arma un mensaje de
+ * WhatsApp) y el "toast" de notificaciones (usado por js/quote.js
+ * mediante el evento personalizado "gq:toast").
  * ------------------------------------------------------------------
  */
+import { WHATSAPP_NUMBERS } from "./quote.js";
 
 /* ---------------------------------------------------------------- */
 /* Menú móvil                                                        */
@@ -130,12 +131,56 @@ function initToast() {
 }
 
 /* ---------------------------------------------------------------- */
-/* Formulario "Fabricación a medida" (solo Front-End en esta fase)   */
+/* Formulario "Fabricación a medida" -> mensaje de WhatsApp           */
 /* ---------------------------------------------------------------- */
+
+/** Arma el mensaje de WhatsApp a partir de los datos del formulario. */
+function buildFabricationWhatsAppMessage(form) {
+  const val = (name) => (form.elements[name]?.value || "").trim();
+
+  const tipo = val("tipo");
+  const cantidad = val("cantidad");
+  const material = val("material");
+  const ancho = val("ancho");
+  const alto = val("alto");
+  const fondo = val("fondo");
+  const funcionamiento = val("funcionamiento");
+  const descripcion = val("comentarios");
+
+  const lines = [
+    "Hola, quisiera solicitar una cotización en Jeinox GastroSystems.",
+    "",
+    `Equipo: ${tipo}`,
+    `Cantidad: ${cantidad}`,
+  ];
+
+  if (material) lines.push(`Material: ${material}`);
+
+  if (ancho || alto || fondo) {
+    lines.push("Medidas aproximadas:");
+    if (ancho) lines.push(`Ancho: ${ancho} cm`);
+    if (alto) lines.push(`Alto: ${alto} cm`);
+    if (fondo) lines.push(`Profundidad: ${fondo} cm`);
+  }
+
+  if (funcionamiento) {
+    lines.push("", `Funcionamiento: ${funcionamiento}`);
+  }
+
+  if (descripcion) {
+    lines.push("", "Descripción:", descripcion);
+  }
+
+  lines.push("", "Quedo atento a su cotización.");
+
+  return lines.join("\n");
+}
+
 function initCustomFabricationForm() {
   const form = document.getElementById("fabForm");
   if (!form) return;
   const status = document.getElementById("fabFormStatus");
+  const primaryNumber = WHATSAPP_NUMBERS[0]?.number;
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -151,18 +196,19 @@ function initCustomFabricationForm() {
     if (hasError) {
       if (status) {
         status.textContent = "Por favor completa los campos obligatorios.";
-        status.classList.remove("is-visible");
+        status.classList.add("is-visible");
       }
       return;
     }
 
-    // NOTA: esta fase NO envía datos a ningún servidor. El formulario
-    // solo valida en Front-End. La integración con backend/CRM/correo
-    // se agregará en una siguiente etapa (ver README).
-    form.reset();
+    if (!primaryNumber) return;
+
+    const message = buildFabricationWhatsAppMessage(form);
+    const url = `https://wa.me/${primaryNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener");
+
     if (status) {
-      status.textContent =
-        "Solicitud registrada (demo). En la siguiente etapa esta información se enviará a nuestro equipo comercial.";
+      status.textContent = "Se abrió WhatsApp con tu solicitud. Si no se abrió, revisa que tu navegador permita ventanas emergentes.";
       status.classList.add("is-visible");
     }
   });

@@ -880,7 +880,17 @@ body.nav-is-open { overflow: hidden; }
   text-align: center;
 }
 @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
-.stat-item .stat-value { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; color: var(--color-accent); display: block; }
+.stat-item { display: flex; flex-direction: column; }
+.stat-item .stat-value {
+  font-size: clamp(1.3rem, 3.4vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
 .stat-item .stat-label { font-size: 0.85rem; color: var(--color-text-muted); }
 
 .why-grid { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }

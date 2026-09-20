@@ -136,31 +136,31 @@
           <h2 id="whyTitle">Por qué elegirnos</h2>
         </div>
         <div class="stats-grid" style="margin-bottom: var(--space-8);">
-          <div class="stat-item"><span class="stat-value">[XX]+</span><span class="stat-label">Años de experiencia</span></div>
-          <div class="stat-item"><span class="stat-value">[X año]</span><span class="stat-label">Garantía</span></div>
-          <div class="stat-item"><span class="stat-value">[Taller propio]</span><span class="stat-label">Fabricación</span></div>
-          <div class="stat-item"><span class="stat-value">[Todo el Perú]</span><span class="stat-label">Cobertura</span></div>
+          <div class="stat-item"><span class="stat-value">Experiencia especializada</span><span class="stat-label">Equipamiento gastronómico</span></div>
+          <div class="stat-item"><span class="stat-value">1 año</span><span class="stat-label">Garantía</span></div>
+          <div class="stat-item"><span class="stat-value">Taller propio</span><span class="stat-label">Fabricación directa</span></div>
+          <div class="stat-item"><span class="stat-value">Todo el Perú</span><span class="stat-label">Cobertura</span></div>
         </div>
         <div class="why-grid">
           <div class="why-item">
             <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-steel"/></svg></span>
-            <h3 class="h4">Acero inoxidable</h3>
-            <p class="text-muted">Fabricación en materiales pensados para uso industrial intensivo.</p>
+            <h3 class="h4">Fabricación industrial</h3>
+            <p class="text-muted">Fabricamos equipos gastronómicos en acero inoxidable diseñados para trabajo comercial e industrial.</p>
           </div>
           <div class="why-item">
-            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-wrench"/></svg></span>
-            <h3 class="h4">Fabricación a medida</h3>
-            <p class="text-muted">Soluciones adaptadas al espacio y necesidad real de tu negocio.</p>
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ruler"/></svg></span>
+            <h3 class="h4">Equipos a medida</h3>
+            <p class="text-muted">Desarrollamos equipos adaptados al espacio, capacidad de producción y necesidades de cada negocio.</p>
           </div>
           <div class="why-item">
-            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-shield"/></svg></span>
-            <h3 class="h4">Soporte técnico</h3>
-            <p class="text-muted">Acompañamiento especializado antes y después de la compra.</p>
+            <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-cpu"/></svg></span>
+            <h3 class="h4">Tecnología y automatización</h3>
+            <p class="text-muted">Fabricamos equipos gastronómicos automáticos y digitales para optimizar los procesos de producción.</p>
           </div>
           <div class="why-item">
             <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-truck"/></svg></span>
             <h3 class="h4">Cobertura nacional</h3>
-            <p class="text-muted">Coordinación de envíos a distintas regiones del país.</p>
+            <p class="text-muted">Atención en Lima y coordinación de envíos de equipos a diferentes regiones del Perú.</p>
           </div>
         </div>
       </div>
@@ -171,33 +171,32 @@
       <div class="container custom-fab">
         <div>
           <span class="eyebrow">A medida</span>
-          <h2 id="fabTitle">¿Necesitas un equipo a medida?</h2>
-          <p class="lead">Fabricamos soluciones en acero inoxidable según el espacio, capacidad y requerimiento específico de tu negocio. Cuéntanos qué necesitas y te contactaremos con una propuesta.</p>
-          <p class="placeholder-note">Este formulario aún no envía datos a un servidor: es una demostración de la interfaz (ver README).</p>
+          <h2 id="fabTitle">¿Necesitas un equipo gastronómico a medida?</h2>
+          <p class="lead">Diseñamos y fabricamos soluciones en acero inoxidable, equipos automáticos y sistemas digitales adaptados a tu operación.</p>
         </div>
         <form id="fabForm" novalidate>
           <div class="form-grid form-grid--2">
             <div class="field">
               <label for="fabTipo">Tipo de equipo *</label>
-              <input type="text" id="fabTipo" name="tipo" required placeholder="Ej. Mesa de trabajo">
+              <input type="text" id="fabTipo" name="tipo" required placeholder="Ej. Cocina industrial, freidora automática, horno, mesa de trabajo">
               <span class="field-error">Este campo es obligatorio.</span>
             </div>
             <div class="field">
               <label for="fabCantidad">Cantidad *</label>
-              <input type="number" id="fabCantidad" name="cantidad" min="1" required placeholder="1">
+              <input type="number" id="fabCantidad" name="cantidad" min="1" required placeholder="1" value="1">
               <span class="field-error">Este campo es obligatorio.</span>
             </div>
             <div class="field">
               <label for="fabAncho">Ancho (cm)</label>
-              <input type="number" id="fabAncho" name="ancho" min="0">
+              <input type="number" id="fabAncho" name="ancho" min="0" placeholder="Ej. 120">
             </div>
             <div class="field">
               <label for="fabAlto">Alto (cm)</label>
-              <input type="number" id="fabAlto" name="alto" min="0">
+              <input type="number" id="fabAlto" name="alto" min="0" placeholder="Ej. 90">
             </div>
             <div class="field">
-              <label for="fabFondo">Fondo (cm)</label>
-              <input type="number" id="fabFondo" name="fondo" min="0">
+              <label for="fabFondo">Profundidad (cm)</label>
+              <input type="number" id="fabFondo" name="fondo" min="0" placeholder="Ej. 70">
             </div>
             <div class="field">
               <label for="fabMaterial">Material</label>
@@ -208,13 +207,26 @@
                 <option value="otro">Otro / no lo sé aún</option>
               </select>
             </div>
+            <div class="field">
+              <label for="fabFuncionamiento">Tipo de funcionamiento</label>
+              <select id="fabFuncionamiento" name="funcionamiento">
+                <option value="">Selecciona una opción</option>
+                <option value="Manual">Manual</option>
+                <option value="Automático">Automático</option>
+                <option value="Digital">Digital</option>
+                <option value="No estoy seguro">No estoy seguro</option>
+              </select>
+            </div>
           </div>
           <div class="field" style="margin-top: var(--space-4);">
-            <label for="fabComentarios">Comentarios</label>
-            <textarea id="fabComentarios" name="comentarios" placeholder="Cuéntanos más sobre lo que necesitas"></textarea>
+            <label for="fabComentarios">Descripción del proyecto</label>
+            <textarea id="fabComentarios" name="comentarios" placeholder="Cuéntanos qué equipo necesitas, capacidad de producción, dimensiones aproximadas o características especiales."></textarea>
           </div>
           <div class="form-status" id="fabFormStatus" role="status"></div>
-          <button type="submit" class="btn btn-primary" style="margin-top: var(--space-4);">Enviar solicitud</button>
+          <button type="submit" class="btn btn-whatsapp" style="margin-top: var(--space-4);">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-whatsapp"/></svg>
+            Solicitar cotización por WhatsApp
+          </button>
         </form>
       </div>
     </section>
