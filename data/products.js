@@ -893,4 +893,33 @@ export const products = [
     featured: false,
     warranty: "1 año",
   },
+  {
+    id: "p25",
+    slug: "cocina-industrial-2-hornillas-mesa",
+    name: "Cocina Industrial 2 Hornillas de Mesa",
+    category: "acero-inoxidable",
+    subcategory: "fabricaciones-especiales",
+    businessTypes: ["restaurantes", "panaderias", "cafeterias", "otros"],
+    images: [
+      "assets/images/products/cocina-industrial-2-hornillas-mesa-1.webp",
+    ],
+    shortDescription:
+      "Cocina industrial de 2 hornillas de mesa, en acero inoxidable, compacta y sin estructura de piso. Ideal para complementar una línea de cocción existente.",
+    description:
+      "Cocina industrial de 2 hornillas de mesa, construida en acero inoxidable, pensada para instalarse directamente sobre una mesa de trabajo o superficie existente, sin necesidad de estructura ni patas de piso. Cuenta con quemadores de fundición y perillas de control independientes por hornilla, además de asas laterales que facilitan su traslado. Su diseño compacto la hace una opción práctica para complementar una línea de cocción ya instalada, para negocios con espacio reducido o para uso como estación de apoyo. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      combustible: "Gas (GLP / natural)",
+      numeroHornillas: "2",
+      potencia: "-- (por confirmar)",
+      peso: "-- (por confirmar)",
+      garantia: "1 año",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "1 año",
+  },
 ];
