@@ -1,7 +1,7 @@
 /**
  * data/products.js
  * ------------------------------------------------------------------
- * FUENTE ÚNICA DE DATOS del catálogo de Jeinox Gastronomic.
+ * FUENTE ÚNICA DE DATOS del catálogo de Jeinox GastroSystems.
  *
  * Ningún producto debe escribirse "a mano" en el HTML. Todas las
  * páginas (inicio, catálogo, ficha de producto, relacionados) leen
