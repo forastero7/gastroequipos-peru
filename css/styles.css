@@ -947,7 +947,7 @@ body.nav-is-open { overflow: hidden; }
   max-height: 0;
   transition: max-height 0.2s ease;
 }
-.accordion-panel__inner { padding-bottom: var(--space-4); color: var(--color-text-muted); }
+.accordion-panel__inner { padding-top: var(--space-2); padding-bottom: var(--space-4); color: var(--color-text-muted); line-height: 1.6; }
 
 /* --------------------------------------------------------------------------
    17. UBICACIÓN
