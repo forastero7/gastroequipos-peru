@@ -30,6 +30,10 @@ const FILTERS = [
 function matchesFilters(product, state) {
   const { category, query, business } = state;
 
+  // Productos sin fotografías reales (visible:false) nunca deben
+  // aparecer en el catálogo público, sin importar filtro o búsqueda.
+  if (!product.visible) return false;
+
   if (category === "fabricacion-especial") {
     if (product.availability !== "fabricacion" && product.subcategory !== "fabricaciones-especiales") {
       return false;

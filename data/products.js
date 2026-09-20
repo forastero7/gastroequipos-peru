@@ -15,7 +15,11 @@
  * 4. Completa specifications SOLO con los campos que apliquen a ese
  *    producto (no agregues campos que no correspondan al equipo).
  * 5. Si aún no tienes una foto real, deja el arreglo "images" con los
- *    placeholders genéricos de assets/images/products/.
+ *    placeholders genéricos de assets/images/products/ y marca
+ *    visible:false para que el producto no se muestre en la web pública
+ *    (catálogo, destacados, filtros, búsqueda, ficha propia) hasta que
+ *    subas fotos reales. Cuando tengas fotos reales, reemplaza "images"
+ *    y cambia visible a true.
  * 6. Marca featured:true si quieres que aparezca en "Equipos
  *    destacados" en la página de inicio (recomendado: 6 a 8 productos).
  *
@@ -147,6 +151,7 @@ export const businessTypes = [
  * @property {"disponible"|"fabricacion"|"consultar"} availability
  * @property {boolean} featured
  * @property {string} warranty            texto corto, placeholder si no está definido
+ * @property {boolean} visible            false = oculto en toda la web pública (ej. sin fotos reales aún); no borrar el producto, solo cambiar a true cuando tenga fotos
  */
 
 /** @type {Product[]} */
@@ -180,6 +185,7 @@ export const products = [
     availability: "disponible",
     featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p02",
@@ -210,6 +216,7 @@ export const products = [
     availability: "disponible",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p03",
@@ -239,6 +246,7 @@ export const products = [
     availability: "fabricacion",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p04",
@@ -268,6 +276,7 @@ export const products = [
     availability: "disponible",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p05",
@@ -305,6 +314,7 @@ export const products = [
     availability: "disponible",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p06",
@@ -335,6 +345,7 @@ export const products = [
     availability: "disponible",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p07",
@@ -372,6 +383,7 @@ export const products = [
     availability: "disponible",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p08",
@@ -399,6 +411,7 @@ export const products = [
     availability: "fabricacion",
     featured: true,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p09",
@@ -427,6 +440,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p10",
@@ -456,6 +470,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p11",
@@ -492,6 +507,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p12",
@@ -521,6 +537,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: false,
   },
   {
     id: "p13",
@@ -553,8 +570,9 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p14",
@@ -585,8 +603,9 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p15",
@@ -618,6 +637,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p16",
@@ -646,8 +666,9 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p17",
@@ -678,6 +699,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p18",
@@ -707,6 +729,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p19",
@@ -735,8 +758,9 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p20",
@@ -769,6 +793,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p21",
@@ -795,8 +820,9 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p22",
@@ -826,6 +852,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p23",
@@ -856,6 +883,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p24",
@@ -890,8 +918,9 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p25",
@@ -921,6 +950,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p26",
@@ -951,6 +981,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p27",
@@ -981,6 +1012,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p28",
@@ -1012,6 +1044,7 @@ export const products = [
     availability: "disponible",
     featured: false,
     warranty: "1 año",
+    visible: true,
   },
   {
     id: "p29",
@@ -1041,7 +1074,8 @@ export const products = [
     price: null,
     priceType: "quote",
     availability: "disponible",
-    featured: false,
+    featured: true,
     warranty: "1 año",
+    visible: true,
   },
 ];

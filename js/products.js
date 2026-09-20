@@ -28,16 +28,17 @@ export function getProductBySlug(slug) {
 }
 
 export function getFeaturedProducts(limit = 8) {
-  return products.filter((p) => p.featured).slice(0, limit);
+  return products.filter((p) => p.featured && p.visible).slice(0, limit);
 }
 
 /**
  * Productos relacionados: misma categoría, priorizando los que
  * comparten tipo(s) de negocio, excluyendo el producto actual.
+ * Solo incluye productos visibles (con fotografías reales cargadas).
  */
 export function getRelatedProducts(product, limit = 4) {
   return products
-    .filter((p) => p.id !== product.id && p.category === product.category)
+    .filter((p) => p.id !== product.id && p.category === product.category && p.visible)
     .sort((a, b) => {
       const sharedA = a.businessTypes.filter((bt) =>
         product.businessTypes.includes(bt)
@@ -275,7 +276,10 @@ function initProductDetail() {
   const slug = params.get("slug");
   const product = slug ? getProductBySlug(slug) : null;
 
-  if (!product) {
+  // Un producto con visible:false (sin fotografías reales aún) se
+  // trata igual que "no encontrado": no debe poder accederse ni por
+  // URL directa mientras esté oculto del resto de la web pública.
+  if (!product || !product.visible) {
     root.innerHTML = `
       <div class="catalog-empty">
         <h1 class="h3">Equipo no encontrado</h1>
