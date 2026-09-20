@@ -202,6 +202,16 @@ h4, .h4 { font-size: 1.05rem; line-height: 1.35; font-weight: 700; color: var(--
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
+/* Grid de tarjetas de producto (catálogo, destacados, relacionados):
+   a diferencia de .grid-4 (usada también por contenido sin botones,
+   como los pasos de "Nuestro proceso de fabricación"), estas tarjetas
+   necesitan un ancho mínimo garantizado para que sus dos botones
+   ("Ver equipo" / "Agregar a cotización") quepan uno junto al otro sin
+   recortarse. auto-fit + minmax agrega columnas según el espacio
+   disponible en vez de forzar siempre 4, evitando ese recorte a
+   cualquier ancho. */
+.grid-cards { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
 .visually-hidden {
   position: absolute !important;
   width: 1px; height: 1px;
@@ -312,7 +322,7 @@ h4, .h4 { font-size: 1.05rem; line-height: 1.35; font-weight: 700; color: var(--
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
+  gap: var(--space-3);
   min-height: var(--header-h);
 }
 
@@ -330,7 +340,11 @@ h4, .h4 { font-size: 1.05rem; line-height: 1.35; font-weight: 700; color: var(--
 }
 .logo-wordmark {
   font-weight: 800;
-  font-size: 1.02rem;
+  /* clamp() en vez de un salto brusco por breakpoint: a 320-360px
+     (los teléfonos más angostos) "Jeinox GastroSystems" + el ícono +
+     el botón de menú no caben en una sola línea a tamaño completo;
+     de ~400px en adelante ya vuelve a su tamaño normal (1.02rem). */
+  font-size: clamp(0.85rem, 3vw + 0.28rem, 1.02rem);
   line-height: 1.15;
   color: var(--color-ink);
   white-space: nowrap;
@@ -421,7 +435,14 @@ h4, .h4 { font-size: 1.05rem; line-height: 1.35; font-weight: 700; color: var(--
 
 body.nav-is-open { overflow: hidden; }
 
-@media (min-width: 1024px) {
+/* El menú de escritorio (enlaces en línea + botón "Cotizar equipos"
+   visible) se activa recién en 1280px, no en 1024px. Con el ancho de
+   marca + 6 enlaces + "Mi cotización" + CTA que tiene esta cabecera,
+   1024-1279px no alcanza a mostrarlos todos en una sola fila sin
+   recortarse: en ese rango se mantiene el menú hamburguesa (que ya
+   funciona correctamente a cualquier ancho) en vez de forzar un
+   layout que no cabe. Ver FASE_3_RESPONSIVE_JEINOX.md. */
+@media (min-width: 1280px) {
   .main-nav {
     position: static;
     inset: auto;
@@ -429,7 +450,12 @@ body.nav-is-open { overflow: hidden; }
     background: none;
     overflow: visible;
   }
-  .nav-list { flex-direction: row; padding: 0; gap: var(--space-5); }
+  .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: var(--space-2) var(--space-4);
+  }
   .nav-list li { border-bottom: 0; }
   .nav-list a { padding: var(--space-2) 0; position: relative; }
   .nav-list a::after {
@@ -738,7 +764,13 @@ body.nav-is-open { overflow: hidden; }
 /* --------------------------------------------------------------------------
    12. COTIZACIÓN
    -------------------------------------------------------------------------- */
-.quote-table-wrap { overflow-x: auto; }
+/* overscroll-behavior-x:contain evita que, en móvil, un gesto de
+   scroll horizontal sobre la tabla (más ancha que la pantalla a
+   propósito, para no comprimir sus columnas) se "encadene" y arrastre
+   la página completa hacia los lados; el scroll queda contenido
+   dentro de este wrapper, como se espera de una tabla con scroll
+   propio. */
+.quote-table-wrap { overflow-x: auto; overscroll-behavior-x: contain; max-width: 100%; }
 .quote-table { min-width: 560px; }
 .quote-table th {
   text-align: left;

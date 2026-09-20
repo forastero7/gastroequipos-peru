@@ -38,7 +38,7 @@ function initNav() {
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      if (window.matchMedia("(max-width: 1023px)").matches) closeNav();
+      if (window.matchMedia("(max-width: 1279px)").matches) closeNav();
     });
   });
 
@@ -55,10 +55,11 @@ function initNav() {
     closeNav();
   });
 
-  // El menú de escritorio (>=1024px) es siempre visible: si la ventana
-  // crece mientras el menú móvil está abierto, restauramos el estado.
+  // El menú de escritorio (>=1280px, ver css/styles.css) es siempre
+  // visible: si la ventana crece mientras el menú móvil está abierto,
+  // restauramos el estado.
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 1024px)").matches) closeNav();
+    if (window.matchMedia("(min-width: 1280px)").matches) closeNav();
   });
 }
 
