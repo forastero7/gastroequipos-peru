@@ -149,10 +149,155 @@ function escapeHtml(str) {
 }
 
 /* ---------------------------------------------------------------- */
+/* Imágenes responsivas (Fase 4)                                     */
+/* ------------------------------------------------------------------
+ * Ancho real (px) de cada imagen ORIGINAL. Permite generar el
+ * descriptor "w" correcto del srcset y saber qué variantes -400/
+ * -800/-1200 existen realmente en disco: el script que las generó
+ * omite cualquier variante mayor o igual al ancho nativo, para no
+ * ampliar ninguna imagen (evita variantes falsas/borrosas).
+ * ------------------------------------------------------------------ */
+const PRODUCT_IMAGE_NATIVE_WIDTH = {
+  "assets/images/products/caja-china-2en1-1.webp": 1600,
+  "assets/images/products/caja-china-2en1-2.webp": 900,
+  "assets/images/products/caja-china-2en1-3.webp": 1600,
+  "assets/images/products/caja-china-3en1-1.webp": 1600,
+  "assets/images/products/caja-china-3en1-2.webp": 900,
+  "assets/images/products/caja-china-4en1-1.webp": 1600,
+  "assets/images/products/caja-china-4en1-2.webp": 1131,
+  "assets/images/products/caja-china-4en1-3.webp": 800,
+  "assets/images/products/cocina-industrial-2-hornillas-1.webp": 1600,
+  "assets/images/products/cocina-industrial-2-hornillas-2.webp": 1600,
+  "assets/images/products/cocina-industrial-2-hornillas-chifero-1.webp": 1600,
+  "assets/images/products/cocina-industrial-2-hornillas-chifero-freidora-horno-1.webp": 1600,
+  "assets/images/products/cocina-industrial-2-hornillas-chifero-freidora-horno-2.webp": 675,
+  "assets/images/products/cocina-industrial-2-hornillas-mesa-1.webp": 1600,
+  "assets/images/products/cocina-industrial-3-hornillas-chifero-horno-1.webp": 1600,
+  "assets/images/products/cocina-industrial-3-hornillas-chifero-horno-2.webp": 1025,
+  "assets/images/products/cocina-industrial-3-hornillas-horno-1.webp": 1600,
+  "assets/images/products/cocina-industrial-3-hornillas-horno-2.webp": 1800,
+  "assets/images/products/cocina-industrial-4-hornillas-1.webp": 1600,
+  "assets/images/products/cocina-industrial-4-hornillas-2.webp": 2002,
+  "assets/images/products/congeladora-2-puertas-1.webp": 1600,
+  "assets/images/products/congeladora-2-puertas-2.webp": 800,
+  "assets/images/products/freidora-automatica-industrial-1.webp": 1600,
+  "assets/images/products/freidora-automatica-industrial-2.webp": 900,
+  "assets/images/products/freidora-automatica-industrial-3.webp": 900,
+  "assets/images/products/freidora-automatica-industrial-4.webp": 900,
+  "assets/images/products/freidora-industrial-2-pozas-1.webp": 1600,
+  "assets/images/products/freidora-industrial-2-pozas-2.webp": 900,
+  "assets/images/products/freidora-industrial-2-pozas-3.webp": 900,
+  "assets/images/products/freidora-industrial-digital-4-quemadores-1.webp": 1600,
+  "assets/images/products/freidora-industrial-digital-4-quemadores-2.webp": 960,
+  "assets/images/products/horno-shawarma-4-quemadores-1.webp": 1600,
+  "assets/images/products/horno-shawarma-4-quemadores-2.webp": 900,
+  "assets/images/products/horno-shawarma-4-quemadores-3.webp": 900,
+  "assets/images/products/lavadero-2pozas-anaqueles-1.webp": 1600,
+  "assets/images/products/lavadero-2pozas-anaqueles-2.webp": 900,
+  "assets/images/products/lavadero-2pozas-anaqueles-3.webp": 900,
+  "assets/images/products/mesa-trabajo-5-niveles-1.webp": 1600,
+  "assets/images/products/mesa-trabajo-5-niveles-2.webp": 1600,
+  "assets/images/products/parrilla-mesa-empotrable-1.webp": 1600,
+  "assets/images/products/parrilla-mesa-empotrable-2.webp": 1800,
+  "assets/images/products/parrilla-mesa-empotrable-3.webp": 1800,
+  "assets/images/products/parrilla-mesa-empotrable-4.webp": 1600,
+};
+
+const CATEGORY_IMAGE_NATIVE_WIDTH = {
+  "assets/images/categories/acero-inoxidable.webp": 1600,
+  "assets/images/categories/linea-caliente.webp": 1600,
+  "assets/images/categories/linea-fria.webp": 1600,
+};
+
+const PRODUCT_IMAGE_TIERS = [400, 800, 1200];
+const CATEGORY_IMAGE_TIERS = [800];
+
+// Calculados a partir del ancho real renderizado de .grid-cards
+// (Fase 3) medido con Playwright en 320-1920px: 1 columna (<656px),
+// 2 columnas (656-1011px) y 3+ columnas auto-fit (>=1012px, tarjeta
+// de ~360px con minmax(300px,1fr) sobre un contenedor de 1200px).
+const CARD_IMAGE_SIZES = "(min-width: 1012px) 360px, (min-width: 656px) 45vw, 95vw";
+
+// Calculados sobre .product-gallery en producto.html: columna fija de
+// ~534px en desktop (>=1200px), 50% del viewport menos el padding del
+// contenedor en tablet, y casi todo el ancho en móvil.
+const DETAIL_IMAGE_SIZES = "(min-width: 1200px) 534px, (min-width: 600px) calc(50vw - 60px), 90vw";
+
+// .grid-3 pasa a 3 columnas desde 860px sobre un contenedor de hasta
+// 1200px: la tarjeta real mide entre ~249px (860px) y ~384px (>=1264px).
+const CATEGORY_IMAGE_SIZES = "(min-width: 860px) 33vw, 90vw";
+
+/**
+ * Arma el atributo srcset a partir del ancho nativo real de la
+ * imagen y de las variantes que efectivamente existen en disco
+ * (cualquier tier >= ancho nativo fue omitido al generarlas).
+ */
+function buildSrcset(src, nativeWidth, tiers) {
+  if (!nativeWidth) return "";
+  const dot = src.lastIndexOf(".");
+  const base = src.slice(0, dot);
+  const ext = src.slice(dot);
+  const entries = tiers.filter((w) => w < nativeWidth).map((w) => `${base}-${w}${ext} ${w}w`);
+  entries.push(`${src} ${nativeWidth}w`);
+  return entries.join(", ");
+}
+
+/** Atributos completos (como string) para el <img> de una tarjeta de producto. */
+function cardImageAttrs(src, alt, { eager = false } = {}) {
+  const nativeWidth = PRODUCT_IMAGE_NATIVE_WIDTH[src];
+  const srcset = buildSrcset(src, nativeWidth, PRODUCT_IMAGE_TIERS);
+  const loadingAttrs = eager ? `loading="eager" fetchpriority="high"` : `loading="lazy"`;
+  return `src="${src}" alt="${alt}" ${srcset ? `srcset="${srcset}" sizes="${CARD_IMAGE_SIZES}"` : ""} width="800" height="600" decoding="async" ${loadingAttrs}`;
+}
+
+/** Atributos completos (como string) para el <img> de una tarjeta de categoría. */
+function categoryImageAttrs(src) {
+  const nativeWidth = CATEGORY_IMAGE_NATIVE_WIDTH[src];
+  const srcset = buildSrcset(src, nativeWidth, CATEGORY_IMAGE_TIERS);
+  return `src="${src}" ${srcset ? `srcset="${srcset}" sizes="${CATEGORY_IMAGE_SIZES}"` : ""} width="800" height="600" decoding="async" loading="lazy"`;
+}
+
+/**
+ * Aplica src/srcset/sizes a la imagen principal de la ficha de
+ * producto (#productMainImage). Es el elemento LCP confirmado de
+ * producto.html: siempre se sirve con fetchpriority="high" y sin
+ * lazy-loading, tanto en la carga inicial como al cambiar de
+ * miniatura.
+ */
+function applyDetailImage(imgEl, src, alt) {
+  const nativeWidth = PRODUCT_IMAGE_NATIVE_WIDTH[src];
+  const srcset = buildSrcset(src, nativeWidth, PRODUCT_IMAGE_TIERS);
+  imgEl.src = src;
+  imgEl.alt = alt;
+  if (srcset) {
+    imgEl.srcset = srcset;
+    imgEl.sizes = DETAIL_IMAGE_SIZES;
+  } else {
+    imgEl.removeAttribute("srcset");
+    imgEl.removeAttribute("sizes");
+  }
+  imgEl.setAttribute("fetchpriority", "high");
+  imgEl.loading = "eager";
+  imgEl.decoding = "async";
+}
+
+/**
+ * Miniatura ligera reutilizada en la galería de producto.html y en
+ * las filas de "Mi cotización": nunca sirve el original a resolución
+ * completa para una miniatura de ~120-200px.
+ */
+export function smallThumbSrc(src) {
+  const nativeWidth = PRODUCT_IMAGE_NATIVE_WIDTH[src];
+  if (!nativeWidth || nativeWidth <= 400) return src;
+  const dot = src.lastIndexOf(".");
+  return `${src.slice(0, dot)}-400${src.slice(dot)}`;
+}
+
+/* ---------------------------------------------------------------- */
 /* Tarjeta de producto                                               */
 /* ---------------------------------------------------------------- */
 
-export function createProductCard(product) {
+export function createProductCard(product, { eager = false } = {}) {
   const category = getCategoryById(product.category);
   const availability = getAvailabilityDisplay(product);
   const price = getPriceDisplay(product);
@@ -165,7 +310,7 @@ export function createProductCard(product) {
   article.innerHTML = `
     <a class="product-card__media" href="producto.html?slug=${encodeURIComponent(product.slug)}">
       <div class="media-frame">
-        <img src="${product.images[0]}" alt="${escapeHtml(product.name)} — imagen referencial" loading="lazy" width="800" height="600">
+        <img ${cardImageAttrs(product.images[0], `${escapeHtml(product.name)} — imagen referencial`, { eager })}>
       </div>
       <span class="badge ${availability.className} product-card__badge">${availability.text}</span>
     </a>
@@ -198,7 +343,7 @@ export function createProductCard(product) {
   return article;
 }
 
-export function renderProductGrid(container, list) {
+export function renderProductGrid(container, list, { eagerFirst = false } = {}) {
   container.innerHTML = "";
   if (!list.length) {
     container.innerHTML = `
@@ -209,7 +354,9 @@ export function renderProductGrid(container, list) {
     return;
   }
   const fragment = document.createDocumentFragment();
-  list.forEach((product) => fragment.appendChild(createProductCard(product)));
+  list.forEach((product, index) =>
+    fragment.appendChild(createProductCard(product, { eager: eagerFirst && index === 0 }))
+  );
   container.appendChild(fragment);
 }
 
@@ -235,7 +382,7 @@ function initCategoryGrid() {
       (cat) => `
     <article class="card category-card">
       <a class="media-frame" href="catalogo.html?cat=${cat.id}" aria-hidden="true" tabindex="-1">
-        <img src="${cat.image}" alt="" loading="lazy" width="800" height="600">
+        <img ${categoryImageAttrs(cat.image)} alt="">
       </a>
       <div class="category-card__body">
         <h3><a href="catalogo.html?cat=${cat.id}">${cat.name}</a></h3>
@@ -313,19 +460,19 @@ function initProductDetail() {
   const mainImg = document.getElementById("productMainImage");
   const thumbsWrap = document.getElementById("productThumbs");
   if (mainImg && thumbsWrap) {
-    mainImg.src = product.images[0];
-    mainImg.alt = `${product.name} — imagen referencial`;
+    const mainImgAlt = `${product.name} — imagen referencial`;
+    applyDetailImage(mainImg, product.images[0], mainImgAlt);
     thumbsWrap.innerHTML = product.images
       .map(
         (src, i) => `
         <button type="button" class="product-gallery__thumb" data-index="${i}" aria-current="${i === 0}" aria-label="Ver imagen ${i + 1} de ${product.name}">
-          <img src="${src}" alt="" loading="lazy" width="200" height="150">
+          <img src="${smallThumbSrc(src)}" alt="" loading="lazy" width="200" height="150" decoding="async">
         </button>`
       )
       .join("");
     thumbsWrap.querySelectorAll(".product-gallery__thumb").forEach((btn) => {
       btn.addEventListener("click", () => {
-        mainImg.src = product.images[Number(btn.dataset.index)];
+        applyDetailImage(mainImg, product.images[Number(btn.dataset.index)], mainImgAlt);
         thumbsWrap
           .querySelectorAll(".product-gallery__thumb")
           .forEach((b) => b.setAttribute("aria-current", "false"));

@@ -15,6 +15,7 @@
  * ------------------------------------------------------------------
  */
 import { products } from "../data/products.js";
+import { smallThumbSrc } from "./products.js";
 
 const STORAGE_KEY = "gastroequipos:quote:v1";
 
@@ -188,7 +189,7 @@ function renderQuotePage() {
         <tr data-row="${product.id}">
           <td>
             <div class="quote-row__product">
-              <div class="quote-row__thumb"><img src="${product.images[0]}" alt="" loading="lazy" width="120" height="120"></div>
+              <div class="quote-row__thumb"><img src="${smallThumbSrc(product.images[0])}" alt="" loading="lazy" width="120" height="120" decoding="async"></div>
               <div>
                 <a href="producto.html?slug=${encodeURIComponent(product.slug)}"><strong>${product.name}</strong></a>
               </div>

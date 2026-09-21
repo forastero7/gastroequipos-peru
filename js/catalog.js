@@ -117,7 +117,7 @@ function initCatalog() {
 
   function update() {
     const filtered = products.filter((p) => matchesFilters(p, state));
-    renderProductGrid(grid, filtered);
+    renderProductGrid(grid, filtered, { eagerFirst: true });
     if (resultsCount) {
       resultsCount.textContent = `${filtered.length} equipo${filtered.length === 1 ? "" : "s"} encontrado${filtered.length === 1 ? "" : "s"}`;
     }
