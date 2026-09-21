@@ -439,6 +439,28 @@ function initProductDetail() {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute("content", product.shortDescription);
 
+  // SEO dinámico por producto (Fase 5): cada ficha obtiene su propio
+  // canonical y Open Graph/Twitter una vez que carga el producto.
+  // Aviso: WhatsApp y Facebook NO ejecutan JavaScript al generar la
+  // vista previa de un enlace, por lo que seguirán mostrando el
+  // Open Graph estático genérico del <head> de producto.html. Esta
+  // actualización beneficia a Google, que sí renderiza JavaScript
+  // antes de indexar.
+  const productPageUrl = new URL(
+    window.location.pathname + window.location.search,
+    window.location.href
+  ).href;
+  const productImageUrl = new URL(product.images[0], window.location.href).href;
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  if (canonicalLink) canonicalLink.setAttribute("href", productPageUrl);
+  setMetaContent('meta[property="og:title"]', `${product.name} | Jeinox GastroSystems`);
+  setMetaContent('meta[property="og:description"]', product.shortDescription);
+  setMetaContent('meta[property="og:url"]', productPageUrl);
+  setMetaContent('meta[property="og:image"]', productImageUrl);
+  setMetaContent('meta[name="twitter:title"]', `${product.name} | Jeinox GastroSystems`);
+  setMetaContent('meta[name="twitter:description"]', product.shortDescription);
+  setMetaContent('meta[name="twitter:image"]', productImageUrl);
+
   const category = getCategoryById(product.category);
   const availability = getAvailabilityDisplay(product);
   const price = getPriceDisplay(product);
@@ -576,6 +598,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initFeaturedGrid();
   initProductDetail();
 });
+
+function setMetaContent(selector, content) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute("content", content);
+}
 
 function setText(id, text) {
   const el = document.getElementById(id);

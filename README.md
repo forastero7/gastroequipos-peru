@@ -69,13 +69,22 @@ publicar el sitio (ver sección 9).
   (por ejemplo, `catalog.js` no hace nada si no encuentra
   `#catalogGrid`), por lo que es seguro incluir los cuatro scripts en
   todas las páginas.
-- **Sin imágenes externas de terceros:** todos los placeholders
-  visuales (productos, categorías, proyectos, logo, iconos) son SVG
-  propios, livianos y fáciles de reemplazar.
-- **Sin dominio real:** las URLs canónicas y Open Graph usan
-  `https://www.gastroequipos-peru.example/` (dominio reservado para
-  documentación, RFC 2606) como placeholder. Reemplázalo por el
-  dominio real cuando esté disponible (ver sección 8).
+- **Imágenes:** productos y categorías usan fotografías reales en
+  WebP (con variantes responsivas -400/-800/-1200, ver Fase 4);
+  proyectos sigue usando placeholders SVG hasta contar con fotos
+  reales de obras entregadas.
+- **Dominio provisional (Fase 5):** las URLs canónicas, Open Graph,
+  `robots.txt` y `sitemap.xml` usan `https://jeinox-gastrosystems.netlify.app/`
+  como dominio de trabajo mientras el sitio no tenga un dominio propio
+  conectado. **Confirmar con el cliente** que ese es el subdominio de
+  Netlify real antes de publicar; si cambia, reemplázalo en los 9
+  archivos HTML, `robots.txt` y `sitemap.xml` (búsqueda y reemplazo
+  simple, no hay build step). El `<link rel="canonical">` y el Open
+  Graph de `producto.html` también se actualizan en tiempo real por
+  JavaScript (`js/products.js`) a partir de `window.location`, por lo
+  que esos sí seguirán el dominio real automáticamente en cuanto se
+  publique — solo los 9 archivos HTML estáticos necesitan el reemplazo
+  manual del dominio.
 
 ## 4. Cómo ejecutar localmente
 
