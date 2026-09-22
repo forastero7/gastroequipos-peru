@@ -8,7 +8,7 @@
  *
  * CONFIGURACIÓN: pega aquí la URL de la Web App publicada.
  */
-const ENDPOINT = "PEGAR_AQUI_URL_DE_LA_WEB_APP"; // https://script.google.com/macros/s/XXXX/exec
+const ENDPOINT = "https://script.google.com/macros/s/AKfycbyZrpuhzlirSz6XyTWn0olb0AzTbE1nM7hHl8KZ9JcaKXfm7R3b96aDLqUu_cMz8fdRuA/exec"; // https://script.google.com/macros/s/XXXX/exec
 const CONTACT_EMAIL = "jeinox2020@gmail.com";
 const MAX_FILE_BYTES = 5 * 1024 * 1024;
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf"];
