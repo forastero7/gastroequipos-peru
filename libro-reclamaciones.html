@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Libro de reclamaciones | Jeinox GastroSystems</title>
-  <meta name="description" content="Información sobre el libro de reclamaciones de Jeinox GastroSystems.">
+  <meta name="description" content="Libro de reclamaciones virtual de Jeinox GastroSystems. Registra tu reclamo o queja y recibe tu código al instante.">
   <link rel="canonical" href="https://jeinox-gastrosystems.netlify.app/libro-reclamaciones.html">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Jeinox GastroSystems">
@@ -17,6 +17,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://jeinox-gastrosystems.netlify.app/assets/images/branding/logo-mark.webp">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/reclamaciones.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido principal</a>
@@ -56,8 +57,8 @@
   </header>
 
   <main id="main">
-    <section class="section">
-      <div class="container" style="max-width: 720px;">
+    <section class="section lr">
+      <div class="container lr-container">
         <nav class="breadcrumb" aria-label="Ruta de navegación">
           <ol>
             <li><a href="index.html">Inicio</a></li>
@@ -65,9 +66,176 @@
             <li aria-current="page">Libro de reclamaciones</li>
           </ol>
         </nav>
+
         <h1>Libro de reclamaciones</h1>
-        <p class="lead">Conforme a la normativa peruana de protección al consumidor (INDECOPI), este negocio contará con un libro de reclamaciones virtual.</p>
-        <p class="placeholder-note">Esta sección está preparada como base. Razón social: Yahyson Oliver Claudio Céspedes — RUC: 10482782961. El formulario o enlace oficial del libro de reclamaciones se integrará cuando la empresa confirme el domicilio fiscal, dato aún pendiente.</p>
+        <p class="lead">Registra aquí tu reclamo o queja. Al enviarlo recibirás un código de registro en pantalla y una copia de tu hoja de reclamación en tu correo.</p>
+
+        <dl class="lr-provider">
+          <div><dt>Nombre comercial</dt><dd>Jeinox GastroSystems</dd></div>
+          <div><dt>Razón social</dt><dd>Yahyson Oliver Claudio Céspedes</dd></div>
+          <div><dt>RUC</dt><dd>10482782961</dd></div>
+          <div><dt>Dirección</dt><dd>Av. Emancipación 841, Lima 15001</dd></div>
+          <div><dt>Fecha</dt><dd data-lr-today>—</dd></div>
+        </dl>
+
+        <form id="lrForm" class="lr-form" novalidate>
+          <!-- Campo trampa anti-spam: los humanos no lo ven -->
+          <div class="lr-hp" aria-hidden="true">
+            <label for="lr_website">No llenar</label>
+            <input type="text" id="lr_website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <fieldset class="lr-block">
+            <legend><span class="lr-step">1</span> Tus datos</legend>
+            <div class="form-grid form-grid--2">
+              <div class="field">
+                <label for="lr_nombres">Nombres *</label>
+                <input id="lr_nombres" name="nombres" autocomplete="given-name" required maxlength="80">
+                <span class="field-error">Escribe tus nombres.</span>
+              </div>
+              <div class="field">
+                <label for="lr_apellidos">Apellidos *</label>
+                <input id="lr_apellidos" name="apellidos" autocomplete="family-name" required maxlength="80">
+                <span class="field-error">Escribe tus apellidos.</span>
+              </div>
+              <div class="field">
+                <label for="lr_tipoDoc">Tipo de documento *</label>
+                <select id="lr_tipoDoc" name="tipoDocumento" required>
+                  <option value="DNI">DNI</option>
+                  <option value="CE">Carné de extranjería</option>
+                  <option value="PASAPORTE">Pasaporte</option>
+                  <option value="RUC">RUC</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="lr_numDoc">Número de documento *</label>
+                <input id="lr_numDoc" name="numeroDocumento" inputmode="numeric" required maxlength="12">
+                <span class="field-error" data-doc-error>Revisa el número de documento.</span>
+              </div>
+              <div class="field">
+                <label for="lr_email">Correo electrónico *</label>
+                <input id="lr_email" name="email" type="email" autocomplete="email" required maxlength="120">
+                <span class="hint">Aquí te enviaremos la copia y la respuesta.</span>
+                <span class="field-error">Escribe un correo válido.</span>
+              </div>
+              <div class="field">
+                <label for="lr_telefono">Teléfono / celular *</label>
+                <input id="lr_telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required maxlength="15">
+                <span class="field-error">Escribe un teléfono de al menos 7 dígitos.</span>
+              </div>
+              <div class="field lr-span-2">
+                <label for="lr_domicilio">Domicilio *</label>
+                <input id="lr_domicilio" name="domicilio" autocomplete="street-address" required maxlength="200" placeholder="Dirección, distrito, provincia">
+                <span class="field-error">Escribe tu domicilio.</span>
+              </div>
+            </div>
+
+            <label class="lr-check">
+              <input type="checkbox" id="lr_menor" name="esMenor" value="si">
+              <span>Soy menor de edad</span>
+            </label>
+
+            <div class="form-grid form-grid--2" id="lrApoderado" hidden>
+              <div class="field lr-span-2">
+                <label for="lr_apoderado">Nombre del padre, madre o apoderado *</label>
+                <input id="lr_apoderado" name="apoderado" maxlength="120">
+                <span class="field-error">Escribe el nombre de tu padre, madre o apoderado.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="lr-block">
+            <legend><span class="lr-step">2</span> Producto o servicio</legend>
+            <div class="lr-radios" role="radiogroup" aria-label="Tipo de bien contratado">
+              <label class="lr-radio"><input type="radio" name="tipoBien" value="Producto" checked> <span>Producto</span></label>
+              <label class="lr-radio"><input type="radio" name="tipoBien" value="Servicio"> <span>Servicio</span></label>
+            </div>
+            <div class="form-grid form-grid--2">
+              <div class="field lr-span-2">
+                <label for="lr_bien">¿Qué producto o servicio fue? *</label>
+                <input id="lr_bien" name="descripcionBien" required maxlength="200" placeholder="Ej.: cocina industrial de 3 hornillas, mantenimiento de campana">
+                <span class="field-error">Indica el producto o servicio.</span>
+              </div>
+              <div class="field">
+                <label for="lr_monto">Monto reclamado (S/)</label>
+                <input id="lr_monto" name="monto" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00">
+                <span class="hint">Déjalo en blanco si no aplica.</span>
+              </div>
+              <div class="field">
+                <label for="lr_comprobante">N.° de boleta o factura</label>
+                <input id="lr_comprobante" name="comprobante" maxlength="40" placeholder="Opcional">
+              </div>
+              <div class="field">
+                <label for="lr_fechaCompra">Fecha de compra o del servicio</label>
+                <input id="lr_fechaCompra" name="fechaCompra" type="date">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="lr-block">
+            <legend><span class="lr-step">3</span> Detalle de tu reclamación</legend>
+            <div class="lr-radios lr-radios--cards" role="radiogroup" aria-label="Tipo de reclamación">
+              <label class="lr-radio lr-radio--card">
+                <input type="radio" name="tipo" value="Reclamo" checked>
+                <span><strong>Reclamo</strong><small>Disconformidad con el producto o servicio.</small></span>
+              </label>
+              <label class="lr-radio lr-radio--card">
+                <input type="radio" name="tipo" value="Queja">
+                <span><strong>Queja</strong><small>Malestar con la atención, sin relación directa con el producto o servicio.</small></span>
+              </label>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="lr_detalle">¿Qué pasó? *</label>
+                <textarea id="lr_detalle" name="detalle" required minlength="20" maxlength="3000" rows="5"></textarea>
+                <span class="hint" data-count="lr_detalle">0 / 3000</span>
+                <span class="field-error">Describe lo ocurrido (mínimo 20 caracteres).</span>
+              </div>
+              <div class="field">
+                <label for="lr_pedido">¿Qué solicitas? *</label>
+                <textarea id="lr_pedido" name="pedido" required minlength="5" maxlength="1500" rows="3" placeholder="Ej.: cambio del equipo, reparación, devolución del dinero"></textarea>
+                <span class="field-error">Indica qué solicitas.</span>
+              </div>
+              <div class="field">
+                <label for="lr_evidencia">Adjuntar evidencia</label>
+                <input id="lr_evidencia" name="evidencia" type="file" accept="image/jpeg,image/png,image/webp,application/pdf">
+                <span class="hint">Opcional. Foto o PDF de hasta 5 MB.</span>
+                <span class="field-error" data-file-error>El archivo debe ser JPG, PNG, WEBP o PDF de hasta 5 MB.</span>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="lr-legal">
+            <p>La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.</p>
+            <p>El proveedor debe responder el reclamo o queja en un plazo no mayor a quince (15) días hábiles improrrogables.</p>
+          </div>
+
+          <label class="lr-check">
+            <input type="checkbox" name="aceptaDatos" value="si" required id="lr_acepta">
+            <span>Declaro que los datos son verdaderos y autorizo su uso para atender mi reclamación, conforme a la <a href="privacidad.html">política de privacidad</a> y la Ley N.° 29733. *</span>
+          </label>
+          <p class="field-error lr-accept-error" data-accept-error>Debes aceptar para enviar.</p>
+
+          <p class="lr-error" id="lrError" role="alert" hidden></p>
+
+          <button type="submit" class="btn btn-primary lr-submit" id="lrSubmit">Enviar reclamación</button>
+        </form>
+
+        <section class="lr-result" id="lrResult" hidden tabindex="-1" aria-labelledby="lrResultTitle">
+          <h2 id="lrResultTitle">Reclamación registrada</h2>
+          <p class="lr-code-label">Tu código de registro</p>
+          <p class="lr-code" data-lr-code>—</p>
+          <dl class="lr-summary">
+            <div><dt>Tipo</dt><dd data-lr-tipo></dd></div>
+            <div><dt>Fecha de registro</dt><dd data-lr-fecha></dd></div>
+            <div><dt>Plazo de respuesta</dt><dd data-lr-limite></dd></div>
+          </dl>
+          <p>Enviamos una copia de tu hoja de reclamación a <strong data-lr-email></strong>. Si no la ves, revisa tu carpeta de spam. Guarda tu código para cualquier consulta.</p>
+          <div class="lr-actions">
+            <button type="button" class="btn btn-outline" data-lr-print>Imprimir o guardar en PDF</button>
+            <a href="index.html" class="btn btn-secondary">Volver al inicio</a>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -124,5 +292,6 @@
   <script type="module" src="js/quote.js"></script>
   <script type="module" src="js/catalog.js"></script>
   <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/reclamaciones.js"></script>
 </body>
 </html>
