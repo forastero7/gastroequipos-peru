@@ -172,12 +172,12 @@ export const products = [
     description:
       "Cocina industrial de 4 hornillas construida en acero inoxidable, pensada para negocios con producción constante. Cuenta con quemadores de fundición de alta resistencia, perillas de control independientes por hornilla y repisa inferior en acero inoxidable para almacenamiento. Estructura tubular reforzada y diseño pensado para uso intensivo. Especificaciones exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "180 × 60 × 75 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "4",
       potencia: "--",
-      peso: "--",
+      peso: "-- (por confirmar)",
       garantia: "1 año",
     },
     price: null,
@@ -557,7 +557,7 @@ export const products = [
     description:
       "Freidora automática industrial de doble cesta, construida en acero inoxidable para resistir el uso intensivo en cocinas de alta demanda. Incluye cestas colgantes con mango ergonómico y gabinete inferior con puerta, montado sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Pensada para negocios con producción constante de frituras. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "75 × 42 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       capacidad: "-- (por confirmar)",
       potencia: "-- (por confirmar)",
@@ -591,7 +591,7 @@ export const products = [
     description:
       "Horno vertical para shawarma de 4 quemadores, construido en acero inoxidable, con bandeja recolectora de grasa y asador giratorio central. Panel de control lateral con perillas independientes por quemador. Estructura montada sobre ruedas giratorias, con gabinete inferior con puerta para almacenamiento. Pensado para negocios con alta demanda de producción de shawarma y döner kebab. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "60 × 50 × 190 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroQuemadores: "4",
@@ -625,11 +625,11 @@ export const products = [
     description:
       "Parrilla de mesa empotrable a carbón, construida en acero inoxidable. Cuenta con parrilla superior ajustable en altura mediante manivela, para regular la intensidad del calor sobre las brasas, y bandeja/cajón extraíble para el manejo de cenizas. Incluye asas laterales para facilitar su traslado. Diseño pensado para integrarse en una línea de cocción empotrada en restaurantes y parrilladas de alto volumen. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "70 × 50 cm (largo × ancho); alto por confirmar",
       material: "Acero inoxidable",
       combustible: "Carbón",
       capacidad: "-- (por confirmar)",
-      peso: "-- (por confirmar)",
+      peso: "65 kg",
       garantia: "1 año",
     },
     price: null,
@@ -656,7 +656,7 @@ export const products = [
     description:
       "Caja china 4 en 1 con tapa, construida en acero inoxidable, pensada para cubrir cuatro modos de cocción en un solo equipo: caja china, parrilla, chancho al palo y pollo a las brasas. Incorpora ventana con visor que permite supervisar la cocción en el interior de la caja china sin necesidad de abrir la tapa, y motor independiente para el sistema de rotación, lo que facilita un dorado uniforme con menor intervención manual. Cuenta con capacidad para 20 kg, adecuada para preparaciones de alto volumen. Su fabricación en acero inoxidable favorece la resistencia al uso intensivo y facilita la limpieza. Diseño orientado a restaurantes, pollerías y negocios de comida a las brasas que requieren un equipo versátil para distintos tipos de cocción. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "80 × 50 × 135 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Carbón",
       capacidad: "20 kg",
@@ -686,7 +686,7 @@ export const products = [
     description:
       "Cocina industrial de 2 hornillas, construida en acero inoxidable, con quemadores de fundición de alta resistencia y perillas de control independientes para cada hornilla. Incorpora repisa inferior en acero inoxidable para almacenamiento u ollas de reserva, y patas regulables para nivelación en piso. Su tamaño compacto la hace adecuada para cocinas con espacio limitado que igualmente requieren capacidad de cocción industrial, como negocios de producción moderada o como complemento de una línea de cocción más amplia. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "90 × 60 × 65 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "2",
@@ -716,7 +716,7 @@ export const products = [
     description:
       "Cocina industrial de 2 hornillas con chifero incorporado, construida en acero inoxidable. Las dos hornillas cuentan con quemadores de fundición y perillas de control independientes, mientras que el chifero incluye un quemador circular tipo wok de mayor potencia, pensado para salteados y preparaciones que requieren fuego intenso y concentrado. Incorpora repisa inferior en acero inoxidable para almacenamiento y patas regulables para nivelación en piso. Diseño pensado para negocios que combinan cocción tradicional con preparaciones al wok en un mismo mueble, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "150 × 60 × 75 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "2 + 1 chifero",
@@ -747,7 +747,7 @@ export const products = [
     description:
       "Cocina industrial de 3 hornillas con horno incorporado, construida en acero inoxidable. Las tres hornillas cuentan con quemadores de fundición y perillas de control independientes, mientras que el módulo inferior integra horno con puerta de visor y función de gratinador, además de repisa lateral para almacenamiento. Panel de control frontal con mando de presión y perillas identificadas por función (cocina, gratinador, horno), lo que facilita su operación. Diseño pensado para negocios que requieren cocción, horneado y gratinado en un mismo mueble, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "132 × 55 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "3 + horno",
@@ -779,7 +779,7 @@ export const products = [
     description:
       "Freidora industrial de 2 pozas independientes, construida en acero inoxidable, pensada para freír dos productos distintos al mismo tiempo sin mezclar sabores ni aceites. Cada poza cuenta con su propia cesta colgante de mango ergonómico para un escurrido cómodo y seguro. El panel frontal incluye perillas de control independientes por poza, y el gabinete inferior cuenta con puerta con pasador de seguridad para almacenamiento, montado sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios con producción constante de frituras que requieren freír distintos productos de forma simultánea. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "45 × 55 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       capacidad: "-- (por confirmar)",
       potencia: "-- (por confirmar)",
@@ -811,7 +811,7 @@ export const products = [
     description:
       "Mesa de trabajo en acero inoxidable de 5 niveles, pensada para maximizar el aprovechamiento del espacio en cocina. Además de la superficie principal de trabajo, incorpora un entrepaño superior de 2 repisas para tener a la mano utensilios, insumos o vajilla, y 2 repisas inferiores adicionales para almacenamiento. Estructura tubular en acero inoxidable con patas regulables para nivelación en piso. Diseño pensado para negocios que requieren ordenar y tener accesible una mayor cantidad de utensilios e insumos en un solo mueble. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "110 × 50 × 165 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       capacidad: "-- (por confirmar)",
       peso: "-- (por confirmar)",
@@ -910,7 +910,7 @@ export const products = [
     description:
       "Lavadero industrial de 2 pozas en acero inoxidable, que además de las dos pozas profundas para el lavado incorpora una estructura superior con 2 anaqueles de rejilla para escurrir y almacenar platos, y un panel con ganchos para colgar utensilios de cocina y vasos. Estructura tubular en acero inoxidable con patas regulables para nivelación en piso. Diseño pensado para negocios que buscan concentrar el lavado, escurrido y almacenamiento de vajilla y utensilios en una sola estación, optimizando el orden y el espacio del área de lavado. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "110 × 55 × 175 cm (largo × ancho × alto); poza 40 × 40 cm",
       material: "Acero inoxidable",
       peso: "-- (por confirmar)",
       garantia: "1 año",
@@ -937,7 +937,7 @@ export const products = [
     description:
       "Cocina industrial de 2 hornillas de mesa, construida en acero inoxidable, pensada para instalarse directamente sobre una mesa de trabajo o superficie existente, sin necesidad de estructura ni patas de piso. Cuenta con quemadores de fundición y perillas de control independientes por hornilla, además de asas laterales que facilitan su traslado. Su diseño compacto la hace una opción práctica para complementar una línea de cocción ya instalada, para negocios con espacio reducido o para uso como estación de apoyo. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "70 × 42 cm (largo × ancho); alto por confirmar",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "2",
@@ -968,7 +968,7 @@ export const products = [
     description:
       "Cocina industrial de 3 hornillas con chifero y horno incorporados, construida en acero inoxidable. Las tres hornillas cuentan con quemadores de fundición y perillas identificadas por colores para facilitar su operación, mientras que el chifero incorpora un quemador circular tipo wok de mayor potencia para salteados y preparaciones a fuego intenso. El módulo inferior integra horno con puerta de visor, manija y perilla de temperatura, además de repisa lateral para almacenamiento. Estructura montada sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios que requieren cocción tradicional, preparaciones al wok y horneado en un mismo equipo, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "60 × 65 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "3 + chifero + horno",
@@ -999,7 +999,7 @@ export const products = [
     description:
       "Cocina industrial de 2 hornillas con chifero, freidora incorporada y horno, construida en acero inoxidable. Las hornillas cuentan con quemadores de fundición y perillas de control independientes, el chifero incorpora un quemador circular tipo wok para salteados a fuego intenso, y la freidora integrada incluye cesta con mango ergonómico para el escurrido. El módulo inferior integra horno con puerta de visor, manija y perilla de temperatura, con bandeja extraíble en su interior. Diseño pensado para negocios que requieren concentrar cocción tradicional, preparaciones al wok, frituras y horneado en un solo equipo, optimizando espacio en cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "60 × 65 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       combustible: "Gas (GLP / natural)",
       numeroHornillas: "2 + chifero + freidora + horno",
@@ -1030,7 +1030,7 @@ export const products = [
     description:
       "Freidora industrial de tanque único, construida en acero inoxidable, con 4 quemadores independientes que brindan una distribución de calor uniforme en toda la superficie de fritura. Incorpora control digital de temperatura con interruptor de encendido/apagado, lo que permite mantener una cocción constante y precisa. El tanque cuenta con canaletas internas que facilitan la circulación del aceite y la limpieza del equipo, además de asas laterales superiores para su manipulación. Estructura montada sobre ruedas giratorias que facilitan su desplazamiento. Diseño pensado para negocios con producción constante de frituras que requieren control preciso de temperatura. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "42 × 75 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       capacidad: "-- (por confirmar)",
       combustible: "Gas (GLP / natural)",
@@ -1062,7 +1062,7 @@ export const products = [
     description:
       "Congeladora vertical de 2 puertas, construida en acero inoxidable, pensada para la conservación a bajas temperaturas por periodos prolongados en negocios gastronómicos. Incorpora panel de control digital con interruptor de encendido/apagado para monitorear la temperatura interior, y entrepaños ajustables que permiten organizar el almacenamiento según el tipo de insumo. Estructura montada sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios que requieren mayor capacidad de conservación en un solo mueble, con acceso independiente a cada compartimento. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
-      dimensiones: "-- (por confirmar)",
+      dimensiones: "100 × 70 × 100 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
       capacidad: "-- (por confirmar)",
       voltaje: "220V (referencial)",
