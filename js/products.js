@@ -201,6 +201,8 @@ const PRODUCT_IMAGE_NATIVE_WIDTH = {
   "assets/images/products/parrilla-mesa-empotrable-2.webp": 1800,
   "assets/images/products/parrilla-mesa-empotrable-3.webp": 1800,
   "assets/images/products/parrilla-mesa-empotrable-4.webp": 1600,
+  "assets/images/products/lavadero-gabinete-anaqueles-1.webp": 1931,
+  "assets/images/products/lavadero-gabinete-anaqueles-2.webp": 1931,
 };
 
 const CATEGORY_IMAGE_NATIVE_WIDTH = {

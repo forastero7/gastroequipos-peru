@@ -1078,4 +1078,40 @@ export const products = [
     warranty: "1 año",
     visible: true,
   },
+  {
+    id: "p30",
+    slug: "lavadero-industrial-gabinete-anaqueles",
+    name: "Lavadero Industrial con Gabinete Superior e Inferior",
+    category: "acero-inoxidable",
+    subcategory: "lavaderos",
+    businessTypes: [
+      "restaurantes",
+      "pollerias",
+      "chifas",
+      "panaderias",
+      "cafeterias",
+      "comida-rapida",
+      "hoteles",
+    ],
+    images: [
+      "assets/images/products/lavadero-gabinete-anaqueles-1.webp",
+      "assets/images/products/lavadero-gabinete-anaqueles-2.webp",
+    ],
+    shortDescription:
+      "Lavadero industrial en acero inoxidable con gabinete superior e inferior, anaquel intermedio y porta vasos, para lavado y almacenamiento en un solo mueble.",
+    description:
+      "Lavadero industrial en acero inoxidable que integra gabinete superior de 2 puertas, gabinete inferior de 2 puertas y un anaquel intermedio abierto para almacenamiento adicional. Sobre la poza de lavado incorpora una rejilla escurridora superior y una fila de ganchos porta vasos y utensilios, lo que permite lavar, escurrir y guardar en un solo mueble. Estructura montada sobre patas reguladas para nivelación en piso. Diseño pensado para negocios que buscan concentrar almacenamiento cerrado y abierto junto a la zona de lavado, optimizando el orden del área de cocina. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+    specifications: {
+      dimensiones: "-- (por confirmar)",
+      material: "Acero inoxidable",
+      peso: "-- (por confirmar)",
+      garantia: "1 año",
+    },
+    price: null,
+    priceType: "quote",
+    availability: "disponible",
+    featured: false,
+    warranty: "1 año",
+    visible: true,
+  },
 ];
