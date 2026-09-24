@@ -52,6 +52,7 @@
                proyectos de ejemplo. Reactivar este <li> cuando existan proyectos
                reales, o cuando la página proyectos.html tenga contenido real. -->
           <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="index.html#ubicanos">Ubicación</a></li>
         </ul>
       </nav>
 
@@ -449,20 +450,38 @@
     <section class="section section--muted" id="ubicanos" aria-labelledby="ubicanosTitle">
       <div class="container location-grid">
         <div>
-          <span class="eyebrow">Visítanos</span>
-          <h2 id="ubicanosTitle">Visítanos</h2>
-          <ul class="location-list" style="margin-top: var(--space-5);">
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg>
-              <span>
-                <strong class="location-list__name">JEINOX GastroSystems — Tienda física</strong>
+          <span class="eyebrow">Ubicación</span>
+          <h2 id="ubicanosTitle">Encuéntranos</h2>
+          <p class="lead" style="margin-top: var(--space-3);">Visita Jeinox GastroSystems y conoce nuestros equipos gastronómicos en Lima, Perú. Contamos con atención directa para ayudarte a encontrar o fabricar el equipo gastronómico que necesita tu negocio.</p>
+
+          <div class="location-cards">
+            <div class="why-item">
+              <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-map-pin"/></svg></span>
+              <h3 class="h4">Ubicación</h3>
+              <p class="text-muted">
+                JEINOX GastroSystems — Tienda física.
+                <!-- Dirección textual pendiente de confirmar por el cliente. Mientras tanto se muestra el enlace real de Google Maps de la tienda. -->
                 <a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener">Ver en Google Maps</a>
-              </span>
-            </li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-steel"/></svg>
-              <span>También contamos con fábrica, taller y showroom.</span>
-            </li>
+              </p>
+            </div>
+            <div class="why-item">
+              <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"/></svg></span>
+              <h3 class="h4">Horario de atención</h3>
+              <p class="text-muted">Lunes a sábado: 9:00 a. m. – 8:00 p. m.<br>Domingos y feriados: cerrado.</p>
+            </div>
+            <div class="why-item">
+              <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-building"/></svg></span>
+              <h3 class="h4">Instalaciones</h3>
+              <p class="text-muted">Tienda · Showroom · Taller · Fábrica.<br>Fabricamos equipos gastronómicos y realizamos proyectos a medida.</p>
+            </div>
+            <div class="why-item">
+              <span class="icon-wrap"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-truck"/></svg></span>
+              <h3 class="h4">Cobertura</h3>
+              <p class="text-muted">Envíos a Lima y todo el Perú.</p>
+            </div>
+          </div>
+
+          <ul class="location-list" style="margin-top: var(--space-5);">
             <li>
               <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-phone"/></svg>
               <span>
@@ -471,13 +490,6 @@
               </span>
             </li>
             <li><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-mail"/></svg><span><a href="mailto:jeinox2020@gmail.com">jeinox2020@gmail.com</a></span></li>
-            <li>
-              <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-check"/></svg>
-              <span>
-                Lunes a sábado: 9:00 a. m. – 8:00 p. m.
-                <span class="text-muted" style="font-weight:400; font-size:0.9rem;">Domingos y feriados: cerrado</span>
-              </span>
-            </li>
           </ul>
         </div>
         <div class="location-map">
@@ -490,10 +502,16 @@
               referrerpolicy="no-referrer-when-downgrade"
               title="Ubicación de JEINOX GastroSystems en Google Maps"></iframe>
           </div>
-          <a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="margin-top: var(--space-3);">
-            Abrir en Google Maps
-            <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-right"/></svg>
-          </a>
+          <div class="location-actions">
+            <a href="https://maps.app.goo.gl/Go7pqGee3JetVSw69" target="_blank" rel="noopener" class="btn btn-outline">
+              Cómo llegar
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-arrow-right"/></svg>
+            </a>
+            <a href="https://wa.me/51943688374?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20para%20visitar%20Jeinox%20GastroSystems." target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <svg class="icon icon--sm" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-whatsapp"/></svg>
+              Contactar por WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </section>
