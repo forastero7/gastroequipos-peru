@@ -765,7 +765,7 @@ export const products = [
   {
     id: "p20",
     slug: "freidora-industrial-2-pozas",
-    name: "Freidora Industrial 2 Pozas",
+    name: "Freidora Convencional 2 Pozas",
     category: "linea-caliente",
     subcategory: "freidoras",
     businessTypes: ["restaurantes", "pollerias", "chifas", "comida-rapida"],
@@ -775,9 +775,9 @@ export const products = [
       "assets/images/products/freidora-industrial-2-pozas-3.webp",
     ],
     shortDescription:
-      "Freidora industrial de 2 pozas independientes en acero inoxidable, con cestas colgantes, gabinete inferior con puerta y ruedas.",
+      "Freidora convencional de 2 pozas independientes en acero inoxidable, con cestas colgantes, gabinete inferior con puerta y ruedas.",
     description:
-      "Freidora industrial de 2 pozas independientes, construida en acero inoxidable, pensada para freír dos productos distintos al mismo tiempo sin mezclar sabores ni aceites. Cada poza cuenta con su propia cesta colgante de mango ergonómico para un escurrido cómodo y seguro. El panel frontal incluye perillas de control independientes por poza, y el gabinete inferior cuenta con puerta con pasador de seguridad para almacenamiento, montado sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios con producción constante de frituras que requieren freír distintos productos de forma simultánea. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
+      "Freidora convencional de 2 pozas independientes, construida en acero inoxidable, pensada para freír dos productos distintos al mismo tiempo sin mezclar sabores ni aceites. Cada poza cuenta con su propia cesta colgante de mango ergonómico para un escurrido cómodo y seguro. El panel frontal incluye perillas de control independientes por poza, y el gabinete inferior cuenta con puerta con pasador de seguridad para almacenamiento, montado sobre ruedas giratorias que facilitan su desplazamiento y limpieza. Diseño pensado para negocios con producción constante de frituras que requieren freír distintos productos de forma simultánea. Especificaciones técnicas exactas sujetas a confirmación según modelo.",
     specifications: {
       dimensiones: "45 × 55 × 90 cm (largo × ancho × alto)",
       material: "Acero inoxidable",
